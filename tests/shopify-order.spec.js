@@ -35,10 +35,10 @@ test('Automation Exercise purchase flow', async ({ page }) => {
 
   // View cart
   await page.getByText('View Cart').click();
-await page.waitForTimeout(2000);
+//await page.waitForTimeout(2000);
   // Checkout
   await page.getByText('Proceed To Checkout').click();
-await page.waitForTimeout(2000);
+//await page.waitForTimeout(2000);
   // Verify checkout page
  // await expect(page.getByText(/address details/i)).toBeVisible();
   // await page.locator('message').fill('Wrap it as Gift!!');
