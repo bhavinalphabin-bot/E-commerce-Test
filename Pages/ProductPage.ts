@@ -3,15 +3,15 @@ import { Page } from '@playwright/test';
 export class ProductPage {
   constructor(private page: Page) {}
 
-  // async openProducts() {
-  //   await this.page.getByRole('link', {
-  //     name: 'Products'
-  //   }).click();
-  // }
+  async openProducts() {
+    await this.page.getByRole('link', {
+      name: 'Products'
+    }).click();
+  }
 
   async searchProduct(product: string) {
     await this.page.locator('#search_product')
-      .first().fill(product);
+      .fill(product);
 
     await this.page.locator('#submit_search')
       .click();
