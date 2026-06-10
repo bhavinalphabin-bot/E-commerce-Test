@@ -1,7 +1,7 @@
 import { defineConfig } from '@playwright/test';
 
 export default defineConfig({
- workers: 6,
+ workers: 4,
   testDir: './tests',
 
   use: {
