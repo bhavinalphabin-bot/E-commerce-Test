@@ -11,7 +11,7 @@ export class ProductPage {
 
   async searchProduct(product: string) {
     await this.page.locator('#search_product')
-      .fill(product);
+      .first().fill(product);
 
     await this.page.locator('#submit_search')
       .click();
