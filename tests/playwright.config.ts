@@ -1,9 +1,9 @@
 import { defineConfig } from '@playwright/test';
 
 export default defineConfig({
- workers: 4,
+ workers: 1,
   testDir: './tests',
-
+retries: 2,
   use: {
     browserName: 'chromium',
 
