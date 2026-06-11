@@ -10,32 +10,21 @@ export class ProductPage {
   }
 
   async searchProduct(product: string) {
-    await this.page.locator('#search_product')
-      .fill(product);
+    const searchInput = this.page.locator('#search_product');
+    await searchInput.waitFor({ state: 'visible', timeout: 15000 });
+    await searchInput.fill(product);
 
-    await this.page.locator('#submit_search')
-      .click();
+    await this.page.locator('#submit_search').click();
   }
-async addFirstProductToCart() {
 
-  const firstProduct = this.page
-    .locator('.product-image-wrapper')
-    .first();
+  async addFirstProductToCart() {
+    const firstProduct = this.page.locator('.product-image-wrapper').first();
 
-  await firstProduct.hover();
+    await firstProduct.hover();
 
-  await this.page
-    .locator('.add-to-cart')
-    .first()
-    .click();
+    await this.page.locator('.add-to-cart').first().click();
 
-  await this.page
-    .getByText('View Cart')
-    .click();
+    await this.page.getByText('View Cart').click();
+  }
 }
-//   async addFirstProductToCart() {
-//     await this.page.locator(
-//       '.product-overlay .add-to-cart'
-//     ).first().click();
 
-  }
