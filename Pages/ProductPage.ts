@@ -11,7 +11,7 @@ export class ProductPage {
 
   async searchProduct(product: string) {
     const searchInput = this.page.locator('#search_product');
-   // await searchInput.waitFor({ state: 'visible', timeout: 15000 });
+   await searchInput.waitFor({ state: 'visible', timeout: 15000 });
     await searchInput.fill(product);
 
     await this.page.locator('#submit_search').click();
