@@ -12,6 +12,10 @@ test('Login Test', async ({ page }) => {
     'Bhavy@207'
   );
 
-  // await expect(page)
-  // .toHaveURL(/.*login/);
+  await expect(
+    page.locator('a[href="/logout"]')
+  ).toBeVisible({
+    timeout: 20000
+  });
+
 });
