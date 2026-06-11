@@ -6,7 +6,8 @@ test('Automation Exercise purchase flow', async ({ page }) => {
   await page.goto('https://automationexercise.com');
 
   // Login
-  await page.getByRole('link', { name: /signup\s*\/\s*login/i }).click();
+  await page.locator('a[href="/login"]').click();
+  //await page.getByRole('link', { name: /signup\s*\/\s*login/i }).click();
 
   await page.getByRole('textbox', { name: /email address/i })
     .first()
