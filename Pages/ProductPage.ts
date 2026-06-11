@@ -3,11 +3,17 @@ import { Page } from '@playwright/test';
 export class ProductPage {
   constructor(private page: Page) {}
 
-  async openProducts() {
-    await this.page.getByRole('link', {
-      name: 'Products'
-    }).click();
+async openProducts() {
+  await this.page.getByRole('link', {
+    name: 'Products'
+  }).click();
+
+  const consent = this.page.locator('button:has-text("Consent")');
+  const isConsentVisible = await consent.isVisible().catch(() => false);
+  if (isConsentVisible) {
+    await consent.click();
   }
+}
 
   async searchProduct(product: string) {
     const searchInput = this.page.locator('#search_product');
