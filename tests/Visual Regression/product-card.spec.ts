@@ -1,5 +1,7 @@
 import { test, expect } from '@playwright/test';
 
+test.skip((globalThis as any).process?.env?.CI, 'Visual snapshots run locally only');
+
 test('product card matches snapshot', async ({ page }) => {
   await page.goto('https://automationexercise.com/products');
 
