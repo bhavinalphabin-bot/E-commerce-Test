@@ -1,36 +1,36 @@
 import { test } from '@playwright/test';
-
 import { LoginPage } from '../Pages/LoginPage';
 import { ProductPage } from '../Pages/ProductPage';
 import { CartPage } from '../Pages/CartPage';
 import { CheckoutPage } from '../Pages/CheckoutPage';
 
-test('Complete Checkout Flow',
-async ({ page }) => {
+test('Complete Checkout Flow', async ({ page }) => {
 
   const loginPage = new LoginPage(page);
   const productPage = new ProductPage(page);
   const cartPage = new CartPage(page);
   const checkoutPage = new CheckoutPage(page);
 
-  await loginPage.goto();
+  await page.goto(
+    'https://automationexercise.com/login'
+  );
 
   await loginPage.login(
     'bhavymangukiya30@gmail.com',
     'Bhavy@207'
   );
 
-  await page.goto(
-    'https://automationexercise.com'
-  );
-
+  // MUST OPEN PRODUCTS FIRST
   await productPage.openProducts();
 
-  await productPage.searchProduct('Men Tshirt');
+  // THEN SEARCH
+  await productPage.searchProduct(
+    'Blue Top'
+  );
 
   await productPage.addFirstProductToCart();
 
-  await cartPage.openCart();
+  await cartPage.verifyProduct('Blue Top');
 
   await checkoutPage.proceedToCheckout();
 
