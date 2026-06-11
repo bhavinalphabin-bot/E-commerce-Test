@@ -1,9 +1,12 @@
 import { defineConfig } from '@playwright/test';
 
 export default defineConfig({
- workers: 4,
+  workers: 4,
+
   testDir: './tests',
-retries: 2,
+
+  retries: 2,
+
   use: {
     browserName: 'chromium',
 
@@ -14,6 +17,9 @@ retries: 2,
     video: 'retain-on-failure',
 
     trace: 'retain-on-failure'
-  }
- 
+  },
+
+  reporter: [
+    ['blob']
+  ]
 });
