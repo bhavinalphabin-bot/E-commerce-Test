@@ -1,5 +1,11 @@
 import { defineConfig } from '@playwright/test';
 
+declare const process: {
+  env: {
+    CI?: string | undefined;
+  };
+};
+
 export default defineConfig({
   workers: 4,
 
@@ -13,13 +19,7 @@ export default defineConfig({
     headless: false,
 
     screenshot: 'only-on-failure',
-
-    video: 'retain-on-failure',
-
-    trace: 'retain-on-failure'
   },
 
-  reporter: [
-    ['blob']
-  ]
+  reporter: process.env.CI ? [['blob']] : [['html']],
 });
