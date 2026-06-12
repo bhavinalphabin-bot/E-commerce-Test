@@ -30,11 +30,15 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
+      - name: Check Playwright Version
+        run: |
+          npx playwright --version
+          echo "CI=$CI"
+
       - name: Run Playwright Tests
         run: npx playwright test --shard=${{ matrix.shard }}/4
-        continue-on-error: true
 
-      - name: Debug Generated Files
+      - name: Show Generated Files
         if: always()
         run: |
           pwd
@@ -46,12 +50,14 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: blob-report-${{ matrix.shard }}
-          path: blob-report
+          path: |
+            blob-report
+            test-results
           retention-days: 1
 
   merge-reports:
-    if: always()
     needs: playwright
+    if: always()
     runs-on: ubuntu-latest
 
     steps:
@@ -66,26 +72,26 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
-      - name: Download Blob Reports
+      - name: Download Reports
         uses: actions/download-artifact@v4
         with:
           pattern: blob-report-*
-          path: all-blob-reports
+          path: all-reports
           merge-multiple: true
 
-      - name: Verify Downloaded Reports
+      - name: Verify Downloaded Files
         run: |
           pwd
           ls -la
-          find all-blob-reports -type f
+          find all-reports || true
 
       - name: Merge Reports
         run: |
           npx playwright merge-reports \
-          --reporter html \
-          all-blob-reports
+            --reporter html \
+            all-reports
 
-      - name: Upload Final HTML Report
+      - name: Upload Final Report
         uses: actions/upload-artifact@v4
         with:
           name: playwright-html-report
