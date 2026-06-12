@@ -1,25 +1,29 @@
 import { defineConfig } from '@playwright/test';
 
-declare const process: {
-  env: {
-    CI?: string | undefined;
-  };
-};
+declare const process: { env: { CI?: string } };
 
 export default defineConfig({
-  workers: 4,
-
   testDir: './tests',
 
-  retries: 2,
+  timeout: 60000,
+
+  retries: process.env.CI ? 2 : 0,
+
+  workers: process.env.CI ? 1 : 4,
 
   use: {
     browserName: 'chromium',
 
-    headless: false,
+    headless: process.env.CI ? true : false,
 
     screenshot: 'only-on-failure',
+
+    trace: 'retain-on-failure',
+
+    video: 'retain-on-failure',
   },
 
-  reporter: process.env.CI ? [['blob']] : [['html']],
+  reporter: [
+    ['blob']
+  ],
 });

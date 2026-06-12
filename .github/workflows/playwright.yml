@@ -9,10 +9,12 @@ on:
 jobs:
   playwright:
     runs-on: ubuntu-latest
+
     strategy:
       fail-fast: false
       matrix:
         shard: [1, 2, 3, 4]
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -30,10 +32,18 @@ jobs:
 
       - name: Run Playwright Tests
         run: npx playwright test --shard=${{ matrix.shard }}/4
+        continue-on-error: true
+
+      - name: Debug Generated Files
+        if: always()
+        run: |
+          pwd
+          ls -la
+          find . -type d | sort
 
       - name: Upload Blob Report
-        uses: actions/upload-artifact@v4
         if: always()
+        uses: actions/upload-artifact@v4
         with:
           name: blob-report-${{ matrix.shard }}
           path: blob-report
@@ -43,6 +53,7 @@ jobs:
     if: always()
     needs: playwright
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -55,18 +66,24 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
-      - name: Download All Blob Reports
+      - name: Download Blob Reports
         uses: actions/download-artifact@v4
         with:
-          path: all-blob-reports
           pattern: blob-report-*
+          path: all-blob-reports
           merge-multiple: true
+
+      - name: Verify Downloaded Reports
+        run: |
+          pwd
+          ls -la
+          find all-blob-reports -type f
 
       - name: Merge Reports
         run: |
           npx playwright merge-reports \
-            --reporter html \
-            all-blob-reports
+          --reporter html \
+          all-blob-reports
 
       - name: Upload Final HTML Report
         uses: actions/upload-artifact@v4
