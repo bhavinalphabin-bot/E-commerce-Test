@@ -22,8 +22,8 @@ export default defineConfig({
 
     video: 'retain-on-failure',
   },
-
-  reporter: [
-    ['blob']
-  ],
-});
+  // Add this in playwright.config.js|ts|mjs
+reporter: [
+  ['html', { outputDir: './playwright-report' }],
+  ['json', { outputFile: './playwright-report/report.json' }],
+]});
