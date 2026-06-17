@@ -10,14 +10,18 @@
     "grep": {},
     "grepInvert": null,
     "maxFailures": 0,
-    "metadata": {},
+    "metadata": {
+      "actualWorkers": 4
+    },
     "preserveOutput": "always",
     "projects": [
       {
         "outputDir": "/Users/jay/Downloads/Plawright/E-commerce-Test/test-results",
         "repeatEach": 1,
         "retries": 0,
-        "metadata": {},
+        "metadata": {
+          "actualWorkers": 4
+        },
         "id": "",
         "name": "",
         "testDir": "/Users/jay/Downloads/Plawright/E-commerce-Test/tests",
@@ -73,8 +77,22 @@
               "expectedStatus": "passed",
               "projectId": "",
               "projectName": "",
-              "results": [],
-              "status": "skipped"
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 14080,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-06-17T11:05:25.723Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
             }
           ],
           "id": "d35ea515ab0a689d77fe-d821bdc5e094cdb8db94",
@@ -92,7 +110,7 @@
       "specs": [
         {
           "title": "Add Product To Cart",
-          "ok": true,
+          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -101,8 +119,67 @@
               "expectedStatus": "passed",
               "projectId": "",
               "projectName": "",
-              "results": [],
-              "status": "skipped"
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 58008,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/.*products/\u001b[39m\nReceived string:  \u001b[31m\"https://automationexercise.com/#google_vignette\"\u001b[39m\nTimeout: 20000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 20000ms\u001b[22m\n\u001b[2m    34 × unexpected value \"https://automationexercise.com/#google_vignette\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/.*products/\u001b[39m\nReceived string:  \u001b[31m\"https://automationexercise.com/#google_vignette\"\u001b[39m\nTimeout: 20000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 20000ms\u001b[22m\n\u001b[2m    34 × unexpected value \"https://automationexercise.com/#google_vignette\"\u001b[22m\n\n    at ProductPage.openProducts (/Users/jay/Downloads/Plawright/E-commerce-Test/Pages/ProductPage.ts:13:29)\n    at /Users/jay/Downloads/Plawright/E-commerce-Test/tests/addToCart.spec.ts:15:3",
+                    "location": {
+                      "file": "/Users/jay/Downloads/Plawright/E-commerce-Test/Pages/ProductPage.ts",
+                      "column": 29,
+                      "line": 13
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39m../Pages/ProductPage.ts:13\n\n\u001b[0m \u001b[90m 11 |\u001b[39m\n \u001b[90m 12 |\u001b[39m     \u001b[90m// Verify navigation completed\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage)\u001b[33m.\u001b[39mtoHaveURL(\n \u001b[90m    |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m       \u001b[35m/.*products/\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 15 |\u001b[39m       { timeout\u001b[33m:\u001b[39m \u001b[35m20000\u001b[39m }\n \u001b[90m 16 |\u001b[39m     )\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/jay/Downloads/Plawright/E-commerce-Test/Pages/ProductPage.ts",
+                        "column": 29,
+                        "line": 13
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/.*products/\u001b[39m\nReceived string:  \u001b[31m\"https://automationexercise.com/#google_vignette\"\u001b[39m\nTimeout: 20000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 20000ms\u001b[22m\n\u001b[2m    34 × unexpected value \"https://automationexercise.com/#google_vignette\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m../Pages/ProductPage.ts:13\n\n\u001b[0m \u001b[90m 11 |\u001b[39m\n \u001b[90m 12 |\u001b[39m     \u001b[90m// Verify navigation completed\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage)\u001b[33m.\u001b[39mtoHaveURL(\n \u001b[90m    |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m       \u001b[35m/.*products/\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 15 |\u001b[39m       { timeout\u001b[33m:\u001b[39m \u001b[35m20000\u001b[39m }\n \u001b[90m 16 |\u001b[39m     )\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at ProductPage.openProducts (/Users/jay/Downloads/Plawright/E-commerce-Test/Pages/ProductPage.ts:13:29)\u001b[22m\n\u001b[2m    at /Users/jay/Downloads/Plawright/E-commerce-Test/tests/addToCart.spec.ts:15:3\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-06-17T11:05:25.750Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/jay/Downloads/Plawright/E-commerce-Test/test-results/addToCart-Add-Product-To-Cart/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/jay/Downloads/Plawright/E-commerce-Test/test-results/addToCart-Add-Product-To-Cart/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/jay/Downloads/Plawright/E-commerce-Test/test-results/addToCart-Add-Product-To-Cart/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/jay/Downloads/Plawright/E-commerce-Test/test-results/addToCart-Add-Product-To-Cart/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/jay/Downloads/Plawright/E-commerce-Test/Pages/ProductPage.ts",
+                    "column": 29,
+                    "line": 13
+                  }
+                }
+              ],
+              "status": "unexpected"
             }
           ],
           "id": "a1b2df80ffd2e8e27332-8c572e02e5fb13201d9b",
@@ -129,8 +206,26 @@
               "expectedStatus": "passed",
               "projectId": "",
               "projectName": "",
-              "results": [],
-              "status": "skipped"
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 3619,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "{\"responseCode\": 200, \"products\": [{\"id\": 1, \"name\": \"Blue Top\", \"price\": \"Rs. 500\", \"brand\": \"Polo\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Tops\"}}, {\"id\": 2, \"name\": \"Men Tshirt\", \"price\": \"Rs. 400\", \"brand\": \"H&M\", \"category\": {\"usertype\": {\"usertype\": \"Men\"}, \"category\": \"Tshirts\"}}, {\"id\": 3, \"name\": \"Sleeveless Dress\", \"price\": \"Rs. 1000\", \"brand\": \"Madame\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Dress\"}}, {\"id\": 4, \"name\": \"Stylish Dress\", \"price\": \"Rs. 1500\", \"brand\": \"Madame\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Dress\"}}, {\"id\": 5, \"name\": \"Winter Top\", \"price\": \"Rs. 600\", \"brand\": \"Mast & Harbour\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Tops\"}}, {\"id\": 6, \"name\": \"Summer White Top\", \"price\": \"Rs. 400\", \"brand\": \"H&M\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Tops\"}}, {\"id\": 7, \"name\": \"Madame Top For Women\", \"price\": \"Rs. 1000\", \"brand\": \"Madame\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Tops\"}}, {\"id\": 8, \"name\": \"Fancy Green Top\", \"price\": \"Rs. 700\", \"brand\": \"Polo\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Tops\"}}, {\"id\": 11, \"name\": \"Sleeves Printed Top - White\", \"price\": \"Rs. 499\", \"brand\": \"Babyhug\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Tops & Shirts\"}}, {\"id\": 12, \"name\": \"Half Sleeves Top Schiffli Detailing - Pink\", \"price\": \"Rs. 359\", \"brand\": \"Babyhug\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Tops & Shirts\"}}, {\"id\": 13, \"name\": \"Frozen Tops For Kids\", \"price\": \"Rs. 278\", \"brand\": \"Allen Solly Junior\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Tops & Shirts\"}}, {\"id\": 14, \"name\": \"Full Sleeves Top Cherry - Pink\", \"price\": \"Rs. 679\", \"brand\": \"Kookie Kids\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Tops & Shirts\"}}, {\"id\": 15, \"name\": \"Printed Off Shoulder Top - White\", \"price\": \"Rs. 315\", \"brand\": \"Babyhug\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Tops & Shirts\"}}, {\"id\": 16, \"name\": \"Sleeves Top and Short - Blue & Pink\", \"price\": \"Rs. 478\", \"brand\": \"Babyhug\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Dress\"}}, {\"id\": 18, \"name\": \"Little Girls Mr. Panda Shirt\", \"price\": \"Rs. 1200\", \"brand\": \"Kookie Kids\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Tops & Shirts\"}}, {\"id\": 19, \"name\": \"Sleeveless Unicorn Patch Gown - Pink\", \"price\": \"Rs. 1050\", \"brand\": \"Allen Solly Junior\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Dress\"}}, {\"id\": 20, \"name\": \"Cotton Mull Embroidered Dress\", \"price\": \"Rs. 1190\", \"brand\": \"Kookie Kids\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Dress\"}}, {\"id\": 21, \"name\": \"Blue Cotton Indie Mickey Dress\", \"price\": \"Rs. 1530\", \"brand\": \"Biba\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Dress\"}}, {\"id\": 22, \"name\": \"Long Maxi Tulle Fancy Dress Up Outfits -Pink\", \"price\": \"Rs. 1600\", \"brand\": \"Biba\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Dress\"}}, {\"id\": 23, \"name\": \"Sleeveless Unicorn Print Fit & Flare Net Dress - Multi\", \"price\": \"Rs. 1100\", \"brand\": \"Biba\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Dress\"}}, {\"id\": 24, \"name\": \"Colour Blocked Shirt \\u2013 Sky Blue\", \"price\": \"Rs. 849\", \"brand\": \"Allen Solly Junior\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Tops & Shirts\"}}, {\"id\": 28, \"name\": \"Pure Cotton V-Neck T-Shirt\", \"price\": \"Rs. 1299\", \"brand\": \"H&M\", \"category\": {\"usertype\": {\"usertype\": \"Men\"}, \"category\": \"Tshirts\"}}, {\"id\": 29, \"name\": \"Green Side Placket Detail T-Shirt\", \"price\": \"Rs. 1000\", \"brand\": \"Polo\", \"category\": {\"usertype\": {\"usertype\": \"Men\"}, \"category\": \"Tshirts\"}}, {\"id\": 30, \"name\": \"Premium Polo T-Shirts\", \"price\": \"Rs. 1500\", \"brand\": \"Polo\", \"category\": {\"usertype\": {\"usertype\": \"Men\"}, \"category\": \"Tshirts\"}}, {\"id\": 31, \"name\": \"Pure Cotton Neon Green Tshirt\", \"price\": \"Rs. 850\", \"brand\": \"H&M\", \"category\": {\"usertype\": {\"usertype\": \"Men\"}, \"category\": \"Tshirts\"}}, {\"id\": 33, \"name\": \"Soft Stretch Jeans\", \"price\": \"Rs. 799\", \"brand\": \"Polo\", \"category\": {\"usertype\": {\"usertype\": \"Men\"}, \"category\": \"Jeans\"}}, {\"id\": 35, \"name\": \"Regular Fit Straight Jeans\", \"price\": \"Rs. 1200\", \"brand\": \"H&M\", \"category\": {\"usertype\": {\"usertype\": \"Men\"}, \"category\": \"Jeans\"}}, {\"id\": 37, \"name\": \"Grunt Blue Slim Fit Jeans\", \"price\": \"Rs. 1400\", \"brand\": \"Polo\", \"category\": {\"usertype\": {\"usertype\": \"Men\"}, \"category\": \"Jeans\"}}, {\"id\": 38, \"name\": \"Rose Pink Embroidered Maxi Dress\", \"price\": \"Rs. 2300\", \"brand\": \"Madame\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Dress\"}}, {\"id\": 39, \"name\": \"Cotton Silk Hand Block Print Saree\", \"price\": \"Rs. 3000\", \"brand\": \"Biba\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Saree\"}}, {\"id\": 40, \"name\": \"Rust Red Linen Saree\", \"price\": \"Rs. 3500\", \"brand\": \"Biba\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Saree\"}}, {\"id\": 41, \"name\": \"Beautiful Peacock Blue Cotton Linen Saree\", \"price\": \"Rs. 5000\", \"brand\": \"Madame\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Saree\"}}, {\"id\": 42, \"name\": \"Lace Top For Women\", \"price\": \"Rs. 1400\", \"brand\": \"Mast & Harbour\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Tops\"}}, {\"id\": 43, \"name\": \"GRAPHIC DESIGN MEN T SHIRT - BLUE\", \"price\": \"Rs. 1389\", \"brand\": \"Mast & Harbour\", \"category\": {\"usertype\": {\"usertype\": \"Men\"}, \"category\": \"Tshirts\"}}]}\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-06-17T11:05:25.774Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
             }
           ],
           "id": "28dca9c1f03ff90da71e-0ac9b292f7c1ad5b8e50",
@@ -157,8 +252,26 @@
               "expectedStatus": "passed",
               "projectId": "",
               "projectName": "",
-              "results": [],
-              "status": "skipped"
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 3663,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "{\"responseCode\": 200, \"products\": [{\"id\": 1, \"name\": \"Blue Top\", \"price\": \"Rs. 500\", \"brand\": \"Polo\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Tops\"}}, {\"id\": 2, \"name\": \"Men Tshirt\", \"price\": \"Rs. 400\", \"brand\": \"H&M\", \"category\": {\"usertype\": {\"usertype\": \"Men\"}, \"category\": \"Tshirts\"}}, {\"id\": 3, \"name\": \"Sleeveless Dress\", \"price\": \"Rs. 1000\", \"brand\": \"Madame\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Dress\"}}, {\"id\": 4, \"name\": \"Stylish Dress\", \"price\": \"Rs. 1500\", \"brand\": \"Madame\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Dress\"}}, {\"id\": 5, \"name\": \"Winter Top\", \"price\": \"Rs. 600\", \"brand\": \"Mast & Harbour\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Tops\"}}, {\"id\": 6, \"name\": \"Summer White Top\", \"price\": \"Rs. 400\", \"brand\": \"H&M\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Tops\"}}, {\"id\": 7, \"name\": \"Madame Top For Women\", \"price\": \"Rs. 1000\", \"brand\": \"Madame\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Tops\"}}, {\"id\": 8, \"name\": \"Fancy Green Top\", \"price\": \"Rs. 700\", \"brand\": \"Polo\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Tops\"}}, {\"id\": 11, \"name\": \"Sleeves Printed Top - White\", \"price\": \"Rs. 499\", \"brand\": \"Babyhug\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Tops & Shirts\"}}, {\"id\": 12, \"name\": \"Half Sleeves Top Schiffli Detailing - Pink\", \"price\": \"Rs. 359\", \"brand\": \"Babyhug\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Tops & Shirts\"}}, {\"id\": 13, \"name\": \"Frozen Tops For Kids\", \"price\": \"Rs. 278\", \"brand\": \"Allen Solly Junior\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Tops & Shirts\"}}, {\"id\": 14, \"name\": \"Full Sleeves Top Cherry - Pink\", \"price\": \"Rs. 679\", \"brand\": \"Kookie Kids\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Tops & Shirts\"}}, {\"id\": 15, \"name\": \"Printed Off Shoulder Top - White\", \"price\": \"Rs. 315\", \"brand\": \"Babyhug\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Tops & Shirts\"}}, {\"id\": 16, \"name\": \"Sleeves Top and Short - Blue & Pink\", \"price\": \"Rs. 478\", \"brand\": \"Babyhug\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Dress\"}}, {\"id\": 18, \"name\": \"Little Girls Mr. Panda Shirt\", \"price\": \"Rs. 1200\", \"brand\": \"Kookie Kids\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Tops & Shirts\"}}, {\"id\": 19, \"name\": \"Sleeveless Unicorn Patch Gown - Pink\", \"price\": \"Rs. 1050\", \"brand\": \"Allen Solly Junior\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Dress\"}}, {\"id\": 20, \"name\": \"Cotton Mull Embroidered Dress\", \"price\": \"Rs. 1190\", \"brand\": \"Kookie Kids\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Dress\"}}, {\"id\": 21, \"name\": \"Blue Cotton Indie Mickey Dress\", \"price\": \"Rs. 1530\", \"brand\": \"Biba\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Dress\"}}, {\"id\": 22, \"name\": \"Long Maxi Tulle Fancy Dress Up Outfits -Pink\", \"price\": \"Rs. 1600\", \"brand\": \"Biba\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Dress\"}}, {\"id\": 23, \"name\": \"Sleeveless Unicorn Print Fit & Flare Net Dress - Multi\", \"price\": \"Rs. 1100\", \"brand\": \"Biba\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Dress\"}}, {\"id\": 24, \"name\": \"Colour Blocked Shirt \\u2013 Sky Blue\", \"price\": \"Rs. 849\", \"brand\": \"Allen Solly Junior\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Tops & Shirts\"}}, {\"id\": 28, \"name\": \"Pure Cotton V-Neck T-Shirt\", \"price\": \"Rs. 1299\", \"brand\": \"H&M\", \"category\": {\"usertype\": {\"usertype\": \"Men\"}, \"category\": \"Tshirts\"}}, {\"id\": 29, \"name\": \"Green Side Placket Detail T-Shirt\", \"price\": \"Rs. 1000\", \"brand\": \"Polo\", \"category\": {\"usertype\": {\"usertype\": \"Men\"}, \"category\": \"Tshirts\"}}, {\"id\": 30, \"name\": \"Premium Polo T-Shirts\", \"price\": \"Rs. 1500\", \"brand\": \"Polo\", \"category\": {\"usertype\": {\"usertype\": \"Men\"}, \"category\": \"Tshirts\"}}, {\"id\": 31, \"name\": \"Pure Cotton Neon Green Tshirt\", \"price\": \"Rs. 850\", \"brand\": \"H&M\", \"category\": {\"usertype\": {\"usertype\": \"Men\"}, \"category\": \"Tshirts\"}}, {\"id\": 33, \"name\": \"Soft Stretch Jeans\", \"price\": \"Rs. 799\", \"brand\": \"Polo\", \"category\": {\"usertype\": {\"usertype\": \"Men\"}, \"category\": \"Jeans\"}}, {\"id\": 35, \"name\": \"Regular Fit Straight Jeans\", \"price\": \"Rs. 1200\", \"brand\": \"H&M\", \"category\": {\"usertype\": {\"usertype\": \"Men\"}, \"category\": \"Jeans\"}}, {\"id\": 37, \"name\": \"Grunt Blue Slim Fit Jeans\", \"price\": \"Rs. 1400\", \"brand\": \"Polo\", \"category\": {\"usertype\": {\"usertype\": \"Men\"}, \"category\": \"Jeans\"}}, {\"id\": 38, \"name\": \"Rose Pink Embroidered Maxi Dress\", \"price\": \"Rs. 2300\", \"brand\": \"Madame\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Dress\"}}, {\"id\": 39, \"name\": \"Cotton Silk Hand Block Print Saree\", \"price\": \"Rs. 3000\", \"brand\": \"Biba\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Saree\"}}, {\"id\": 40, \"name\": \"Rust Red Linen Saree\", \"price\": \"Rs. 3500\", \"brand\": \"Biba\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Saree\"}}, {\"id\": 41, \"name\": \"Beautiful Peacock Blue Cotton Linen Saree\", \"price\": \"Rs. 5000\", \"brand\": \"Madame\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Saree\"}}, {\"id\": 42, \"name\": \"Lace Top For Women\", \"price\": \"Rs. 1400\", \"brand\": \"Mast & Harbour\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Tops\"}}, {\"id\": 43, \"name\": \"GRAPHIC DESIGN MEN T SHIRT - BLUE\", \"price\": \"Rs. 1389\", \"brand\": \"Mast & Harbour\", \"category\": {\"usertype\": {\"usertype\": \"Men\"}, \"category\": \"Tshirts\"}}]}\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-06-17T11:05:25.774Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
             }
           ],
           "id": "9dd4c2d9fc384d91036d-2e76398b05bb28878210",
@@ -177,14 +290,599 @@
               "expectedStatus": "passed",
               "projectId": "",
               "projectName": "",
-              "results": [],
-              "status": "skipped"
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 7761,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-06-17T11:05:29.472Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
             }
           ],
           "id": "9dd4c2d9fc384d91036d-5fb472d4a2f17bafe949",
           "file": "API/ProductAPI.spec.ts",
           "line": 19,
           "column": 5
+        }
+      ]
+    },
+    {
+      "title": "api-mocking.spec.ts",
+      "file": "api-mocking.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "API Mocking Examples",
+          "file": "api-mocking.spec.ts",
+          "line": 8,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Mock product search API response",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 46076,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-17T11:05:29.447Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "bcff5fa723f516684996-2efc3c9ac0276c723554",
+              "file": "api-mocking.spec.ts",
+              "line": 10,
+              "column": 7
+            },
+            {
+              "title": "Mock successful API with custom data",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 18683,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-17T11:06:17.600Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "bcff5fa723f516684996-7dd7f555d12695601b70",
+              "file": "api-mocking.spec.ts",
+              "line": 23,
+              "column": 7
+            },
+            {
+              "title": "Monitor and log network requests",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 37577,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "API Request: https://fonts.googleapis.com/icon?family=Material+Icons\n"
+                        },
+                        {
+                          "text": "Method: GET\n"
+                        },
+                        {
+                          "text": "API Request: http://fonts.googleapis.com/css?family=Roboto:400,300,400italic,500,700,100\n"
+                        },
+                        {
+                          "text": "Method: GET\n"
+                        },
+                        {
+                          "text": "API Request: http://fonts.googleapis.com/css?family=Open+Sans:400,800,300,600,700\n"
+                        },
+                        {
+                          "text": "Method: GET\n"
+                        },
+                        {
+                          "text": "API Request: http://fonts.googleapis.com/css?family=Abel\n"
+                        },
+                        {
+                          "text": "Method: GET\n"
+                        },
+                        {
+                          "text": "API Request: https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-1677597403311019&output=html&adk=1812271804&adf=3025194257&abgtt=6&lmt=1781694401&plat=3%3A16%2C4%3A16%2C9%3A32776%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1081344%2C32%3A32%2C41%3A32%2C42%3A32%2C43%3A32%2C44%3A32&format=0x0&url=https%3A%2F%2Fautomationexercise.com%2F&pra=5&asro=0&aimartd=4&aieuf=1&aicrs=1&uach=WyJtYWNPUyIsIjE0LjcuMCIsIng4NiIsIiIsIjE0OC4wLjc3NzguOTYiLG51bGwsMCxudWxsLCI2NCIsW1siTm90L0EpQnJhbmQiLCI5OS4wLjAuMCJdLFsiQ2hyb21pdW0iLCIxNDguMC43Nzc4Ljk2Il1dLDBd&dt=1781694400547&bpp=11&bdt=799&idt=211&shv=r20260611&mjsv=m202606110101&ptt=9&saldr=aa&abxe=1&cookie_enabled=1&eoidce=1&nras=1&correlator=3436240018543&frm=20&pv=2&u_tz=330&u_his=2&u_h=720&u_w=1280&u_ah=720&u_aw=1280&u_cd=24&u_sd=1&dmc=16&adx=-12245933&ady=-12245933&biw=1265&bih=720&scr_x=0&scr_y=0&eid=31099130&oid=2&pvsid=7021574905812414&tmod=1135636320&uas=0&nvt=1&fsapi=1&fc=1920&brdim=22%2C47%2C22%2C47%2C1280%2C0%2C1282%2C800%2C1280%2C720&vis=1&rsz=%7C%7Cs%7C&abl=NS&fu=32768&bc=31&bz=1&ifi=1&uci=a!1&fsb=1&dtd=477\n"
+                        },
+                        {
+                          "text": "Method: GET\n"
+                        },
+                        {
+                          "text": "API Request: https://fonts.googleapis.com/css?family=Open%20Sans%3A400%2C500\n"
+                        },
+                        {
+                          "text": "Method: GET\n"
+                        },
+                        {
+                          "text": "API Request: https://tpc.googlesyndication.com/pagead/js/r20260612/r20110914/elements/html/fullscreen_api_adapter_fy2021.js\n"
+                        },
+                        {
+                          "text": "Method: GET\n"
+                        },
+                        {
+                          "text": "API Request: https://cdn.flashtalking.com/frameworks/js/api/2/10/html5API.js\n"
+                        },
+                        {
+                          "text": "Method: GET\n"
+                        },
+                        {
+                          "text": "API Request: https://www.google.com/recaptcha/api2/aframe\n"
+                        },
+                        {
+                          "text": "Method: GET\n"
+                        },
+                        {
+                          "text": "Total API requests: \u001b[33m9\u001b[39m\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-17T11:06:36.628Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "bcff5fa723f516684996-a069abce656b990086df",
+              "file": "api-mocking.spec.ts",
+              "line": 48,
+              "column": 7
+            },
+            {
+              "title": "Simulate slow network",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 30932,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Page load time with throttling: \u001b[33m24689\u001b[39m\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-17T11:07:14.374Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "bcff5fa723f516684996-aabbfd8e84d670452904",
+              "file": "api-mocking.spec.ts",
+              "line": 67,
+              "column": 7
+            },
+            {
+              "title": "Simulate API error responses",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 15328,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-17T11:07:45.318Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "bcff5fa723f516684996-583826ff1e5ced9dbcfb",
+              "file": "api-mocking.spec.ts",
+              "line": 84,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "Network Response Validation",
+          "file": "api-mocking.spec.ts",
+          "line": 105,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Verify response headers",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 11184,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Response Headers: {\n  \u001b[32m'cf-cache-status'\u001b[39m: \u001b[32m'HIT'\u001b[39m,\n  age: \u001b[32m'6469'\u001b[39m,\n  \u001b[32m'report-to'\u001b[39m: \u001b[32m'{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=LMapqVAARyuQAU%2FLY1f0f1vdvcnr7Ykc%2BDaEH1hI3OooeMjhHSrwp9SVeEInp8W4x68xdsGtEgAUg%2BOvlpYhF8akikZF37MG%2BwsxhxtX4FpFHdaIQc9ag3RYDF9BR5JeITGOMP40%2BYTesep02B8MG%2FIQyIcM\"}]}'\u001b[39m,\n  \u001b[32m'x-content-type-options'\u001b[39m: \u001b[32m'nosniff'\u001b[39m,\n  status: \u001b[32m'200 OK'\u001b[39m,\n  \u001b[32m'alt-svc'\u001b[39m: \u001b[32m'h3=\":443\"; ma=86400'\u001b[39m,\n  \u001b[32m'server-timing'\u001b[39m: \u001b[32m'cfExtPri'\u001b[39m,\n  date: \u001b[32m'Wed, 17 Jun 2026 11:08:05 GMT'\u001b[39m,\n  \u001b[32m'last-modified'\u001b[39m: \u001b[32m'Wed, 13 Oct 2021 09:18:14 GMT'\u001b[39m,\n  \u001b[32m'content-type'\u001b[39m: \u001b[32m'image/png'\u001b[39m,\n  \u001b[32m'content-disposition'\u001b[39m: \u001b[32m'inline; filename=\"short_logo.png\"'\u001b[39m,\n  priority: \u001b[32m'u=1,i'\u001b[39m,\n  \u001b[32m'x-frame-options'\u001b[39m: \u001b[32m'DENY'\u001b[39m,\n  \u001b[32m'cache-control'\u001b[39m: \u001b[32m'max-age=14400'\u001b[39m,\n  nel: \u001b[32m'{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}'\u001b[39m,\n  \u001b[32m'referrer-policy'\u001b[39m: \u001b[32m'same-origin'\u001b[39m,\n  \u001b[32m'cf-ray'\u001b[39m: \u001b[32m'a0d198287f605833-SIN'\u001b[39m,\n  \u001b[32m'accept-ranges'\u001b[39m: \u001b[32m'bytes'\u001b[39m,\n  \u001b[32m'content-length'\u001b[39m: \u001b[32m'1071'\u001b[39m,\n  \u001b[32m'x-powered-by'\u001b[39m: \u001b[32m'Phusion Passenger(R) 6.0.27'\u001b[39m,\n  server: \u001b[32m'cloudflare'\u001b[39m\n}\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-17T11:08:00.671Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "bcff5fa723f516684996-697388228c9d47f423d5",
+              "file": "api-mocking.spec.ts",
+              "line": 107,
+              "column": 7
+            },
+            {
+              "title": "Validate JSON response structure",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 7302,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-17T11:08:11.890Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "bcff5fa723f516684996-44c5dd535f47035d525d",
+              "file": "api-mocking.spec.ts",
+              "line": 123,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "browser-interactions.spec.ts",
+      "file": "browser-interactions.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "File Upload",
+          "file": "browser-interactions.spec.ts",
+          "line": 115,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Upload profile picture",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 34861,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-17T11:05:39.288Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2ba1996ab9af49a658f4-f46a251753237921368f",
+              "file": "browser-interactions.spec.ts",
+              "line": 117,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "Modal & Dialog Handling",
+          "file": "browser-interactions.spec.ts",
+          "line": 136,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Handle alert dialogs",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 7027,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-17T11:06:14.208Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2ba1996ab9af49a658f4-3b0db2521e4a8fe1b78e",
+              "file": "browser-interactions.spec.ts",
+              "line": 138,
+              "column": 7
+            },
+            {
+              "title": "Handle confirmation dialogs",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 7046,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-17T11:06:21.251Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2ba1996ab9af49a658f4-c35dfdead26eade54451",
+              "file": "browser-interactions.spec.ts",
+              "line": 156,
+              "column": 7
+            },
+            {
+              "title": "Handle prompt dialogs",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 5274,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-17T11:06:28.320Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2ba1996ab9af49a658f4-972c76720a2f3699f194",
+              "file": "browser-interactions.spec.ts",
+              "line": 171,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "Multiple Tabs/Windows",
+          "file": "browser-interactions.spec.ts",
+          "line": 184,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Switch between multiple tabs",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "timedOut",
+                      "duration": 81929,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-17T11:06:33.774Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/jay/Downloads/Plawright/E-commerce-Test/test-results/browser-interactions-Multi-54d9c-witch-between-multiple-tabs/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/jay/Downloads/Plawright/E-commerce-Test/test-results/browser-interactions-Multi-54d9c-witch-between-multiple-tabs/video-1.webm"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/jay/Downloads/Plawright/E-commerce-Test/test-results/browser-interactions-Multi-54d9c-witch-between-multiple-tabs/video-2.webm"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/jay/Downloads/Plawright/E-commerce-Test/test-results/browser-interactions-Multi-54d9c-witch-between-multiple-tabs/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/jay/Downloads/Plawright/E-commerce-Test/test-results/browser-interactions-Multi-54d9c-witch-between-multiple-tabs/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/jay/Downloads/Plawright/E-commerce-Test/test-results/browser-interactions-Multi-54d9c-witch-between-multiple-tabs/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "2ba1996ab9af49a658f4-7e9044a46f4afcbd52d8",
+              "file": "browser-interactions.spec.ts",
+              "line": 209,
+              "column": 7
+            }
+          ]
         }
       ]
     },
@@ -205,8 +903,26 @@
               "expectedStatus": "passed",
               "projectId": "",
               "projectName": "",
-              "results": [],
-              "status": "skipped"
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 78877,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Current URL: https://automationexercise.com/products\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-06-17T11:05:40.443Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
             }
           ],
           "id": "4fae901f9bd61a5a8bf0-497490296225bcd8e204",
@@ -233,8 +949,22 @@
               "expectedStatus": "passed",
               "projectId": "",
               "projectName": "",
-              "results": [],
-              "status": "skipped"
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 24550,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-06-17T11:06:59.434Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
             }
           ],
           "id": "41d3fd2474a19feb00a1-f3ebcd273c51be8114b6",
@@ -252,7 +982,7 @@
       "specs": [
         {
           "title": "homepage LCP is under 2.5s",
-          "ok": true,
+          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -261,8 +991,67 @@
               "expectedStatus": "passed",
               "projectId": "",
               "projectName": "",
-              "results": [],
-              "status": "skipped"
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 23641,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m2500\u001b[39m\nReceived:   \u001b[31m5664\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m2500\u001b[39m\nReceived:   \u001b[31m5664\u001b[39m\n    at /Users/jay/Downloads/Plawright/E-commerce-Test/tests/Performance/assertions.spec.ts:13:15",
+                    "location": {
+                      "file": "/Users/jay/Downloads/Plawright/E-commerce-Test/tests/Performance/assertions.spec.ts",
+                      "column": 15,
+                      "line": 13
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 11 |\u001b[39m     })\n \u001b[90m 12 |\u001b[39m   )\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m   expect(lcp)\u001b[33m.\u001b[39mtoBeLessThan(\u001b[35m2500\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/jay/Downloads/Plawright/E-commerce-Test/tests/Performance/assertions.spec.ts",
+                        "column": 15,
+                        "line": 13
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m2500\u001b[39m\nReceived:   \u001b[31m5664\u001b[39m\n\n\u001b[0m \u001b[90m 11 |\u001b[39m     })\n \u001b[90m 12 |\u001b[39m   )\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m   expect(lcp)\u001b[33m.\u001b[39mtoBeLessThan(\u001b[35m2500\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /Users/jay/Downloads/Plawright/E-commerce-Test/tests/Performance/assertions.spec.ts:13:15\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-06-17T11:07:17.871Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/jay/Downloads/Plawright/E-commerce-Test/test-results/Performance-assertions-homepage-LCP-is-under-2-5s/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/jay/Downloads/Plawright/E-commerce-Test/test-results/Performance-assertions-homepage-LCP-is-under-2-5s/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/jay/Downloads/Plawright/E-commerce-Test/test-results/Performance-assertions-homepage-LCP-is-under-2-5s/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/jay/Downloads/Plawright/E-commerce-Test/test-results/Performance-assertions-homepage-LCP-is-under-2-5s/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/jay/Downloads/Plawright/E-commerce-Test/tests/Performance/assertions.spec.ts",
+                    "column": 15,
+                    "line": 13
+                  }
+                }
+              ],
+              "status": "unexpected"
             }
           ],
           "id": "ff20b78484ef6563815b-0eb584a1bdd0cd2a8d45",
@@ -289,8 +1078,22 @@
               "expectedStatus": "passed",
               "projectId": "",
               "projectName": "",
-              "results": [],
-              "status": "skipped"
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 19977,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-06-17T11:07:24.123Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
             }
           ],
           "id": "a752315b48b41a7aa942-9cdd7be07e98dba5ce86",
@@ -309,42 +1112,28 @@
               "expectedStatus": "passed",
               "projectId": "",
               "projectName": "",
-              "results": [],
-              "status": "skipped"
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1642,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-06-17T11:07:44.117Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
             }
           ],
           "id": "a752315b48b41a7aa942-2489e46b604e4d75956c",
           "file": "Security/edge-cases.spec.ts",
           "line": 14,
           "column": 5
-        }
-      ]
-    },
-    {
-      "title": "shopify-order.spec.js",
-      "file": "shopify-order.spec.js",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Automation Exercise purchase flow",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 60000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [],
-              "status": "skipped"
-            }
-          ],
-          "id": "5b7afa3508ea15bec3c6-ac2b527c84405e5f4b7b",
-          "file": "shopify-order.spec.js",
-          "line": 3,
-          "column": 1
         }
       ]
     },
@@ -365,8 +1154,22 @@
               "expectedStatus": "passed",
               "projectId": "",
               "projectName": "",
-              "results": [],
-              "status": "skipped"
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 28524,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-06-17T11:07:45.791Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
             }
           ],
           "id": "7dff6fa425278d1857ca-900efa2c02bd6ffb0aa0",
@@ -379,11 +1182,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-06-16T12:11:04.205Z",
-    "duration": 26.70500000000004,
-    "expected": 0,
-    "skipped": 12,
-    "unexpected": 0,
+    "startTime": "2026-06-17T11:05:25.079Z",
+    "duration": 174633.05299999999,
+    "expected": 20,
+    "skipped": 0,
+    "unexpected": 3,
     "flaky": 0
   }
 }
