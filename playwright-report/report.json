@@ -82,12 +82,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 13167,
+                  "duration": 12673,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-06-23T11:15:43.536Z",
+                  "startTime": "2026-06-23T11:19:13.655Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -124,10 +124,10 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "failed",
-                  "duration": 40540,
+                  "duration": 35533,
                   "error": {
-                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/.*products/\u001b[39m\nReceived string:  \u001b[31m\"https://automationexercise.com/#google_vignette\"\u001b[39m\nTimeout: 20000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 20000ms\u001b[22m\n\u001b[2m    39 × unexpected value \"https://automationexercise.com/#google_vignette\"\u001b[22m\n",
-                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/.*products/\u001b[39m\nReceived string:  \u001b[31m\"https://automationexercise.com/#google_vignette\"\u001b[39m\nTimeout: 20000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 20000ms\u001b[22m\n\u001b[2m    39 × unexpected value \"https://automationexercise.com/#google_vignette\"\u001b[22m\n\n    at ProductPage.openProducts (/Users/jay/Downloads/Plawright/E-commerce-Test/Pages/ProductPage.ts:13:29)\n    at /Users/jay/Downloads/Plawright/E-commerce-Test/tests/addToCart.spec.ts:15:3",
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/.*products/\u001b[39m\nReceived string:  \u001b[31m\"https://automationexercise.com/#google_vignette\"\u001b[39m\nTimeout: 20000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 20000ms\u001b[22m\n\u001b[2m    40 × unexpected value \"https://automationexercise.com/#google_vignette\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/.*products/\u001b[39m\nReceived string:  \u001b[31m\"https://automationexercise.com/#google_vignette\"\u001b[39m\nTimeout: 20000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 20000ms\u001b[22m\n\u001b[2m    40 × unexpected value \"https://automationexercise.com/#google_vignette\"\u001b[22m\n\n    at ProductPage.openProducts (/Users/jay/Downloads/Plawright/E-commerce-Test/Pages/ProductPage.ts:13:29)\n    at /Users/jay/Downloads/Plawright/E-commerce-Test/tests/addToCart.spec.ts:15:3",
                     "location": {
                       "file": "/Users/jay/Downloads/Plawright/E-commerce-Test/Pages/ProductPage.ts",
                       "column": 29,
@@ -142,13 +142,13 @@
                         "column": 29,
                         "line": 13
                       },
-                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/.*products/\u001b[39m\nReceived string:  \u001b[31m\"https://automationexercise.com/#google_vignette\"\u001b[39m\nTimeout: 20000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 20000ms\u001b[22m\n\u001b[2m    39 × unexpected value \"https://automationexercise.com/#google_vignette\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m../Pages/ProductPage.ts:13\n\n\u001b[0m \u001b[90m 11 |\u001b[39m\n \u001b[90m 12 |\u001b[39m     \u001b[90m// Verify navigation completed\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage)\u001b[33m.\u001b[39mtoHaveURL(\n \u001b[90m    |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m       \u001b[35m/.*products/\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 15 |\u001b[39m       { timeout\u001b[33m:\u001b[39m \u001b[35m20000\u001b[39m }\n \u001b[90m 16 |\u001b[39m     )\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at ProductPage.openProducts (/Users/jay/Downloads/Plawright/E-commerce-Test/Pages/ProductPage.ts:13:29)\u001b[22m\n\u001b[2m    at /Users/jay/Downloads/Plawright/E-commerce-Test/tests/addToCart.spec.ts:15:3\u001b[22m"
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/.*products/\u001b[39m\nReceived string:  \u001b[31m\"https://automationexercise.com/#google_vignette\"\u001b[39m\nTimeout: 20000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 20000ms\u001b[22m\n\u001b[2m    40 × unexpected value \"https://automationexercise.com/#google_vignette\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m../Pages/ProductPage.ts:13\n\n\u001b[0m \u001b[90m 11 |\u001b[39m\n \u001b[90m 12 |\u001b[39m     \u001b[90m// Verify navigation completed\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage)\u001b[33m.\u001b[39mtoHaveURL(\n \u001b[90m    |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m       \u001b[35m/.*products/\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 15 |\u001b[39m       { timeout\u001b[33m:\u001b[39m \u001b[35m20000\u001b[39m }\n \u001b[90m 16 |\u001b[39m     )\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at ProductPage.openProducts (/Users/jay/Downloads/Plawright/E-commerce-Test/Pages/ProductPage.ts:13:29)\u001b[22m\n\u001b[2m    at /Users/jay/Downloads/Plawright/E-commerce-Test/tests/addToCart.spec.ts:15:3\u001b[22m"
                     }
                   ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-06-23T11:15:43.536Z",
+                  "startTime": "2026-06-23T11:19:13.682Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -211,7 +211,7 @@
                   "workerIndex": 2,
                   "parallelIndex": 2,
                   "status": "passed",
-                  "duration": 1817,
+                  "duration": 1599,
                   "errors": [],
                   "stdout": [
                     {
@@ -220,7 +220,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-06-23T11:15:43.528Z",
+                  "startTime": "2026-06-23T11:19:13.706Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -257,7 +257,7 @@
                   "workerIndex": 3,
                   "parallelIndex": 3,
                   "status": "passed",
-                  "duration": 1357,
+                  "duration": 1668,
                   "errors": [],
                   "stdout": [
                     {
@@ -266,7 +266,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-06-23T11:15:43.547Z",
+                  "startTime": "2026-06-23T11:19:13.680Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -295,12 +295,12 @@
                   "workerIndex": 3,
                   "parallelIndex": 3,
                   "status": "passed",
-                  "duration": 7371,
+                  "duration": 5794,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-06-23T11:15:44.958Z",
+                  "startTime": "2026-06-23T11:19:15.622Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -344,12 +344,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 14959,
+                      "duration": 14903,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-06-23T11:15:45.419Z",
+                      "startTime": "2026-06-23T11:19:15.368Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -378,12 +378,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 15901,
+                      "duration": 13528,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-06-23T11:16:02.332Z",
+                      "startTime": "2026-06-23T11:19:31.768Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -412,7 +412,7 @@
                       "workerIndex": 2,
                       "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 25051,
+                      "duration": 25103,
                       "errors": [],
                       "stdout": [
                         {
@@ -440,7 +440,7 @@
                           "text": "Method: GET\n"
                         },
                         {
-                          "text": "API Request: https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-1677597403311019&output=html&adk=1812271804&adf=3025194257&abgtt=6&lmt=1782213384&plat=3%3A16%2C4%3A16%2C9%3A32776%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1081344%2C32%3A32%2C41%3A32%2C42%3A32%2C43%3A32%2C44%3A32&format=0x0&url=https%3A%2F%2Fautomationexercise.com%2F&pra=5&asro=0&aimartd=4&aieuf=1&aicrs=1&uach=WyJtYWNPUyIsIjE0LjcuMCIsIng4NiIsIiIsIjE0OC4wLjc3NzguOTYiLG51bGwsMCxudWxsLCI2NCIsW1siTm90L0EpQnJhbmQiLCI5OS4wLjAuMCJdLFsiQ2hyb21pdW0iLCIxNDguMC43Nzc4Ljk2Il1dLDBd&dt=1782213383534&bpp=163&bdt=1027&idt=547&shv=r20260622&mjsv=m202606150101&ptt=9&saldr=aa&abxe=1&cookie_enabled=1&eoidce=1&nras=1&correlator=8662197045090&frm=20&pv=2&u_tz=330&u_his=2&u_h=720&u_w=1280&u_ah=720&u_aw=1280&u_cd=24&u_sd=1&dmc=16&adx=-12245933&ady=-12245933&biw=1265&bih=720&scr_x=0&scr_y=0&eid=42533294&oid=2&pvsid=1306145886258657&tmod=1673634624&uas=3&nvt=1&fsapi=1&fc=1920&brdim=22%2C47%2C22%2C47%2C1280%2C0%2C1282%2C800%2C1280%2C720&vis=1&rsz=%7C%7Cs%7C&abl=NS&fu=32768&bc=31&bz=1&ifi=1&uci=a!1&fsb=1&dtd=739\n"
+                          "text": "API Request: https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-1677597403311019&output=html&adk=1812271804&adf=3025194257&abgtt=6&lmt=1782213587&plat=3%3A16%2C4%3A16%2C9%3A32776%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1081344%2C32%3A32%2C41%3A32%2C42%3A32%2C43%3A32%2C44%3A32&format=0x0&url=https%3A%2F%2Fautomationexercise.com%2F&pra=5&asro=0&aimartd=4&aieuf=1&aicrs=1&uach=WyJtYWNPUyIsIjE0LjcuMCIsIng4NiIsIiIsIjE0OC4wLjc3NzguOTYiLG51bGwsMCxudWxsLCI2NCIsW1siTm90L0EpQnJhbmQiLCI5OS4wLjAuMCJdLFsiQ2hyb21pdW0iLCIxNDguMC43Nzc4Ljk2Il1dLDBd&dt=1782213587399&bpp=6&bdt=373&idt=156&shv=r20260622&mjsv=m202606150101&ptt=9&saldr=aa&abxe=1&cookie_enabled=1&eoidce=1&nras=1&correlator=4372291450121&frm=20&pv=2&u_tz=330&u_his=2&u_h=720&u_w=1280&u_ah=720&u_aw=1280&u_cd=24&u_sd=1&dmc=16&adx=-12245933&ady=-12245933&biw=1265&bih=720&scr_x=0&scr_y=0&eid=95394756&oid=2&pvsid=7694980340118468&tmod=81035970&uas=3&nvt=1&fsapi=1&fc=1920&brdim=22%2C47%2C22%2C47%2C1280%2C0%2C1282%2C800%2C1280%2C720&vis=1&rsz=%7C%7Cs%7C&abl=NS&fu=32768&bc=31&bz=1&ifi=1&uci=a!1&fsb=1&dtd=305\n"
                         },
                         {
                           "text": "Method: GET\n"
@@ -457,7 +457,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-06-23T11:16:18.348Z",
+                      "startTime": "2026-06-23T11:19:45.335Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -486,16 +486,16 @@
                       "workerIndex": 2,
                       "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 32725,
+                      "duration": 22445,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "Page load time with throttling: \u001b[33m24337\u001b[39m\n"
+                          "text": "Page load time with throttling: \u001b[33m18382\u001b[39m\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-06-23T11:16:43.550Z",
+                      "startTime": "2026-06-23T11:20:10.484Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -524,12 +524,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 4032,
+                      "duration": 7213,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-06-23T11:17:16.286Z",
+                      "startTime": "2026-06-23T11:20:32.996Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -566,16 +566,16 @@
                       "workerIndex": 2,
                       "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 5696,
+                      "duration": 6465,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "Response Headers: {\n  \u001b[32m'cf-cache-status'\u001b[39m: \u001b[32m'HIT'\u001b[39m,\n  age: \u001b[32m'5673'\u001b[39m,\n  \u001b[32m'report-to'\u001b[39m: \u001b[32m'{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=C%2FheSrts8MmsVal1YSGXbAM8bbIkJwgbZZmEYL7B4VYhkMPZpNtPGoIeba4mpOXcpxNiqqnEVDmtpTin%2FhSvmsWY8e%2BLWikbSwsbM1Nj%2FaELSfJIsH4dF6OGOBPuInJAUEXNPvNtCwJ8wDq8Z4feKgtsjVF5\"}]}'\u001b[39m,\n  \u001b[32m'x-content-type-options'\u001b[39m: \u001b[32m'nosniff'\u001b[39m,\n  status: \u001b[32m'200 OK'\u001b[39m,\n  \u001b[32m'alt-svc'\u001b[39m: \u001b[32m'h3=\":443\"; ma=86400'\u001b[39m,\n  \u001b[32m'server-timing'\u001b[39m: \u001b[32m'cfExtPri'\u001b[39m,\n  date: \u001b[32m'Tue, 23 Jun 2026 11:17:23 GMT'\u001b[39m,\n  \u001b[32m'content-type'\u001b[39m: \u001b[32m'image/png'\u001b[39m,\n  \u001b[32m'content-disposition'\u001b[39m: \u001b[32m'inline; filename=\"short_logo.png\"'\u001b[39m,\n  \u001b[32m'last-modified'\u001b[39m: \u001b[32m'Wed, 13 Oct 2021 09:18:14 GMT'\u001b[39m,\n  \u001b[32m'x-frame-options'\u001b[39m: \u001b[32m'DENY'\u001b[39m,\n  priority: \u001b[32m'u=1,i'\u001b[39m,\n  \u001b[32m'cache-control'\u001b[39m: \u001b[32m'max-age=14400'\u001b[39m,\n  nel: \u001b[32m'{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}'\u001b[39m,\n  \u001b[32m'referrer-policy'\u001b[39m: \u001b[32m'same-origin'\u001b[39m,\n  \u001b[32m'cf-ray'\u001b[39m: \u001b[32m'a1031608cd5cd3c6-SIN'\u001b[39m,\n  \u001b[32m'accept-ranges'\u001b[39m: \u001b[32m'bytes'\u001b[39m,\n  \u001b[32m'content-length'\u001b[39m: \u001b[32m'1071'\u001b[39m,\n  \u001b[32m'x-powered-by'\u001b[39m: \u001b[32m'Phusion Passenger(R) 6.0.27'\u001b[39m,\n  server: \u001b[32m'cloudflare'\u001b[39m\n}\n"
+                          "text": "Response Headers: {\n  \u001b[32m'cf-cache-status'\u001b[39m: \u001b[32m'HIT'\u001b[39m,\n  age: \u001b[32m'5874'\u001b[39m,\n  \u001b[32m'report-to'\u001b[39m: \u001b[32m'{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=6FUdCy%2ByhpiclWOrEtufg%2F9%2F2WOPNelCChQ4x31fjMdF%2FSS3GdCKYe5Nf8RvTOAWH8C0kfXMYL0HckOQirySFn6fMGFqtSgoMS0nCZaOJGcSZeT%2FjhUtZIGwY1glMrK8i%2BVc0Sx1RySbAUIxROMQMPp9cJmS\"}]}'\u001b[39m,\n  \u001b[32m'x-content-type-options'\u001b[39m: \u001b[32m'nosniff'\u001b[39m,\n  status: \u001b[32m'200 OK'\u001b[39m,\n  \u001b[32m'alt-svc'\u001b[39m: \u001b[32m'h3=\":443\"; ma=86400'\u001b[39m,\n  \u001b[32m'server-timing'\u001b[39m: \u001b[32m'cfExtPri'\u001b[39m,\n  date: \u001b[32m'Tue, 23 Jun 2026 11:20:44 GMT'\u001b[39m,\n  \u001b[32m'content-type'\u001b[39m: \u001b[32m'image/png'\u001b[39m,\n  \u001b[32m'content-disposition'\u001b[39m: \u001b[32m'inline; filename=\"short_logo.png\"'\u001b[39m,\n  \u001b[32m'last-modified'\u001b[39m: \u001b[32m'Wed, 13 Oct 2021 09:18:14 GMT'\u001b[39m,\n  \u001b[32m'x-frame-options'\u001b[39m: \u001b[32m'DENY'\u001b[39m,\n  priority: \u001b[32m'u=1,i'\u001b[39m,\n  \u001b[32m'cache-control'\u001b[39m: \u001b[32m'max-age=14400'\u001b[39m,\n  nel: \u001b[32m'{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}'\u001b[39m,\n  \u001b[32m'referrer-policy'\u001b[39m: \u001b[32m'same-origin'\u001b[39m,\n  \u001b[32m'cf-ray'\u001b[39m: \u001b[32m'a1031aee6f0188ff-SIN'\u001b[39m,\n  \u001b[32m'accept-ranges'\u001b[39m: \u001b[32m'bytes'\u001b[39m,\n  \u001b[32m'content-length'\u001b[39m: \u001b[32m'1071'\u001b[39m,\n  \u001b[32m'x-powered-by'\u001b[39m: \u001b[32m'Phusion Passenger(R) 6.0.27'\u001b[39m,\n  server: \u001b[32m'cloudflare'\u001b[39m\n}\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-06-23T11:17:20.360Z",
+                      "startTime": "2026-06-23T11:20:40.245Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -604,12 +604,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 4509,
+                      "duration": 3683,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-06-23T11:17:26.101Z",
+                      "startTime": "2026-06-23T11:20:46.720Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -655,12 +655,12 @@
                       "workerIndex": 3,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 7582,
+                      "duration": 11525,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-06-23T11:15:54.762Z",
+                      "startTime": "2026-06-23T11:19:22.677Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -697,12 +697,12 @@
                       "workerIndex": 3,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 2219,
+                      "duration": 3547,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-06-23T11:16:02.356Z",
+                      "startTime": "2026-06-23T11:19:34.231Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -731,12 +731,12 @@
                       "workerIndex": 3,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 3490,
+                      "duration": 4661,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-06-23T11:16:04.660Z",
+                      "startTime": "2026-06-23T11:19:37.794Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -765,12 +765,12 @@
                       "workerIndex": 3,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 3841,
+                      "duration": 3262,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-06-23T11:16:08.257Z",
+                      "startTime": "2026-06-23T11:19:42.475Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -807,12 +807,12 @@
                       "workerIndex": 3,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 43746,
+                      "duration": 36847,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-06-23T11:16:12.143Z",
+                      "startTime": "2026-06-23T11:19:45.839Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -851,7 +851,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 56080,
+                  "duration": 51081,
                   "errors": [],
                   "stdout": [
                     {
@@ -860,7 +860,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-06-23T11:15:57.956Z",
+                  "startTime": "2026-06-23T11:19:26.977Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -897,12 +897,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 10776,
+                  "duration": 7726,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-06-23T11:16:54.267Z",
+                  "startTime": "2026-06-23T11:20:18.085Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -936,15 +936,15 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 3,
-                  "parallelIndex": 3,
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 9267,
+                  "duration": 10635,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-06-23T11:16:56.178Z",
+                  "startTime": "2026-06-23T11:20:26.536Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -978,15 +978,15 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 4,
-                  "parallelIndex": 1,
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
                   "status": "passed",
-                  "duration": 7918,
+                  "duration": 6204,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-06-23T11:17:00.465Z",
+                  "startTime": "2026-06-23T11:20:22.779Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1012,15 +1012,15 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 4,
-                  "parallelIndex": 1,
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
                   "status": "passed",
-                  "duration": 1514,
+                  "duration": 2153,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-06-23T11:17:14.753Z",
+                  "startTime": "2026-06-23T11:20:29.110Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1057,7 +1057,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "failed",
-                  "duration": 11437,
+                  "duration": 13008,
                   "error": {
                     "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.product-image-wrapper').first()\n  3367 pixels (ratio 0.04 of all image pixels) are different.\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot\" with timeout 5000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - waiting for locator('.product-image-wrapper').first()\u001b[22m\n\u001b[2m    - locator resolved to <div class=\"product-image-wrapper\">…</div>\u001b[22m\n\u001b[2m  - taking element screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - attempting scroll into view action\u001b[22m\n\u001b[2m    - waiting for element to be stable\u001b[22m\n\u001b[2m  - 3367 pixels (ratio 0.04 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - waiting for locator('.product-image-wrapper').first()\u001b[22m\n\u001b[2m    - locator resolved to <div class=\"product-image-wrapper\">…</div>\u001b[22m\n\u001b[2m  - taking element screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - attempting scroll into view action\u001b[22m\n\u001b[2m    - waiting for element to be stable\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - 3367 pixels (ratio 0.04 of all image pixels) are different.\u001b[22m\n",
                     "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.product-image-wrapper').first()\n  3367 pixels (ratio 0.04 of all image pixels) are different.\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot\" with timeout 5000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - waiting for locator('.product-image-wrapper').first()\u001b[22m\n\u001b[2m    - locator resolved to <div class=\"product-image-wrapper\">…</div>\u001b[22m\n\u001b[2m  - taking element screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - attempting scroll into view action\u001b[22m\n\u001b[2m    - waiting for element to be stable\u001b[22m\n\u001b[2m  - 3367 pixels (ratio 0.04 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - waiting for locator('.product-image-wrapper').first()\u001b[22m\n\u001b[2m    - locator resolved to <div class=\"product-image-wrapper\">…</div>\u001b[22m\n\u001b[2m  - taking element screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - attempting scroll into view action\u001b[22m\n\u001b[2m    - waiting for element to be stable\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - 3367 pixels (ratio 0.04 of all image pixels) are different.\u001b[22m\n\n    at /Users/jay/Downloads/Plawright/E-commerce-Test/tests/Visual Regression/product-card.spec.ts:19:22",
@@ -1081,7 +1081,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-06-23T11:17:05.139Z",
+                  "startTime": "2026-06-23T11:20:25.851Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -1140,8 +1140,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-06-23T11:15:42.565Z",
-    "duration": 108456.489,
+    "startTime": "2026-06-23T11:19:13.047Z",
+    "duration": 98004.713,
     "expected": 21,
     "skipped": 0,
     "unexpected": 2,
