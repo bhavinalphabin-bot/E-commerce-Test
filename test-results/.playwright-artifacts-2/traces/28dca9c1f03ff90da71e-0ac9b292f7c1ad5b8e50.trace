@@ -1,0 +1,26 @@
+{"version":8,"type":"context-options","origin":"library","browserName":"","playwrightVersion":"1.60.0","options":{},"platform":"darwin","wallTime":1782213820840,"monotonicTime":1280.909,"sdkLanguage":"javascript","contextId":"request-context@1ca7a4e82f6918a5316666bc55830ca6","title":"API/product.spec.ts:3 › Print products"}
+{"type":"before","callId":"call@5","startTime":1283.783,"class":"APIRequestContext","method":"fetch","params":{"url":"https://automationexercise.com/api/productsList","method":"GET","timeout":0},"stepId":"pw:api@32"}
+{"type":"log","callId":"call@5","time":1293.699,"message":"→ GET https://automationexercise.com/api/productsList"}
+{"type":"log","callId":"call@5","time":1293.739,"message":"  user-agent: Playwright/1.60.0 (x64; macOS 14.7) node/24.16"}
+{"type":"log","callId":"call@5","time":1293.746,"message":"  accept: */*"}
+{"type":"log","callId":"call@5","time":1293.753,"message":"  accept-encoding: gzip,deflate,br"}
+{"type":"log","callId":"call@5","time":2572.246,"message":"← 200 OK"}
+{"type":"log","callId":"call@5","time":2572.305,"message":"  date: Tue, 23 Jun 2026 11:23:42 GMT"}
+{"type":"log","callId":"call@5","time":2572.319,"message":"  content-type: text/html; charset=utf-8"}
+{"type":"log","callId":"call@5","time":2572.349,"message":"  transfer-encoding: chunked"}
+{"type":"log","callId":"call@5","time":2572.389,"message":"  connection: keep-alive"}
+{"type":"log","callId":"call@5","time":2572.412,"message":"  vary: Accept,Cookie,Accept-Encoding"}
+{"type":"log","callId":"call@5","time":2572.425,"message":"  referrer-policy: same-origin"}
+{"type":"log","callId":"call@5","time":2572.432,"message":"  x-frame-options: DENY"}
+{"type":"log","callId":"call@5","time":2572.438,"message":"  x-content-type-options: nosniff"}
+{"type":"log","callId":"call@5","time":2572.444,"message":"  allow: OPTIONS, POST, DELETE, PUT, GET"}
+{"type":"log","callId":"call@5","time":2572.449,"message":"  x-powered-by: Phusion Passenger(R) 6.1.2"}
+{"type":"log","callId":"call@5","time":2572.454,"message":"  status: 200 OK"}
+{"type":"log","callId":"call@5","time":2572.459,"message":"  report-to: {\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=TsUW%2FGmA5JjolnAJzgeD5imtTyeA6FAdqaghe7lnMFbhswvAOLy2MTv3xlulKDbObUd9ABuSLUb15hZ5LNqU4WHokLT%2F1c15UQHlSZZuY9roAkwJOVQTwCa%2BjKHsIkBtz5L873ESBQW8q8zf9jnSbxCYjhNJ\"}]}"}
+{"type":"log","callId":"call@5","time":2572.473,"message":"  server: cloudflare"}
+{"type":"log","callId":"call@5","time":2572.479,"message":"  cf-cache-status: DYNAMIC"}
+{"type":"log","callId":"call@5","time":2572.485,"message":"  nel: {\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"}
+{"type":"log","callId":"call@5","time":2572.491,"message":"  content-encoding: br"}
+{"type":"log","callId":"call@5","time":2572.498,"message":"  cf-ray: a1031f3e4981ec6d-SIN"}
+{"type":"log","callId":"call@5","time":2572.503,"message":"  alt-svc: h3=\":443\"; ma=86400"}
+{"type":"after","callId":"call@5","endTime":2825.61,"result":{"response":{"url":"https://automationexercise.com/api/productsList","status":200,"statusText":"OK","headers":[{"name":"Date","value":"Tue, 23 Jun 2026 11:23:42 GMT"},{"name":"Content-Type","value":"text/html; charset=utf-8"},{"name":"Transfer-Encoding","value":"chunked"},{"name":"Connection","value":"keep-alive"},{"name":"Vary","value":"Accept,Cookie,Accept-Encoding"},{"name":"Referrer-Policy","value":"same-origin"},{"name":"X-Frame-Options","value":"DENY"},{"name":"X-Content-Type-Options","value":"nosniff"},{"name":"Allow","value":"OPTIONS, POST, DELETE, PUT, GET"},{"name":"X-Powered-By","value":"Phusion Passenger(R) 6.1.2"},{"name":"Status","value":"200 OK"},{"name":"Report-To","value":"{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=TsUW%2FGmA5JjolnAJzgeD5imtTyeA6FAdqaghe7lnMFbhswvAOLy2MTv3xlulKDbObUd9ABuSLUb15hZ5LNqU4WHokLT%2F1c15UQHlSZZuY9roAkwJOVQTwCa%2BjKHsIkBtz5L873ESBQW8q8zf9jnSbxCYjhNJ\"}]}"},{"name":"Server","value":"cloudflare"},{"name":"Cf-Cache-Status","value":"DYNAMIC"},{"name":"Nel","value":"{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"},{"name":"Content-Encoding","value":"br"},{"name":"CF-RAY","value":"a1031f3e4981ec6d-SIN"},{"name":"alt-svc","value":"h3=\":443\"; ma=86400"}],"body":"<Buffer>","fetchUid":"e899962b51015711abbf4533e74c5bec"}}}
