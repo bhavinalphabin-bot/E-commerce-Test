@@ -82,12 +82,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 9861,
+                  "duration": 13352,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-06-30T12:12:32.196Z",
+                  "startTime": "2026-06-30T12:14:38.305Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -123,8 +123,8 @@
                 {
                   "workerIndex": 1,
                   "parallelIndex": 1,
-                  "status": "skipped",
-                  "duration": 0,
+                  "status": "interrupted",
+                  "duration": 48586,
                   "errors": [],
                   "stdout": [
                     {
@@ -133,13 +133,18 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-06-30T12:12:32.212Z",
+                  "startTime": "2026-06-30T12:14:38.331Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
                       "path": "/Users/jay/Downloads/Plawright/E-commerce-Test/test-results/addToCart-Add-Product-To-Cart/test-failed-1.png"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/jay/Downloads/Plawright/E-commerce-Test/test-results/addToCart-Add-Product-To-Cart/trace.zip"
                     }
                   ]
                 }
@@ -176,7 +181,7 @@
                   "workerIndex": 2,
                   "parallelIndex": 2,
                   "status": "passed",
-                  "duration": 1390,
+                  "duration": 1380,
                   "errors": [],
                   "stdout": [
                     {
@@ -185,7 +190,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-06-30T12:12:32.224Z",
+                  "startTime": "2026-06-30T12:14:38.288Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -222,7 +227,7 @@
                   "workerIndex": 3,
                   "parallelIndex": 3,
                   "status": "passed",
-                  "duration": 1483,
+                  "duration": 1428,
                   "errors": [],
                   "stdout": [
                     {
@@ -231,7 +236,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-06-30T12:12:32.228Z",
+                  "startTime": "2026-06-30T12:14:38.299Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -260,12 +265,12 @@
                   "workerIndex": 3,
                   "parallelIndex": 3,
                   "status": "passed",
-                  "duration": 3267,
+                  "duration": 6781,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-06-30T12:12:33.745Z",
+                  "startTime": "2026-06-30T12:14:39.768Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -309,12 +314,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 8427,
+                      "duration": 17899,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-06-30T12:12:33.669Z",
+                      "startTime": "2026-06-30T12:14:39.713Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -342,18 +347,37 @@
                     {
                       "workerIndex": 2,
                       "parallelIndex": 2,
-                      "status": "passed",
-                      "duration": 21552,
-                      "errors": [],
+                      "status": "interrupted",
+                      "duration": 28918,
+                      "error": {
+                        "message": "Error: browserContext.close: Test ended.\nBrowser logs:\n\n<launching> /Users/jay/Library/Caches/ms-playwright/chromium-1223/chrome-mac-x64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=/var/folders/8z/275qrrln1sb43k35hh1wvjsc0000gp/T/playwright_chromiumdev_profile-dgUQop --remote-debugging-pipe --no-startup-window\n<launched> pid=29589\n[pid=29589][err] [29601:249676:0630/174441.173665:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Error) eglQueryDeviceAttribEXT: Bad attribute.\n[pid=29589][err] [29601:249676:0630/174441.181130:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Error) eglQueryDeviceAttribEXT: Bad attribute.\n[pid=29589][err] [29601:249676:0630/174441.181574:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Error) eglQueryDeviceAttribEXT: Bad attribute.\n[pid=29589][err] [29601:249676:0630/174458.966294:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Error) eglQueryDeviceAttribEXT: Bad attribute.\n[pid=29589][err] [29601:249676:0630/174458.967392:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Error) eglQueryDeviceAttribEXT: Bad attribute.\n[pid=29589][err] [29601:249676:0630/174458.967796:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Error) eglQueryDeviceAttribEXT: Bad attribute.\n[pid=29589] <gracefully close start>",
+                        "stack": "Error: browserContext.close: Test ended.\nBrowser logs:\n\n<launching> /Users/jay/Library/Caches/ms-playwright/chromium-1223/chrome-mac-x64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=/var/folders/8z/275qrrln1sb43k35hh1wvjsc0000gp/T/playwright_chromiumdev_profile-dgUQop --remote-debugging-pipe --no-startup-window\n<launched> pid=29589\n[pid=29589][err] [29601:249676:0630/174441.173665:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Error) eglQueryDeviceAttribEXT: Bad attribute.\n[pid=29589][err] [29601:249676:0630/174441.181130:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Error) eglQueryDeviceAttribEXT: Bad attribute.\n[pid=29589][err] [29601:249676:0630/174441.181574:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Error) eglQueryDeviceAttribEXT: Bad attribute.\n[pid=29589][err] [29601:249676:0630/174458.966294:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Error) eglQueryDeviceAttribEXT: Bad attribute.\n[pid=29589][err] [29601:249676:0630/174458.967392:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Error) eglQueryDeviceAttribEXT: Bad attribute.\n[pid=29589][err] [29601:249676:0630/174458.967796:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Error) eglQueryDeviceAttribEXT: Bad attribute.\n[pid=29589] <gracefully close start>"
+                      },
+                      "errors": [
+                        {
+                          "message": "Error: browserContext.close: Test ended.\nBrowser logs:\n\n<launching> /Users/jay/Library/Caches/ms-playwright/chromium-1223/chrome-mac-x64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=/var/folders/8z/275qrrln1sb43k35hh1wvjsc0000gp/T/playwright_chromiumdev_profile-dgUQop --remote-debugging-pipe --no-startup-window\n<launched> pid=29589\n[pid=29589][err] [29601:249676:0630/174441.173665:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Error) eglQueryDeviceAttribEXT: Bad attribute.\n[pid=29589][err] [29601:249676:0630/174441.181130:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Error) eglQueryDeviceAttribEXT: Bad attribute.\n[pid=29589][err] [29601:249676:0630/174441.181574:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Error) eglQueryDeviceAttribEXT: Bad attribute.\n[pid=29589][err] [29601:249676:0630/174458.966294:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Error) eglQueryDeviceAttribEXT: Bad attribute.\n[pid=29589][err] [29601:249676:0630/174458.967392:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Error) eglQueryDeviceAttribEXT: Bad attribute.\n[pid=29589][err] [29601:249676:0630/174458.967796:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Error) eglQueryDeviceAttribEXT: Bad attribute.\n[pid=29589] <gracefully close start>"
+                        }
+                      ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-06-30T12:12:43.032Z",
+                      "startTime": "2026-06-30T12:14:58.549Z",
                       "annotations": [],
-                      "attachments": []
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/jay/Downloads/Plawright/E-commerce-Test/test-results/api-mocking-API-Mocking-Ex-d9749-essful-API-with-custom-data/test-failed-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/jay/Downloads/Plawright/E-commerce-Test/test-results/api-mocking-API-Mocking-Ex-d9749-essful-API-with-custom-data/trace.zip"
+                        }
+                      ]
                     }
                   ],
-                  "status": "expected"
+                  "status": "skipped"
                 }
               ],
               "id": "bcff5fa723f516684996-7dd7f555d12695601b70",
@@ -372,85 +396,7 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 2,
-                      "parallelIndex": 2,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "API Request: https://fonts.googleapis.com/icon?family=Material+Icons\n"
-                        },
-                        {
-                          "text": "Method: GET\n"
-                        },
-                        {
-                          "text": "API Request: http://fonts.googleapis.com/css?family=Roboto:400,300,400italic,500,700,100\n"
-                        },
-                        {
-                          "text": "Method: GET\n"
-                        },
-                        {
-                          "text": "API Request: http://fonts.googleapis.com/css?family=Open+Sans:400,800,300,600,700\n"
-                        },
-                        {
-                          "text": "Method: GET\n"
-                        },
-                        {
-                          "text": "API Request: http://fonts.googleapis.com/css?family=Abel\n"
-                        },
-                        {
-                          "text": "Method: GET\n"
-                        },
-                        {
-                          "text": "API Request: https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-1677597403311019&output=html&adk=1812271804&adf=3025194257&abgtt=6&lmt=1782821591&plat=3%3A16%2C4%3A16%2C9%3A32776%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1081344%2C32%3A32%2C41%3A32%2C42%3A32%2C43%3A32%2C44%3A32&format=0x0&url=https%3A%2F%2Fautomationexercise.com%2F&pra=5&asro=0&aimartd=4&aieuf=1&aicrs=1&uach=WyJtYWNPUyIsIjE0LjcuMCIsIng4NiIsIiIsIjE0OC4wLjc3NzguOTYiLG51bGwsMCxudWxsLCI2NCIsW1siTm90L0EpQnJhbmQiLCI5OS4wLjAuMCJdLFsiQ2hyb21pdW0iLCIxNDguMC43Nzc4Ljk2Il1dLDBd&dt=1782821590987&bpp=7&bdt=1428&idt=462&shv=r20260625&mjsv=m202606250101&ptt=9&saldr=aa&abxe=1&cookie_enabled=1&eoidce=1&nras=1&correlator=2119142426025&frm=20&pv=2&u_tz=330&u_his=2&u_h=720&u_w=1280&u_ah=720&u_aw=1280&u_cd=24&u_sd=1&dmc=16&adx=-12245933&ady=-12245933&biw=1265&bih=720&scr_x=0&scr_y=0&oid=2&pvsid=5499045860006566&tmod=1835833980&uas=0&nvt=1&fsapi=1&fc=1920&brdim=22%2C47%2C22%2C47%2C1280%2C0%2C1282%2C800%2C1280%2C720&vis=1&rsz=%7C%7Cs%7C&abl=NS&fu=32768&bc=31&bz=1&ifi=1&uci=a!1&fsb=1&dtd=644\n"
-                        },
-                        {
-                          "text": "Method: GET\n"
-                        },
-                        {
-                          "text": "API Request: https://fonts.googleapis.com/css?family=Roboto%3A500\n"
-                        },
-                        {
-                          "text": "Method: GET\n"
-                        },
-                        {
-                          "text": "API Request: https://fonts.googleapis.com/css?family=Google%20Sans%3A400\n"
-                        },
-                        {
-                          "text": "Method: GET\n"
-                        },
-                        {
-                          "text": "API Request: https://fonts.googleapis.com/css?family=Google%20Sans%3A700\n"
-                        },
-                        {
-                          "text": "Method: GET\n"
-                        },
-                        {
-                          "text": "API Request: https://www.google.com/recaptcha/api2/aframe\n"
-                        },
-                        {
-                          "text": "Method: GET\n"
-                        },
-                        {
-                          "text": "Total API requests: \u001b[33m9\u001b[39m\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-06-30T12:13:04.595Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/jay/Downloads/Plawright/E-commerce-Test/test-results/api-mocking-API-Mocking-Ex-e0969-or-and-log-network-requests/test-failed-1.png"
-                        }
-                      ]
-                    }
-                  ],
+                  "results": [],
                   "status": "skipped"
                 }
               ],
@@ -580,12 +526,12 @@
                       "workerIndex": 3,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 17871,
+                      "duration": 14154,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-06-30T12:12:37.897Z",
+                      "startTime": "2026-06-30T12:14:47.461Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -622,12 +568,12 @@
                       "workerIndex": 3,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 4365,
+                      "duration": 12172,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-06-30T12:12:55.783Z",
+                      "startTime": "2026-06-30T12:15:01.635Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -656,12 +602,12 @@
                       "workerIndex": 3,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 6401,
+                      "duration": 5370,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-06-30T12:13:00.186Z",
+                      "startTime": "2026-06-30T12:15:13.820Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -690,12 +636,12 @@
                       "workerIndex": 3,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 2807,
+                      "duration": 5659,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-06-30T12:13:06.604Z",
+                      "startTime": "2026-06-30T12:15:19.875Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -731,19 +677,27 @@
                     {
                       "workerIndex": 3,
                       "parallelIndex": 3,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
+                      "status": "interrupted",
+                      "duration": 2743,
+                      "error": {
+                        "message": "Error: browserContext.newPage: Test ended.",
+                        "stack": "Error: browserContext.newPage: Test ended."
+                      },
+                      "errors": [
+                        {
+                          "message": "Error: browserContext.newPage: Test ended."
+                        }
+                      ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-06-30T12:13:09.434Z",
+                      "startTime": "2026-06-30T12:15:25.561Z",
                       "annotations": [],
                       "attachments": [
                         {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/jay/Downloads/Plawright/E-commerce-Test/test-results/browser-interactions-Multi-54d9c-witch-between-multiple-tabs/test-failed-1.png"
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/jay/Downloads/Plawright/E-commerce-Test/test-results/browser-interactions-Multi-54d9c-witch-between-multiple-tabs/trace.zip"
                         }
                       ]
                     }
@@ -781,8 +735,8 @@
                 {
                   "workerIndex": 0,
                   "parallelIndex": 0,
-                  "status": "skipped",
-                  "duration": 0,
+                  "status": "interrupted",
+                  "duration": 38040,
                   "errors": [],
                   "stdout": [
                     {
@@ -791,13 +745,23 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-06-30T12:12:42.748Z",
+                  "startTime": "2026-06-30T12:14:52.687Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
                       "path": "/Users/jay/Downloads/Plawright/E-commerce-Test/test-results/CheckoutPage-Complete-Checkout-Flow/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/jay/Downloads/Plawright/E-commerce-Test/test-results/CheckoutPage-Complete-Checkout-Flow/video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/jay/Downloads/Plawright/E-commerce-Test/test-results/CheckoutPage-Complete-Checkout-Flow/trace.zip"
                     }
                   ]
                 }
@@ -947,10 +911,10 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-06-30T12:12:31.510Z",
-    "duration": 61941.975,
-    "expected": 10,
-    "skipped": 13,
+    "startTime": "2026-06-30T12:14:37.596Z",
+    "duration": 54423.657999999996,
+    "expected": 9,
+    "skipped": 14,
     "unexpected": 0,
     "flaky": 0
   }
