@@ -81,24 +81,18 @@
                 {
                   "workerIndex": 0,
                   "parallelIndex": 0,
-                  "status": "skipped",
-                  "duration": 0,
+                  "status": "passed",
+                  "duration": 10735,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-06-23T11:42:53.900Z",
+                  "startTime": "2026-06-30T12:00:12.367Z",
                   "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/jay/Downloads/Plawright/E-commerce-Test/test-results/a11y-Accessibility-auditin-29b5d-ield-is-keyboard-accessible/test-failed-1.png"
-                    }
-                  ]
+                  "attachments": []
                 }
               ],
-              "status": "skipped"
+              "status": "expected"
             }
           ],
           "id": "d35ea515ab0a689d77fe-d821bdc5e094cdb8db94",
@@ -135,7 +129,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-06-23T11:42:53.897Z",
+                  "startTime": "2026-06-30T12:00:12.337Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -178,7 +172,7 @@
                   "workerIndex": 2,
                   "parallelIndex": 2,
                   "status": "passed",
-                  "duration": 1196,
+                  "duration": 1651,
                   "errors": [],
                   "stdout": [
                     {
@@ -187,7 +181,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-06-23T11:42:53.930Z",
+                  "startTime": "2026-06-30T12:00:12.337Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -224,7 +218,7 @@
                   "workerIndex": 3,
                   "parallelIndex": 3,
                   "status": "passed",
-                  "duration": 1642,
+                  "duration": 1689,
                   "errors": [],
                   "stdout": [
                     {
@@ -233,7 +227,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-06-23T11:42:53.901Z",
+                  "startTime": "2026-06-30T12:00:12.350Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -262,12 +256,12 @@
                   "workerIndex": 3,
                   "parallelIndex": 3,
                   "status": "passed",
-                  "duration": 4876,
+                  "duration": 3865,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-06-23T11:42:55.589Z",
+                  "startTime": "2026-06-30T12:00:14.081Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -310,24 +304,18 @@
                     {
                       "workerIndex": 2,
                       "parallelIndex": 2,
-                      "status": "skipped",
-                      "duration": 0,
+                      "status": "passed",
+                      "duration": 18411,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-06-23T11:42:55.215Z",
+                      "startTime": "2026-06-30T12:00:14.051Z",
                       "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/jay/Downloads/Plawright/E-commerce-Test/test-results/api-mocking-API-Mocking-Ex-54503-product-search-API-response/test-failed-1.png"
-                        }
-                      ]
+                      "attachments": []
                     }
                   ],
-                  "status": "skipped"
+                  "status": "expected"
                 }
               ],
               "id": "bcff5fa723f516684996-2efc3c9ac0276c723554",
@@ -346,7 +334,27 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [],
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-30T12:00:33.702Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/jay/Downloads/Plawright/E-commerce-Test/test-results/api-mocking-API-Mocking-Ex-d9749-essful-API-with-custom-data/test-failed-1.png"
+                        }
+                      ]
+                    }
+                  ],
                   "status": "skipped"
                 }
               ],
@@ -495,18 +503,18 @@
                     {
                       "workerIndex": 3,
                       "parallelIndex": 3,
-                      "status": "skipped",
-                      "duration": 0,
+                      "status": "passed",
+                      "duration": 13252,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-06-23T11:43:02.160Z",
+                      "startTime": "2026-06-30T12:00:19.082Z",
                       "annotations": [],
                       "attachments": []
                     }
                   ],
-                  "status": "skipped"
+                  "status": "expected"
                 }
               ],
               "id": "2ba1996ab9af49a658f4-f46a251753237921368f",
@@ -533,8 +541,22 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [],
-                  "status": "skipped"
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 3234,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-30T12:00:32.375Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
               "id": "2ba1996ab9af49a658f4-3b0db2521e4a8fe1b78e",
@@ -553,7 +575,21 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [],
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-30T12:00:35.651Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
                   "status": "skipped"
                 }
               ],
@@ -631,7 +667,25 @@
               "expectedStatus": "passed",
               "projectId": "",
               "projectName": "",
-              "results": [],
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Current URL: https://automationexercise.com/products\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-06-30T12:00:23.783Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
               "status": "skipped"
             }
           ],
@@ -777,10 +831,10 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-06-23T11:42:53.125Z",
-    "duration": 16173.695,
-    "expected": 3,
-    "skipped": 20,
+    "startTime": "2026-06-30T12:00:11.389Z",
+    "duration": 27458.61,
+    "expected": 7,
+    "skipped": 16,
     "unexpected": 0,
     "flaky": 0
   }

@@ -1,26 +1,26 @@
-{"version":8,"type":"context-options","origin":"library","browserName":"","playwrightVersion":"1.60.0","options":{},"platform":"darwin","wallTime":1782214973996,"monotonicTime":1448.3,"sdkLanguage":"javascript","contextId":"request-context@569d918cbbcf43d514784a9dd438f7ad","title":"API/product.spec.ts:3 › Print products"}
-{"type":"before","callId":"call@5","startTime":1450.908,"class":"APIRequestContext","method":"fetch","params":{"url":"https://automationexercise.com/api/productsList","method":"GET","timeout":0},"stepId":"pw:api@32"}
-{"type":"log","callId":"call@5","time":1459.629,"message":"→ GET https://automationexercise.com/api/productsList"}
-{"type":"log","callId":"call@5","time":1459.66,"message":"  user-agent: Playwright/1.60.0 (x64; macOS 14.7) node/24.16"}
-{"type":"log","callId":"call@5","time":1459.667,"message":"  accept: */*"}
-{"type":"log","callId":"call@5","time":1459.672,"message":"  accept-encoding: gzip,deflate,br"}
-{"type":"log","callId":"call@5","time":2547.107,"message":"← 200 OK"}
-{"type":"log","callId":"call@5","time":2547.157,"message":"  date: Tue, 23 Jun 2026 11:42:55 GMT"}
-{"type":"log","callId":"call@5","time":2547.169,"message":"  content-type: text/html; charset=utf-8"}
-{"type":"log","callId":"call@5","time":2547.178,"message":"  transfer-encoding: chunked"}
-{"type":"log","callId":"call@5","time":2547.193,"message":"  connection: keep-alive"}
-{"type":"log","callId":"call@5","time":2547.209,"message":"  vary: Accept,Cookie,Accept-Encoding"}
-{"type":"log","callId":"call@5","time":2547.22,"message":"  referrer-policy: same-origin"}
-{"type":"log","callId":"call@5","time":2547.226,"message":"  x-frame-options: DENY"}
-{"type":"log","callId":"call@5","time":2547.232,"message":"  x-content-type-options: nosniff"}
-{"type":"log","callId":"call@5","time":2547.237,"message":"  allow: OPTIONS, PUT, GET, POST, DELETE"}
-{"type":"log","callId":"call@5","time":2547.242,"message":"  x-powered-by: Phusion Passenger(R) 6.1.2"}
-{"type":"log","callId":"call@5","time":2547.247,"message":"  status: 200 OK"}
-{"type":"log","callId":"call@5","time":2547.252,"message":"  report-to: {\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=8fL8vtj0G8XpeNujWo2dnB0cRNRHwFFY%2FK5OLknz2hTWcgZBL9iO4CRIuvgL8IOh45QLULgIOIebb%2ByGqJEc0emLq1baCPQWBlSH2Z6DjGU2FU673Z%2Fwk9%2ByFsRslWgjF5nw4%2BxLS7wUh0VKOCF7eQZU%2FehD\"}]}"}
-{"type":"log","callId":"call@5","time":2547.262,"message":"  server: cloudflare"}
-{"type":"log","callId":"call@5","time":2547.267,"message":"  cf-cache-status: DYNAMIC"}
-{"type":"log","callId":"call@5","time":2547.273,"message":"  nel: {\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"}
-{"type":"log","callId":"call@5","time":2547.278,"message":"  content-encoding: br"}
-{"type":"log","callId":"call@5","time":2547.284,"message":"  cf-ray: a1033b66c88c1984-SIN"}
-{"type":"log","callId":"call@5","time":2547.289,"message":"  alt-svc: h3=\":443\"; ma=86400"}
-{"type":"after","callId":"call@5","endTime":2552.059,"result":{"response":{"url":"https://automationexercise.com/api/productsList","status":200,"statusText":"OK","headers":[{"name":"Date","value":"Tue, 23 Jun 2026 11:42:55 GMT"},{"name":"Content-Type","value":"text/html; charset=utf-8"},{"name":"Transfer-Encoding","value":"chunked"},{"name":"Connection","value":"keep-alive"},{"name":"Vary","value":"Accept,Cookie,Accept-Encoding"},{"name":"Referrer-Policy","value":"same-origin"},{"name":"X-Frame-Options","value":"DENY"},{"name":"X-Content-Type-Options","value":"nosniff"},{"name":"Allow","value":"OPTIONS, PUT, GET, POST, DELETE"},{"name":"X-Powered-By","value":"Phusion Passenger(R) 6.1.2"},{"name":"Status","value":"200 OK"},{"name":"Report-To","value":"{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=8fL8vtj0G8XpeNujWo2dnB0cRNRHwFFY%2FK5OLknz2hTWcgZBL9iO4CRIuvgL8IOh45QLULgIOIebb%2ByGqJEc0emLq1baCPQWBlSH2Z6DjGU2FU673Z%2Fwk9%2ByFsRslWgjF5nw4%2BxLS7wUh0VKOCF7eQZU%2FehD\"}]}"},{"name":"Server","value":"cloudflare"},{"name":"Cf-Cache-Status","value":"DYNAMIC"},{"name":"Nel","value":"{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"},{"name":"Content-Encoding","value":"br"},{"name":"CF-RAY","value":"a1033b66c88c1984-SIN"},{"name":"alt-svc","value":"h3=\":443\"; ma=86400"}],"body":"<Buffer>","fetchUid":"d34718d327ef514c4c377107fdc8e3a2"}}}
+{"version":8,"type":"context-options","origin":"library","browserName":"","playwrightVersion":"1.60.0","options":{},"platform":"darwin","wallTime":1782820812429,"monotonicTime":1534.188,"sdkLanguage":"javascript","contextId":"request-context@29db69f0cffb543f47f6820877932c33","title":"API/product.spec.ts:3 › Print products"}
+{"type":"before","callId":"call@5","startTime":1537.228,"class":"APIRequestContext","method":"fetch","params":{"url":"https://automationexercise.com/api/productsList","method":"GET","timeout":0},"stepId":"pw:api@32"}
+{"type":"log","callId":"call@5","time":1546.733,"message":"→ GET https://automationexercise.com/api/productsList"}
+{"type":"log","callId":"call@5","time":1546.799,"message":"  user-agent: Playwright/1.60.0 (x64; macOS 14.7) node/24.16"}
+{"type":"log","callId":"call@5","time":1546.809,"message":"  accept: */*"}
+{"type":"log","callId":"call@5","time":1546.818,"message":"  accept-encoding: gzip,deflate,br"}
+{"type":"log","callId":"call@5","time":3126.422,"message":"← 200 OK"}
+{"type":"log","callId":"call@5","time":3126.459,"message":"  date: Tue, 30 Jun 2026 12:00:13 GMT"}
+{"type":"log","callId":"call@5","time":3126.466,"message":"  content-type: text/html; charset=utf-8"}
+{"type":"log","callId":"call@5","time":3126.474,"message":"  transfer-encoding: chunked"}
+{"type":"log","callId":"call@5","time":3126.483,"message":"  connection: keep-alive"}
+{"type":"log","callId":"call@5","time":3126.492,"message":"  vary: Accept,Cookie,Accept-Encoding"}
+{"type":"log","callId":"call@5","time":3126.498,"message":"  referrer-policy: same-origin"}
+{"type":"log","callId":"call@5","time":3126.501,"message":"  x-frame-options: DENY"}
+{"type":"log","callId":"call@5","time":3126.504,"message":"  x-content-type-options: nosniff"}
+{"type":"log","callId":"call@5","time":3126.507,"message":"  allow: POST, DELETE, OPTIONS, GET, PUT"}
+{"type":"log","callId":"call@5","time":3126.51,"message":"  x-powered-by: Phusion Passenger(R) 6.1.2"}
+{"type":"log","callId":"call@5","time":3126.512,"message":"  status: 200 OK"}
+{"type":"log","callId":"call@5","time":3126.515,"message":"  nel: {\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"}
+{"type":"log","callId":"call@5","time":3126.518,"message":"  server: cloudflare"}
+{"type":"log","callId":"call@5","time":3126.522,"message":"  cf-cache-status: DYNAMIC"}
+{"type":"log","callId":"call@5","time":3126.525,"message":"  report-to: {\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=LP8XXbPZ5MuXvcZmBorJ3T2Qpwq%2FJThMaFCPMNoYjAsWi4TYSUcBCHM%2FuQBL96XXkYO6JlYuQTbd7g6vsg95gUeofwycHInOBVRYwcSTBl2vHKjci1nXQF%2Fnjb6ohKUlQ4ELkNjzUAJ4aKduIw5xM9MuigHg\"}]}"}
+{"type":"log","callId":"call@5","time":3126.531,"message":"  content-encoding: br"}
+{"type":"log","callId":"call@5","time":3126.534,"message":"  cf-ray: a13d0261b927c26b-SIN"}
+{"type":"log","callId":"call@5","time":3126.537,"message":"  alt-svc: h3=\":443\"; ma=86400"}
+{"type":"after","callId":"call@5","endTime":3129.34,"result":{"response":{"url":"https://automationexercise.com/api/productsList","status":200,"statusText":"OK","headers":[{"name":"Date","value":"Tue, 30 Jun 2026 12:00:13 GMT"},{"name":"Content-Type","value":"text/html; charset=utf-8"},{"name":"Transfer-Encoding","value":"chunked"},{"name":"Connection","value":"keep-alive"},{"name":"Vary","value":"Accept,Cookie,Accept-Encoding"},{"name":"Referrer-Policy","value":"same-origin"},{"name":"X-Frame-Options","value":"DENY"},{"name":"X-Content-Type-Options","value":"nosniff"},{"name":"Allow","value":"POST, DELETE, OPTIONS, GET, PUT"},{"name":"X-Powered-By","value":"Phusion Passenger(R) 6.1.2"},{"name":"Status","value":"200 OK"},{"name":"Nel","value":"{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"},{"name":"Server","value":"cloudflare"},{"name":"Cf-Cache-Status","value":"DYNAMIC"},{"name":"Report-To","value":"{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=LP8XXbPZ5MuXvcZmBorJ3T2Qpwq%2FJThMaFCPMNoYjAsWi4TYSUcBCHM%2FuQBL96XXkYO6JlYuQTbd7g6vsg95gUeofwycHInOBVRYwcSTBl2vHKjci1nXQF%2Fnjb6ohKUlQ4ELkNjzUAJ4aKduIw5xM9MuigHg\"}]}"},{"name":"Content-Encoding","value":"br"},{"name":"CF-RAY","value":"a13d0261b927c26b-SIN"},{"name":"alt-svc","value":"h3=\":443\"; ma=86400"}],"body":"<Buffer>","fetchUid":"b1a0eedb52050495a2502d8f35557444"}}}

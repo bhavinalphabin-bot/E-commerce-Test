@@ -19,12 +19,22 @@ Error: Channel closed
 Error: expect(page).toHaveURL(expected) failed
 
 Expected pattern: /.*products/
-Received string:  "https://automationexercise.com/#google_vignette"
+Received string:  "chrome-error://chromewebdata/"
+Timeout: 20000ms
 
 Call log:
   - Expect "toHaveURL" with timeout 20000ms
-    18 × unexpected value "https://automationexercise.com/#google_vignette"
+    38 × unexpected value "chrome-error://chromewebdata/"
 
+```
+
+```yaml
+- heading "This page isn’t working" [level=1]
+- paragraph:
+  - strong: automationexercise.com
+  - text: is currently unable to handle this request.
+- text: HTTP ERROR 500
+- button "Reload"
 ```
 
 # Test source
