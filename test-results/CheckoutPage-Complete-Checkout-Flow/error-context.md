@@ -12,97 +12,99 @@
 # Error details
 
 ```
-Test timeout of 60000ms exceeded.
+Error: Channel closed
 ```
 
-# Page snapshot
+```
+Error: locator.click: Test ended.
+Call log:
+  - waiting for getByText('View Cart')
+    - locator resolved to <u>View Cart</u>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    29 × waiting for element to be visible, enabled and stable
+       - element is not visible
+     - retrying click action
+       - waiting 500ms
 
-```yaml
-- generic [active] [ref=e1]:
-  - banner [ref=e2]:
-    - generic [ref=e5]:
-      - link "Automation Exercise website" [ref=e8] [cursor=pointer]:
-        - /url: /
-        - img "Automation Exercise website" [ref=e9]
-      - list [ref=e12]:
-        - listitem [ref=e13]:
-          - link " Home" [ref=e14] [cursor=pointer]:
-            - /url: /
-            - generic [ref=e15]: 
-            - text: Home
-        - listitem [ref=e16]:
-          - link " Products" [ref=e17] [cursor=pointer]:
-            - /url: /products
-            - generic [ref=e18]: 
-            - text: Products
-        - listitem [ref=e19]:
-          - link " Cart" [ref=e20] [cursor=pointer]:
-            - /url: /view_cart
-            - generic [ref=e21]: 
-            - text: Cart
-        - listitem [ref=e22]:
-          - link " Logout" [ref=e23] [cursor=pointer]:
-            - /url: /logout
-            - generic [ref=e24]: 
-            - text: Logout
-        - listitem [ref=e25]:
-          - link " Delete Account" [ref=e26] [cursor=pointer]:
-            - /url: /delete_account
-            - generic [ref=e27]: 
-            - text: Delete Account
-        - listitem [ref=e28]:
-          - link " Test Cases" [ref=e29] [cursor=pointer]:
-            - /url: /test_cases
-            - generic [ref=e30]: 
-            - text: Test Cases
-        - listitem [ref=e31]:
-          - link " API Testing" [ref=e32] [cursor=pointer]:
-            - /url: /api_list
-            - generic [ref=e33]: 
-            - text: API Testing
-        - listitem [ref=e34]:
-          - link " Video Tutorials" [ref=e35] [cursor=pointer]:
-            - /url: https://www.youtube.com/c/AutomationExercise
-            - generic [ref=e36]: 
-            - text: Video Tutorials
-        - listitem [ref=e37]:
-          - link " Contact us" [ref=e38] [cursor=pointer]:
-            - /url: /contact_us
-            - generic [ref=e39]: 
-            - text: Contact us
-        - listitem [ref=e40]:
-          - generic [ref=e41]:
-            - generic [ref=e42]: 
-            - text: Logged in as Bhavy Mangukiya
-  - generic [ref=e46]:
-    - heading "Order Placed!" [level=2] [ref=e47]
-    - paragraph [ref=e48]: Congratulations! Your order has been confirmed!
-    - link "Download Invoice" [ref=e49] [cursor=pointer]:
-      - /url: /download_invoice/1000
-    - link "Continue" [ref=e51] [cursor=pointer]:
-      - /url: /
-  - contentinfo [ref=e52]:
-    - generic [ref=e57]:
-      - heading "Subscription" [level=2] [ref=e58]
-      - generic [ref=e59]:
-        - textbox "Your email address" [ref=e60]
-        - button "" [ref=e61] [cursor=pointer]:
-          - generic [ref=e62]: 
-        - paragraph [ref=e63]:
-          - text: Get the most recent updates from
-          - text: our site and be updated your self...
-    - paragraph [ref=e67]: Copyright © 2021 All rights reserved
-  - text: 
-  - insertion [ref=e69]:
-    - generic [ref=e72]:
-      - heading "These are topics related to the article that might interest you" [level=2] [ref=e74]: Discover more
-      - link "Billing & Invoicing" [ref=e75] [cursor=pointer]:
-        - generic "Billing & Invoicing" [ref=e76]
-        - img [ref=e78]
-      - link "Development Tools" [ref=e80] [cursor=pointer]:
-        - generic "Development Tools" [ref=e81]
-        - img [ref=e83]
-      - link "Dictionaries & Encyclopedias" [ref=e85] [cursor=pointer]:
-        - generic "Dictionaries & Encyclopedias" [ref=e86]
-        - img [ref=e88]
+```
+
+# Test source
+
+```ts
+  1  | import { Page, expect } from '@playwright/test';
+  2  | 
+  3  | export class ProductPage {
+  4  |   constructor(private page: Page) {}
+  5  | 
+  6  |   async openProducts() {
+  7  | 
+  8  |     await this.page.getByRole('link', {
+  9  |       name: 'Products'
+  10 |     }).click();
+  11 | 
+  12 |     // Verify navigation completed
+  13 |     await expect(this.page).toHaveURL(
+  14 |       /.*products/,
+  15 |       { timeout: 20000 }
+  16 |     );
+  17 | 
+  18 |     // Verify search box exists
+  19 |     await expect(
+  20 |       this.page.locator('#search_product')
+  21 |     ).toBeVisible({
+  22 |       timeout: 20000
+  23 |     });
+  24 |   }
+  25 | 
+  26 |   async searchProduct(product: string) {
+  27 | 
+  28 |     console.log('Current URL:', this.page.url());
+  29 | 
+  30 |     const searchInput =
+  31 |       this.page.locator('#search_product');
+  32 | 
+  33 |     await expect(searchInput)
+  34 |       .toBeVisible({
+  35 |         timeout: 20000
+  36 |       });
+  37 | 
+  38 |     await searchInput.fill(product);
+  39 | 
+  40 |     await this.page.locator(
+  41 |       '#submit_search'
+  42 |     ).click();
+  43 |   }
+  44 | 
+  45 |   async addFirstProductToCart() {
+  46 | 
+  47 |     const firstProduct =
+  48 |       this.page.locator(
+  49 |         '.product-image-wrapper'
+  50 |       ).first();
+  51 | 
+  52 |     await expect(firstProduct)
+  53 |       .toBeVisible({
+  54 |         timeout: 20000
+  55 |       });
+  56 | 
+  57 |     await firstProduct.hover();
+  58 | 
+  59 |     await this.page.locator(
+  60 |       '.add-to-cart'
+  61 |     ).first().click();
+  62 | 
+  63 |     await this.page.getByText(
+  64 |       'View Cart'
+> 65 |     ).click();
+     |       ^ Error: locator.click: Test ended.
+  66 |   }
+  67 | }
 ```

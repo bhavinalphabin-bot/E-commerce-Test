@@ -1,0 +1,26 @@
+{"version":8,"type":"context-options","origin":"library","browserName":"","playwrightVersion":"1.60.0","options":{},"platform":"darwin","wallTime":1782821131065,"monotonicTime":1212.883,"sdkLanguage":"javascript","contextId":"request-context@1d67dd79ed2161df6f31b0263e097582","title":"API/ProductAPI.spec.ts:4 › Verify Product API"}
+{"type":"before","callId":"call@5","startTime":1216.782,"class":"APIRequestContext","method":"fetch","params":{"url":"https://automationexercise.com/api/productsList","method":"GET","timeout":0},"stepId":"pw:api@32"}
+{"type":"log","callId":"call@5","time":1227.881,"message":"→ GET https://automationexercise.com/api/productsList"}
+{"type":"log","callId":"call@5","time":1227.918,"message":"  user-agent: Playwright/1.60.0 (x64; macOS 14.7) node/24.16"}
+{"type":"log","callId":"call@5","time":1227.925,"message":"  accept: */*"}
+{"type":"log","callId":"call@5","time":1227.93,"message":"  accept-encoding: gzip,deflate,br"}
+{"type":"log","callId":"call@5","time":2396.355,"message":"← 200 OK"}
+{"type":"log","callId":"call@5","time":2396.387,"message":"  date: Tue, 30 Jun 2026 12:05:32 GMT"}
+{"type":"log","callId":"call@5","time":2396.394,"message":"  content-type: text/html; charset=utf-8"}
+{"type":"log","callId":"call@5","time":2396.402,"message":"  transfer-encoding: chunked"}
+{"type":"log","callId":"call@5","time":2396.412,"message":"  connection: keep-alive"}
+{"type":"log","callId":"call@5","time":2396.422,"message":"  vary: Accept,Cookie,Accept-Encoding"}
+{"type":"log","callId":"call@5","time":2396.428,"message":"  referrer-policy: same-origin"}
+{"type":"log","callId":"call@5","time":2396.432,"message":"  x-frame-options: DENY"}
+{"type":"log","callId":"call@5","time":2396.435,"message":"  x-content-type-options: nosniff"}
+{"type":"log","callId":"call@5","time":2396.438,"message":"  allow: PUT, POST, OPTIONS, GET, DELETE"}
+{"type":"log","callId":"call@5","time":2396.441,"message":"  x-powered-by: Phusion Passenger(R) 6.1.2"}
+{"type":"log","callId":"call@5","time":2396.444,"message":"  status: 200 OK"}
+{"type":"log","callId":"call@5","time":2396.446,"message":"  nel: {\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"}
+{"type":"log","callId":"call@5","time":2396.45,"message":"  server: cloudflare"}
+{"type":"log","callId":"call@5","time":2396.453,"message":"  cf-cache-status: DYNAMIC"}
+{"type":"log","callId":"call@5","time":2396.456,"message":"  report-to: {\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=krL8JIbU3WsGaXastShh5ZOiZe7NR6Qa4mC5Nix%2BlBeEdwY6DtXWn%2FIWgrvYqgssWrkjDKAhQw6d2XnA5cFYBMhYyQHGhTUL%2B50lqLGf3mCEC1WsezGeyCYowuDyfBW82pJMCDyMpGg2A45X7Ocsh18yeb%2Bw\"}]}"}
+{"type":"log","callId":"call@5","time":2396.463,"message":"  content-encoding: br"}
+{"type":"log","callId":"call@5","time":2396.469,"message":"  cf-ray: a13d0a26a8eb9c8d-SIN"}
+{"type":"log","callId":"call@5","time":2396.472,"message":"  alt-svc: h3=\":443\"; ma=86400"}
+{"type":"after","callId":"call@5","endTime":2404.55,"result":{"response":{"url":"https://automationexercise.com/api/productsList","status":200,"statusText":"OK","headers":[{"name":"Date","value":"Tue, 30 Jun 2026 12:05:32 GMT"},{"name":"Content-Type","value":"text/html; charset=utf-8"},{"name":"Transfer-Encoding","value":"chunked"},{"name":"Connection","value":"keep-alive"},{"name":"Vary","value":"Accept,Cookie,Accept-Encoding"},{"name":"Referrer-Policy","value":"same-origin"},{"name":"X-Frame-Options","value":"DENY"},{"name":"X-Content-Type-Options","value":"nosniff"},{"name":"Allow","value":"PUT, POST, OPTIONS, GET, DELETE"},{"name":"X-Powered-By","value":"Phusion Passenger(R) 6.1.2"},{"name":"Status","value":"200 OK"},{"name":"Nel","value":"{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"},{"name":"Server","value":"cloudflare"},{"name":"Cf-Cache-Status","value":"DYNAMIC"},{"name":"Report-To","value":"{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=krL8JIbU3WsGaXastShh5ZOiZe7NR6Qa4mC5Nix%2BlBeEdwY6DtXWn%2FIWgrvYqgssWrkjDKAhQw6d2XnA5cFYBMhYyQHGhTUL%2B50lqLGf3mCEC1WsezGeyCYowuDyfBW82pJMCDyMpGg2A45X7Ocsh18yeb%2Bw\"}]}"},{"name":"Content-Encoding","value":"br"},{"name":"CF-RAY","value":"a13d0a26a8eb9c8d-SIN"},{"name":"alt-svc","value":"h3=\":443\"; ma=86400"}],"body":"<Buffer>","fetchUid":"496f027ad1b605144a246c0dcf045e30"}}}

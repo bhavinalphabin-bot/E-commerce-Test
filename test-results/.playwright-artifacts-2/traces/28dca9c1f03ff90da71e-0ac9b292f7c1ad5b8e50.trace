@@ -1,0 +1,26 @@
+{"version":8,"type":"context-options","origin":"library","browserName":"","playwrightVersion":"1.60.0","options":{},"platform":"darwin","wallTime":1782821131079,"monotonicTime":1227.293,"sdkLanguage":"javascript","contextId":"request-context@dc10a13733e533a347c83e47dcd1683d","title":"API/product.spec.ts:3 › Print products"}
+{"type":"before","callId":"call@5","startTime":1230.635,"class":"APIRequestContext","method":"fetch","params":{"url":"https://automationexercise.com/api/productsList","method":"GET","timeout":0},"stepId":"pw:api@32"}
+{"type":"log","callId":"call@5","time":1238.9,"message":"→ GET https://automationexercise.com/api/productsList"}
+{"type":"log","callId":"call@5","time":1238.933,"message":"  user-agent: Playwright/1.60.0 (x64; macOS 14.7) node/24.16"}
+{"type":"log","callId":"call@5","time":1238.94,"message":"  accept: */*"}
+{"type":"log","callId":"call@5","time":1238.945,"message":"  accept-encoding: gzip,deflate,br"}
+{"type":"log","callId":"call@5","time":2408.184,"message":"← 200 OK"}
+{"type":"log","callId":"call@5","time":2408.232,"message":"  date: Tue, 30 Jun 2026 12:05:32 GMT"}
+{"type":"log","callId":"call@5","time":2408.242,"message":"  content-type: text/html; charset=utf-8"}
+{"type":"log","callId":"call@5","time":2408.251,"message":"  transfer-encoding: chunked"}
+{"type":"log","callId":"call@5","time":2408.264,"message":"  connection: keep-alive"}
+{"type":"log","callId":"call@5","time":2408.279,"message":"  vary: Accept,Cookie,Accept-Encoding"}
+{"type":"log","callId":"call@5","time":2408.289,"message":"  referrer-policy: same-origin"}
+{"type":"log","callId":"call@5","time":2408.295,"message":"  x-frame-options: DENY"}
+{"type":"log","callId":"call@5","time":2408.299,"message":"  x-content-type-options: nosniff"}
+{"type":"log","callId":"call@5","time":2408.304,"message":"  allow: PUT, POST, OPTIONS, GET, DELETE"}
+{"type":"log","callId":"call@5","time":2408.309,"message":"  x-powered-by: Phusion Passenger(R) 6.1.2"}
+{"type":"log","callId":"call@5","time":2408.314,"message":"  status: 200 OK"}
+{"type":"log","callId":"call@5","time":2408.319,"message":"  nel: {\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"}
+{"type":"log","callId":"call@5","time":2408.324,"message":"  server: cloudflare"}
+{"type":"log","callId":"call@5","time":2408.328,"message":"  cf-cache-status: DYNAMIC"}
+{"type":"log","callId":"call@5","time":2408.334,"message":"  report-to: {\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=5cBn3hpFA1c0bVgxS1ZPpk2qf9PdeZ%2BeMVBm22db8CH6myOUEkMJrUI%2BIma%2FVWXEGyTaDXlQRKmDoxxMcNAqAVRnhlstI2Yrb4p1arLInhGtwGIEx9tMlfk0z1utAabROOm5uYJmo%2F10N%2BuPTrMr%2B01eGb1i\"}]}"}
+{"type":"log","callId":"call@5","time":2408.349,"message":"  content-encoding: br"}
+{"type":"log","callId":"call@5","time":2408.356,"message":"  cf-ray: a13d0a271881e60e-SIN"}
+{"type":"log","callId":"call@5","time":2408.362,"message":"  alt-svc: h3=\":443\"; ma=86400"}
+{"type":"after","callId":"call@5","endTime":2414.218,"result":{"response":{"url":"https://automationexercise.com/api/productsList","status":200,"statusText":"OK","headers":[{"name":"Date","value":"Tue, 30 Jun 2026 12:05:32 GMT"},{"name":"Content-Type","value":"text/html; charset=utf-8"},{"name":"Transfer-Encoding","value":"chunked"},{"name":"Connection","value":"keep-alive"},{"name":"Vary","value":"Accept,Cookie,Accept-Encoding"},{"name":"Referrer-Policy","value":"same-origin"},{"name":"X-Frame-Options","value":"DENY"},{"name":"X-Content-Type-Options","value":"nosniff"},{"name":"Allow","value":"PUT, POST, OPTIONS, GET, DELETE"},{"name":"X-Powered-By","value":"Phusion Passenger(R) 6.1.2"},{"name":"Status","value":"200 OK"},{"name":"Nel","value":"{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"},{"name":"Server","value":"cloudflare"},{"name":"Cf-Cache-Status","value":"DYNAMIC"},{"name":"Report-To","value":"{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=5cBn3hpFA1c0bVgxS1ZPpk2qf9PdeZ%2BeMVBm22db8CH6myOUEkMJrUI%2BIma%2FVWXEGyTaDXlQRKmDoxxMcNAqAVRnhlstI2Yrb4p1arLInhGtwGIEx9tMlfk0z1utAabROOm5uYJmo%2F10N%2BuPTrMr%2B01eGb1i\"}]}"},{"name":"Content-Encoding","value":"br"},{"name":"CF-RAY","value":"a13d0a271881e60e-SIN"},{"name":"alt-svc","value":"h3=\":443\"; ma=86400"}],"body":"<Buffer>","fetchUid":"5c07dfc50c941001f3a4d22d7dec4e1c"}}}
