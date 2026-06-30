@@ -12,11 +12,7 @@
 # Error details
 
 ```
-Error: Channel closed
-```
-
-```
-Error: locator.click: Target page, context or browser has been closed
+Test timeout of 60000ms exceeded.
 ```
 
 # Page snapshot
@@ -25,9 +21,9 @@ Error: locator.click: Target page, context or browser has been closed
 - generic [active] [ref=e1]:
   - banner [ref=e2]:
     - generic [ref=e5]:
-      - link "Website for automation practice" [ref=e8] [cursor=pointer]:
+      - link "Automation Exercise website" [ref=e8] [cursor=pointer]:
         - /url: /
-        - img "Website for automation practice" [ref=e9]
+        - img "Automation Exercise website" [ref=e9]
       - list [ref=e12]:
         - listitem [ref=e13]:
           - link " Home" [ref=e14] [cursor=pointer]:
@@ -78,103 +74,35 @@ Error: locator.click: Target page, context or browser has been closed
           - generic [ref=e41]:
             - generic [ref=e42]: 
             - text: Logged in as Bhavy Mangukiya
-  - generic [ref=e44]:
-    - list [ref=e46]:
-      - listitem [ref=e47]:
-        - link "Home" [ref=e48] [cursor=pointer]:
-          - /url: /
-      - listitem [ref=e49]: Shopping Cart
-    - generic [ref=e54] [cursor=pointer]: Proceed To Checkout
-    - table [ref=e56]:
-      - rowgroup [ref=e57]:
-        - row "Item Description Price Quantity Total" [ref=e58]:
-          - cell "Item" [ref=e59]
-          - cell "Description" [ref=e60]
-          - cell "Price" [ref=e61]
-          - cell "Quantity" [ref=e62]
-          - cell "Total" [ref=e63]
-          - cell [ref=e64]
-      - rowgroup [ref=e65]:
-        - row "Product Image Blue Top Women > Tops Rs. 500 1 Rs. 500 " [ref=e66]:
-          - cell "Product Image" [ref=e67]:
-            - link "Product Image" [ref=e68] [cursor=pointer]:
-              - /url: ""
-              - img "Product Image" [ref=e69]
-          - cell "Blue Top Women > Tops" [ref=e70]:
-            - heading "Blue Top" [level=4] [ref=e71]:
-              - link "Blue Top" [ref=e72] [cursor=pointer]:
-                - /url: /product_details/1
-            - paragraph [ref=e73]: Women > Tops
-          - cell "Rs. 500" [ref=e74]:
-            - paragraph [ref=e75]: Rs. 500
-          - cell "1" [ref=e76]:
-            - button "1" [ref=e77] [cursor=pointer]
-          - cell "Rs. 500" [ref=e78]:
-            - paragraph [ref=e79]: Rs. 500
-          - cell "" [ref=e80]:
-            - generic [ref=e82] [cursor=pointer]: 
-  - contentinfo [ref=e83]:
-    - generic [ref=e88]:
-      - heading "Subscription" [level=2] [ref=e89]
-      - generic [ref=e90]:
-        - textbox "Your email address" [ref=e91]
-        - button "" [ref=e92] [cursor=pointer]:
-          - generic [ref=e93]: 
-        - paragraph [ref=e94]:
+  - generic [ref=e46]:
+    - heading "Order Placed!" [level=2] [ref=e47]
+    - paragraph [ref=e48]: Congratulations! Your order has been confirmed!
+    - link "Download Invoice" [ref=e49] [cursor=pointer]:
+      - /url: /download_invoice/1000
+    - link "Continue" [ref=e51] [cursor=pointer]:
+      - /url: /
+  - contentinfo [ref=e52]:
+    - generic [ref=e57]:
+      - heading "Subscription" [level=2] [ref=e58]
+      - generic [ref=e59]:
+        - textbox "Your email address" [ref=e60]
+        - button "" [ref=e61] [cursor=pointer]:
+          - generic [ref=e62]: 
+        - paragraph [ref=e63]:
           - text: Get the most recent updates from
           - text: our site and be updated your self...
-    - paragraph [ref=e98]: Copyright © 2021 All rights reserved
+    - paragraph [ref=e67]: Copyright © 2021 All rights reserved
   - text: 
-```
-
-# Test source
-
-```ts
-  1  | import { Page } from '@playwright/test';
-  2  | 
-  3  | export class CheckoutPage {
-  4  |   constructor(private page: Page) {}
-  5  | 
-  6  |   async proceedToCheckout() {
-  7  |     await this.page.locator(
-  8  |       '.check_out'
-  9  |     ).click();
-  10 |   }
-  11 | 
-  12 |   async placeOrder() {
-  13 |     await this.page.locator(
-  14 |       'a[href="/payment"]'
-> 15 |     ).click();
-     |       ^ Error: locator.click: Target page, context or browser has been closed
-  16 |   }
-  17 | 
-  18 |   async enterPaymentDetails() {
-  19 | 
-  20 |     await this.page.locator(
-  21 |       '[data-qa="name-on-card"]'
-  22 |     ).fill('Bhavy');
-  23 | 
-  24 |     await this.page.locator(
-  25 |       '[data-qa="card-number"]'
-  26 |     ).fill('799020152503');
-  27 | 
-  28 |     await this.page.locator(
-  29 |       '[data-qa="cvc"]'
-  30 |     ).fill('23');
-  31 | 
-  32 |     await this.page.locator(
-  33 |       '[data-qa="expiry-month"]'
-  34 |     ).fill('12');
-  35 | 
-  36 |     await this.page.locator(
-  37 |       '[data-qa="expiry-year"]'
-  38 |     ).fill('2030');
-  39 |   }
-  40 | 
-  41 |   async submitOrder() {
-  42 |     await this.page.locator(
-  43 |       '[data-qa="pay-button"]'
-  44 |     ).click();
-  45 |   }
-  46 | }
+  - insertion [ref=e69]:
+    - generic [ref=e72]:
+      - heading "These are topics related to the article that might interest you" [level=2] [ref=e74]: Discover more
+      - link "Billing & Invoicing" [ref=e75] [cursor=pointer]:
+        - generic "Billing & Invoicing" [ref=e76]
+        - img [ref=e78]
+      - link "Development Tools" [ref=e80] [cursor=pointer]:
+        - generic "Development Tools" [ref=e81]
+        - img [ref=e83]
+      - link "Dictionaries & Encyclopedias" [ref=e85] [cursor=pointer]:
+        - generic "Dictionaries & Encyclopedias" [ref=e86]
+        - img [ref=e88]
 ```
