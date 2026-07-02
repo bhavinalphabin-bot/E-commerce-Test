@@ -1,31 +1,57 @@
-import { defineConfig } from '@playwright/test';
+// @ts-check
+import { defineConfig, devices } from '@playwright/test';
+import dotenv from 'dotenv';
 
-declare const process: { env: { CI?: string } };
+dotenv.config({ path: 'utils/.env' });
+
+const isCI = !!process.env.CI;
+
+// Use the GitHub Actions run identifier in CI so all shards share one run,
+// and fall back to a date-based id for local runs.
+const ciRunId = isCI
+  ? `ci-run-${process.env.GITHUB_RUN_ID}-${process.env.GITHUB_RUN_ATTEMPT || 1}`
+  : `local-run-${new Date().toISOString().split('T')[0]}`;
+
+const testDinoToken = process.env.TESTDINO_TOKEN || process.env.TestDino_API_TOKEN || '';
 
 export default defineConfig({
   testDir: './tests',
+  snapshotDir: './__screenshots__',
+  fullyParallel: true,
+  forbidOnly: isCI,
+  retries: isCI ? 0 : 2,
+  workers: isCI ? 5 : 5,
 
-  timeout: 60000,
+  timeout: 30 * 1000,
+  expect: {
+    timeout: 10 * 1000,
+  },
 
-  retries: process.env.CI ? 2 : 0,
-
-  workers: process.env.CI ? 1 : 4,
+  reporter: [
+    ['@testdino/playwright', {
+      serverUrl: 'https://stg-analytics.testdino.com',
+      token: testDinoToken,
+      ciRunId,
+      debug: false,
+      artifacts: true,
+    }],
+    ['blob', { outputDir: 'blob-report' }],
+  ],
 
   use: {
-    browserName: 'chromium',
-
-    headless: process.env.CI ? true : false,
-
-    screenshot: 'only-on-failure',
-
+    baseURL: 'https://storedemo.testdino.com/products',
+    headless: true,
     trace: 'retain-on-failure',
-
+    screenshot: 'only-on-failure',
     video: 'retain-on-failure',
+    actionTimeout: 15 * 1000,
+    navigationTimeout: 30 * 1000,
   },
-// Add this in playwright.config.js|ts|mjs
-reporter: [
-  ['html', { outputDir: './playwright-report' }],
-  ['json', { outputFile: './playwright-report/report.json' }],
-]
-  
+
+  projects: [
+    {
+      name: 'chromium',
+      use: { ...devices['Desktop Chrome'] },
+    },
+  ],
 });

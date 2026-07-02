@@ -9,6 +9,9 @@ on:
 jobs:
   playwright:
     runs-on: ubuntu-latest
+    env:
+      TESTDINO_TOKEN: ${{ secrets.TESTDINO_TOKEN }}
+      TESTDINO_SERVER_URL: https://stg-analytics.testdino.com
 
     strategy:
       fail-fast: false
@@ -30,7 +33,10 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
-      - name: Run Playwright Tests
+      - name: Verify TestDino Token
+        run: test -n "$TESTDINO_TOKEN"
+
+      - name: Run Playwright Tests and Upload to TestDino
         run: npx playwright test --shard=${{ matrix.shard }}/4
 
       - name: Verify Blob Report
