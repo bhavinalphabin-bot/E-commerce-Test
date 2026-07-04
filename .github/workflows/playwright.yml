@@ -45,8 +45,14 @@ jobs:
             exit 1
           fi
 
-      - name: Run Playwright Tests and Upload to TestDino
-        run: npx playwright test --shard=${{ matrix.shard }}/4
+      - name: Run TestDino Playwright Shard
+        env:
+          TESTDINO_TOKEN: ${{ secrets.TESTDINO_TOKEN }}
+        run: npx tdpw test --ci-run-id ci-run-${{ github.run_id }}-${{ github.run_attempt }} -- --shard=${{ matrix.shard }}/4
+
+      - name: Upload to TestDino
+        if: always()
+        run: npx tdpw upload ./playwright-report --token="${{ secrets.TESTDINO_TOKEN }}" --upload-html
 
       - name: Verify Blob Report
         if: always()

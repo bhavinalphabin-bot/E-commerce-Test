@@ -35,6 +35,8 @@ export default defineConfig({
       debug: false,
       artifacts: true,
     }],
+    ['html', { outputDir: './playwright-report' }],
+    ['json', { outputFile: './playwright-report/report.json' }],
     ['blob', { outputDir: 'blob-report' }],
   ],
 
