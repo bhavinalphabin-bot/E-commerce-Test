@@ -18,6 +18,7 @@
     "axe-playwright": "^2.2.2"
   },
   "dependencies": {
-    "tdpw": "^1.0.38"
+    "tdpw": "^1.0.38",
+    "testdino-mcp": "^1.0.10"
   }
 }
