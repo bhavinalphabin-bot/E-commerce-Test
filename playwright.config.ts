@@ -43,7 +43,7 @@ export default defineConfig({
   use: {
     baseURL: 'https://storedemo.testdino.com/products',
     headless: true,
-    trace: 'retain-on-failure',
+    trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
     actionTimeout: 15 * 1000,
@@ -54,6 +54,7 @@ export default defineConfig({
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
-    },
+   },
+   
   ],
 });
