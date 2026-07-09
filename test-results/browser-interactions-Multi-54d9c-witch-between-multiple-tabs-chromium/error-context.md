@@ -15,10 +15,6 @@
 Test timeout of 30000ms exceeded.
 ```
 
-```
-Tearing down "context" exceeded the test timeout of 30000ms.
-```
-
 # Page snapshot
 
 ```yaml
@@ -115,29 +111,29 @@ Tearing down "context" exceeded the test timeout of 30000ms.
       - insertion [ref=e87]:
         - generic [ref=e90]:
           - heading "These are topics related to the article that might interest you" [level=2] [ref=e92]: Discover more
-          - link "Dresses" [ref=e93] [cursor=pointer]:
-            - generic "Dresses" [ref=e94]
+          - link "Test case templates" [ref=e93] [cursor=pointer]:
+            - generic "Test case templates" [ref=e94]
             - img [ref=e96]
-          - link "Website development services" [ref=e98] [cursor=pointer]:
-            - generic "Website development services" [ref=e99]
+          - link "Casual Apparel" [ref=e98] [cursor=pointer]:
+            - generic "Casual Apparel" [ref=e99]
             - img [ref=e101]
-          - link "API testing tools" [ref=e103] [cursor=pointer]:
-            - generic "API testing tools" [ref=e104]
+          - link "T-Shirts" [ref=e103] [cursor=pointer]:
+            - generic "T-Shirts" [ref=e104]
             - img [ref=e106]
-          - link "Test case templates" [ref=e108] [cursor=pointer]:
-            - generic "Test case templates" [ref=e109]
+          - link "Automation training courses" [ref=e108] [cursor=pointer]:
+            - generic "Automation training courses" [ref=e109]
             - img [ref=e111]
-          - link "Engineering & Technology" [ref=e113] [cursor=pointer]:
-            - generic "Engineering & Technology" [ref=e114]
+          - link "T SHIRT" [ref=e113] [cursor=pointer]:
+            - generic "T SHIRT" [ref=e114]
             - img [ref=e116]
-          - link "T SHIRT" [ref=e118] [cursor=pointer]:
-            - generic "T SHIRT" [ref=e119]
+          - link "Psychology" [ref=e118] [cursor=pointer]:
+            - generic "Psychology" [ref=e119]
             - img [ref=e121]
-          - link "Automation practice website" [ref=e123] [cursor=pointer]:
-            - generic "Automation practice website" [ref=e124]
+          - link "Website development services" [ref=e123] [cursor=pointer]:
+            - generic "Website development services" [ref=e124]
             - img [ref=e126]
-          - link "Software" [ref=e128] [cursor=pointer]:
-            - generic "Software" [ref=e129]
+          - link "Web design services" [ref=e128] [cursor=pointer]:
+            - generic "Web design services" [ref=e129]
             - img [ref=e131]
       - generic [ref=e133]:
         - heading "Brands" [level=2] [ref=e134]
@@ -370,9 +366,9 @@ Tearing down "context" exceeded the test timeout of 30000ms.
               - heading "Rs. 499" [level=2] [ref=e327]
               - paragraph [ref=e328]:
                 - text: Sleeves Printed Top - White
-                - link "Psychology" [ref=e329] [cursor=pointer]:
+                - link "Internet & Telecom" [ref=e329] [cursor=pointer]:
                   - img [ref=e331]
-                  - text: Psychology
+                  - text: Internet & Telecom
               - generic [ref=e333] [cursor=pointer]:
                 - generic [ref=e334]: 
                 - text: Add to cart
@@ -395,9 +391,9 @@ Tearing down "context" exceeded the test timeout of 30000ms.
               - heading "Rs. 359" [level=2] [ref=e350]
               - paragraph [ref=e351]:
                 - text: Half Sleeves Top Schiffli Detailing - Pink
-                - link "Software quality metrics" [ref=e352] [cursor=pointer]:
+                - link "Engineering & Technology" [ref=e352] [cursor=pointer]:
                   - img [ref=e354]
-                  - text: Software quality metrics
+                  - text: Engineering & Technology
               - generic [ref=e356] [cursor=pointer]:
                 - generic [ref=e357]: 
                 - text: Add to cart
@@ -441,9 +437,9 @@ Tearing down "context" exceeded the test timeout of 30000ms.
               - heading "Rs. 679" [level=2] [ref=e392]
               - paragraph [ref=e393]:
                 - text: Full Sleeves Top Cherry - Pink
-                - link "REST API practice" [ref=e394] [cursor=pointer]:
+                - link "Software quality metrics" [ref=e394] [cursor=pointer]:
                   - img [ref=e396]
-                  - text: REST API practice
+                  - text: Software quality metrics
               - generic [ref=e398] [cursor=pointer]:
                 - generic [ref=e399]: 
                 - text: Add to cart
@@ -529,9 +525,9 @@ Tearing down "context" exceeded the test timeout of 30000ms.
               - heading "Rs. 1050" [level=2] [ref=e472]
               - paragraph [ref=e473]:
                 - text: Sleeveless Unicorn Patch Gown - Pink
-                - link "Manual testing guide" [ref=e474] [cursor=pointer]:
+                - link "API testing tutorials" [ref=e474] [cursor=pointer]:
                   - img [ref=e476]
-                  - text: Manual testing guide
+                  - text: API testing tutorials
               - generic [ref=e478] [cursor=pointer]:
                 - generic [ref=e479]: 
                 - text: Add to cart
@@ -596,9 +592,9 @@ Tearing down "context" exceeded the test timeout of 30000ms.
               - heading "Rs. 1600" [level=2] [ref=e533]
               - paragraph [ref=e534]:
                 - text: Long Maxi Tulle Fancy Dress Up Outfits -Pink
-                - link "T-Shirts" [ref=e535] [cursor=pointer]:
+                - link "Software testing services" [ref=e535] [cursor=pointer]:
                   - img [ref=e537]
-                  - text: T-Shirts
+                  - text: Software testing services
               - generic [ref=e539] [cursor=pointer]:
                 - generic [ref=e540]: 
                 - text: Add to cart
@@ -988,27 +984,9 @@ Tearing down "context" exceeded the test timeout of 30000ms.
           - text: our site and be updated your self...
     - paragraph [ref=e900]: Copyright © 2021 All rights reserved
   - text: 
-  - insertion [ref=e901]:
-    - iframe [ref=e904]:
-      - generic [ref=f9e3]:
-        - button [ref=f9e4]:
-          - img [ref=f9e5]
-        - generic [ref=f9e7]:
-          - generic [ref=f9e9]:
-            - generic [ref=f9e13]:
-              - generic:
-                - generic:
-                  - generic:
-                    - button "Pause video":
-                      - img
-              - button "Unmute video" [ref=f9e15] [cursor=pointer]
-            - button "Replay" [ref=f9e23]:
-              - img [ref=f9e25] [cursor=pointer]
-            - img [ref=f9e30]
-          - button "Learn more" [ref=f9e37] [cursor=pointer]
-  - generic [ref=e905]:
-    - generic [ref=e906] [cursor=pointer]:
-      - img [ref=e908]
-      - link "Go to shopping options for Factory Automation" [ref=e910]: Factory Automation
-    - button "Close shopping anchor" [ref=e911]
+  - generic [ref=e901]:
+    - generic [ref=e902] [cursor=pointer]:
+      - img [ref=e904]
+      - link "Go to shopping options for API testing tools" [ref=e906]: API testing tools
+    - button "Close shopping anchor" [ref=e907]
 ```
