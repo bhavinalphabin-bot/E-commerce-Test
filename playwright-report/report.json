@@ -3,37 +3,43 @@
     "configFile": "/Users/jay/Downloads/Plawright/E-commerce-Test/playwright.config.ts",
     "rootDir": "/Users/jay/Downloads/Plawright/E-commerce-Test/tests",
     "forbidOnly": false,
-    "fullyParallel": false,
+    "fullyParallel": true,
     "globalSetup": null,
     "globalTeardown": null,
     "globalTimeout": 0,
     "grep": {},
     "grepInvert": null,
     "maxFailures": 0,
-    "metadata": {
-      "actualWorkers": 4
-    },
+    "metadata": {},
     "preserveOutput": "always",
     "projects": [
       {
         "outputDir": "/Users/jay/Downloads/Plawright/E-commerce-Test/test-results",
         "repeatEach": 1,
-        "retries": 0,
-        "metadata": {
-          "actualWorkers": 4
-        },
-        "id": "",
-        "name": "",
+        "retries": 2,
+        "metadata": {},
+        "id": "chromium",
+        "name": "chromium",
         "testDir": "/Users/jay/Downloads/Plawright/E-commerce-Test/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
         ],
-        "timeout": 60000
+        "timeout": 30000
       }
     ],
     "quiet": false,
     "reporter": [
+      [
+        "/Users/jay/Downloads/Plawright/E-commerce-Test/node_modules/@testdino/playwright/dist/index.js",
+        {
+          "serverUrl": "https://stg-analytics.testdino.com",
+          "token": "td_api_18c986fd8e2bd954a650c02ed01fb540456a39dd670ca924b5004241832445a2",
+          "ciRunId": "local-run-2026-07-09",
+          "debug": false,
+          "artifacts": true
+        }
+      ],
       [
         "html",
         {
@@ -44,6 +50,12 @@
         "json",
         {
           "outputFile": "./playwright-report/report.json"
+        }
+      ],
+      [
+        "blob",
+        {
+          "outputDir": "blob-report"
         }
       ]
     ],
@@ -56,7 +68,7 @@
     "updateSnapshots": "missing",
     "updateSourceMethod": "patch",
     "version": "1.60.0",
-    "workers": 4,
+    "workers": 5,
     "webServer": null
   },
   "suites": [
@@ -72,30 +84,16 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 60000,
+              "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 13352,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-06-30T12:14:38.305Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [],
+              "status": "skipped"
             }
           ],
-          "id": "d35ea515ab0a689d77fe-d821bdc5e094cdb8db94",
+          "id": "d35ea515ab0a689d77fe-ff79f86df83083c11abc",
           "file": "a11y/Accessibility-auditing.spec.ts",
           "line": 4,
           "column": 5
@@ -114,45 +112,16 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 60000,
+              "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
-                  "status": "interrupted",
-                  "duration": 48586,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Current URL: https://automationexercise.com/products\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-06-30T12:14:38.331Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/jay/Downloads/Plawright/E-commerce-Test/test-results/addToCart-Add-Product-To-Cart/test-failed-1.png"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "/Users/jay/Downloads/Plawright/E-commerce-Test/test-results/addToCart-Add-Product-To-Cart/trace.zip"
-                    }
-                  ]
-                }
-              ],
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [],
               "status": "skipped"
             }
           ],
-          "id": "a1b2df80ffd2e8e27332-8c572e02e5fb13201d9b",
+          "id": "a1b2df80ffd2e8e27332-d8bdc841f636868a8279",
           "file": "addToCart.spec.ts",
           "line": 6,
           "column": 5
@@ -171,34 +140,16 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 60000,
+              "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "parallelIndex": 2,
-                  "status": "passed",
-                  "duration": 1380,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "{\"responseCode\": 200, \"products\": [{\"id\": 1, \"name\": \"Blue Top\", \"price\": \"Rs. 500\", \"brand\": \"Polo\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Tops\"}}, {\"id\": 2, \"name\": \"Men Tshirt\", \"price\": \"Rs. 400\", \"brand\": \"H&M\", \"category\": {\"usertype\": {\"usertype\": \"Men\"}, \"category\": \"Tshirts\"}}, {\"id\": 3, \"name\": \"Sleeveless Dress\", \"price\": \"Rs. 1000\", \"brand\": \"Madame\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Dress\"}}, {\"id\": 4, \"name\": \"Stylish Dress\", \"price\": \"Rs. 1500\", \"brand\": \"Madame\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Dress\"}}, {\"id\": 5, \"name\": \"Winter Top\", \"price\": \"Rs. 600\", \"brand\": \"Mast & Harbour\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Tops\"}}, {\"id\": 6, \"name\": \"Summer White Top\", \"price\": \"Rs. 400\", \"brand\": \"H&M\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Tops\"}}, {\"id\": 7, \"name\": \"Madame Top For Women\", \"price\": \"Rs. 1000\", \"brand\": \"Madame\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Tops\"}}, {\"id\": 8, \"name\": \"Fancy Green Top\", \"price\": \"Rs. 700\", \"brand\": \"Polo\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Tops\"}}, {\"id\": 11, \"name\": \"Sleeves Printed Top - White\", \"price\": \"Rs. 499\", \"brand\": \"Babyhug\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Tops & Shirts\"}}, {\"id\": 12, \"name\": \"Half Sleeves Top Schiffli Detailing - Pink\", \"price\": \"Rs. 359\", \"brand\": \"Babyhug\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Tops & Shirts\"}}, {\"id\": 13, \"name\": \"Frozen Tops For Kids\", \"price\": \"Rs. 278\", \"brand\": \"Allen Solly Junior\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Tops & Shirts\"}}, {\"id\": 14, \"name\": \"Full Sleeves Top Cherry - Pink\", \"price\": \"Rs. 679\", \"brand\": \"Kookie Kids\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Tops & Shirts\"}}, {\"id\": 15, \"name\": \"Printed Off Shoulder Top - White\", \"price\": \"Rs. 315\", \"brand\": \"Babyhug\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Tops & Shirts\"}}, {\"id\": 16, \"name\": \"Sleeves Top and Short - Blue & Pink\", \"price\": \"Rs. 478\", \"brand\": \"Babyhug\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Dress\"}}, {\"id\": 18, \"name\": \"Little Girls Mr. Panda Shirt\", \"price\": \"Rs. 1200\", \"brand\": \"Kookie Kids\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Tops & Shirts\"}}, {\"id\": 19, \"name\": \"Sleeveless Unicorn Patch Gown - Pink\", \"price\": \"Rs. 1050\", \"brand\": \"Allen Solly Junior\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Dress\"}}, {\"id\": 20, \"name\": \"Cotton Mull Embroidered Dress\", \"price\": \"Rs. 1190\", \"brand\": \"Kookie Kids\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Dress\"}}, {\"id\": 21, \"name\": \"Blue Cotton Indie Mickey Dress\", \"price\": \"Rs. 1530\", \"brand\": \"Biba\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Dress\"}}, {\"id\": 22, \"name\": \"Long Maxi Tulle Fancy Dress Up Outfits -Pink\", \"price\": \"Rs. 1600\", \"brand\": \"Biba\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Dress\"}}, {\"id\": 23, \"name\": \"Sleeveless Unicorn Print Fit & Flare Net Dress - Multi\", \"price\": \"Rs. 1100\", \"brand\": \"Biba\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Dress\"}}, {\"id\": 24, \"name\": \"Colour Blocked Shirt \\u2013 Sky Blue\", \"price\": \"Rs. 849\", \"brand\": \"Allen Solly Junior\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Tops & Shirts\"}}, {\"id\": 28, \"name\": \"Pure Cotton V-Neck T-Shirt\", \"price\": \"Rs. 1299\", \"brand\": \"H&M\", \"category\": {\"usertype\": {\"usertype\": \"Men\"}, \"category\": \"Tshirts\"}}, {\"id\": 29, \"name\": \"Green Side Placket Detail T-Shirt\", \"price\": \"Rs. 1000\", \"brand\": \"Polo\", \"category\": {\"usertype\": {\"usertype\": \"Men\"}, \"category\": \"Tshirts\"}}, {\"id\": 30, \"name\": \"Premium Polo T-Shirts\", \"price\": \"Rs. 1500\", \"brand\": \"Polo\", \"category\": {\"usertype\": {\"usertype\": \"Men\"}, \"category\": \"Tshirts\"}}, {\"id\": 31, \"name\": \"Pure Cotton Neon Green Tshirt\", \"price\": \"Rs. 850\", \"brand\": \"H&M\", \"category\": {\"usertype\": {\"usertype\": \"Men\"}, \"category\": \"Tshirts\"}}, {\"id\": 33, \"name\": \"Soft Stretch Jeans\", \"price\": \"Rs. 799\", \"brand\": \"Polo\", \"category\": {\"usertype\": {\"usertype\": \"Men\"}, \"category\": \"Jeans\"}}, {\"id\": 35, \"name\": \"Regular Fit Straight Jeans\", \"price\": \"Rs. 1200\", \"brand\": \"H&M\", \"category\": {\"usertype\": {\"usertype\": \"Men\"}, \"category\": \"Jeans\"}}, {\"id\": 37, \"name\": \"Grunt Blue Slim Fit Jeans\", \"price\": \"Rs. 1400\", \"brand\": \"Polo\", \"category\": {\"usertype\": {\"usertype\": \"Men\"}, \"category\": \"Jeans\"}}, {\"id\": 38, \"name\": \"Rose Pink Embroidered Maxi Dress\", \"price\": \"Rs. 2300\", \"brand\": \"Madame\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Dress\"}}, {\"id\": 39, \"name\": \"Cotton Silk Hand Block Print Saree\", \"price\": \"Rs. 3000\", \"brand\": \"Biba\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Saree\"}}, {\"id\": 40, \"name\": \"Rust Red Linen Saree\", \"price\": \"Rs. 3500\", \"brand\": \"Biba\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Saree\"}}, {\"id\": 41, \"name\": \"Beautiful Peacock Blue Cotton Linen Saree\", \"price\": \"Rs. 5000\", \"brand\": \"Madame\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Saree\"}}, {\"id\": 42, \"name\": \"Lace Top For Women\", \"price\": \"Rs. 1400\", \"brand\": \"Mast & Harbour\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Tops\"}}, {\"id\": 43, \"name\": \"GRAPHIC DESIGN MEN T SHIRT - BLUE\", \"price\": \"Rs. 1389\", \"brand\": \"Mast & Harbour\", \"category\": {\"usertype\": {\"usertype\": \"Men\"}, \"category\": \"Tshirts\"}}]}\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-06-30T12:14:38.288Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [],
+              "status": "skipped"
             }
           ],
-          "id": "28dca9c1f03ff90da71e-0ac9b292f7c1ad5b8e50",
+          "id": "28dca9c1f03ff90da71e-8cb4cf23c83d8439e088",
           "file": "API/product.spec.ts",
           "line": 3,
           "column": 5
@@ -217,34 +168,16 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 60000,
+              "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 3,
-                  "parallelIndex": 3,
-                  "status": "passed",
-                  "duration": 1428,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "{\"responseCode\": 200, \"products\": [{\"id\": 1, \"name\": \"Blue Top\", \"price\": \"Rs. 500\", \"brand\": \"Polo\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Tops\"}}, {\"id\": 2, \"name\": \"Men Tshirt\", \"price\": \"Rs. 400\", \"brand\": \"H&M\", \"category\": {\"usertype\": {\"usertype\": \"Men\"}, \"category\": \"Tshirts\"}}, {\"id\": 3, \"name\": \"Sleeveless Dress\", \"price\": \"Rs. 1000\", \"brand\": \"Madame\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Dress\"}}, {\"id\": 4, \"name\": \"Stylish Dress\", \"price\": \"Rs. 1500\", \"brand\": \"Madame\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Dress\"}}, {\"id\": 5, \"name\": \"Winter Top\", \"price\": \"Rs. 600\", \"brand\": \"Mast & Harbour\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Tops\"}}, {\"id\": 6, \"name\": \"Summer White Top\", \"price\": \"Rs. 400\", \"brand\": \"H&M\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Tops\"}}, {\"id\": 7, \"name\": \"Madame Top For Women\", \"price\": \"Rs. 1000\", \"brand\": \"Madame\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Tops\"}}, {\"id\": 8, \"name\": \"Fancy Green Top\", \"price\": \"Rs. 700\", \"brand\": \"Polo\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Tops\"}}, {\"id\": 11, \"name\": \"Sleeves Printed Top - White\", \"price\": \"Rs. 499\", \"brand\": \"Babyhug\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Tops & Shirts\"}}, {\"id\": 12, \"name\": \"Half Sleeves Top Schiffli Detailing - Pink\", \"price\": \"Rs. 359\", \"brand\": \"Babyhug\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Tops & Shirts\"}}, {\"id\": 13, \"name\": \"Frozen Tops For Kids\", \"price\": \"Rs. 278\", \"brand\": \"Allen Solly Junior\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Tops & Shirts\"}}, {\"id\": 14, \"name\": \"Full Sleeves Top Cherry - Pink\", \"price\": \"Rs. 679\", \"brand\": \"Kookie Kids\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Tops & Shirts\"}}, {\"id\": 15, \"name\": \"Printed Off Shoulder Top - White\", \"price\": \"Rs. 315\", \"brand\": \"Babyhug\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Tops & Shirts\"}}, {\"id\": 16, \"name\": \"Sleeves Top and Short - Blue & Pink\", \"price\": \"Rs. 478\", \"brand\": \"Babyhug\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Dress\"}}, {\"id\": 18, \"name\": \"Little Girls Mr. Panda Shirt\", \"price\": \"Rs. 1200\", \"brand\": \"Kookie Kids\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Tops & Shirts\"}}, {\"id\": 19, \"name\": \"Sleeveless Unicorn Patch Gown - Pink\", \"price\": \"Rs. 1050\", \"brand\": \"Allen Solly Junior\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Dress\"}}, {\"id\": 20, \"name\": \"Cotton Mull Embroidered Dress\", \"price\": \"Rs. 1190\", \"brand\": \"Kookie Kids\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Dress\"}}, {\"id\": 21, \"name\": \"Blue Cotton Indie Mickey Dress\", \"price\": \"Rs. 1530\", \"brand\": \"Biba\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Dress\"}}, {\"id\": 22, \"name\": \"Long Maxi Tulle Fancy Dress Up Outfits -Pink\", \"price\": \"Rs. 1600\", \"brand\": \"Biba\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Dress\"}}, {\"id\": 23, \"name\": \"Sleeveless Unicorn Print Fit & Flare Net Dress - Multi\", \"price\": \"Rs. 1100\", \"brand\": \"Biba\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Dress\"}}, {\"id\": 24, \"name\": \"Colour Blocked Shirt \\u2013 Sky Blue\", \"price\": \"Rs. 849\", \"brand\": \"Allen Solly Junior\", \"category\": {\"usertype\": {\"usertype\": \"Kids\"}, \"category\": \"Tops & Shirts\"}}, {\"id\": 28, \"name\": \"Pure Cotton V-Neck T-Shirt\", \"price\": \"Rs. 1299\", \"brand\": \"H&M\", \"category\": {\"usertype\": {\"usertype\": \"Men\"}, \"category\": \"Tshirts\"}}, {\"id\": 29, \"name\": \"Green Side Placket Detail T-Shirt\", \"price\": \"Rs. 1000\", \"brand\": \"Polo\", \"category\": {\"usertype\": {\"usertype\": \"Men\"}, \"category\": \"Tshirts\"}}, {\"id\": 30, \"name\": \"Premium Polo T-Shirts\", \"price\": \"Rs. 1500\", \"brand\": \"Polo\", \"category\": {\"usertype\": {\"usertype\": \"Men\"}, \"category\": \"Tshirts\"}}, {\"id\": 31, \"name\": \"Pure Cotton Neon Green Tshirt\", \"price\": \"Rs. 850\", \"brand\": \"H&M\", \"category\": {\"usertype\": {\"usertype\": \"Men\"}, \"category\": \"Tshirts\"}}, {\"id\": 33, \"name\": \"Soft Stretch Jeans\", \"price\": \"Rs. 799\", \"brand\": \"Polo\", \"category\": {\"usertype\": {\"usertype\": \"Men\"}, \"category\": \"Jeans\"}}, {\"id\": 35, \"name\": \"Regular Fit Straight Jeans\", \"price\": \"Rs. 1200\", \"brand\": \"H&M\", \"category\": {\"usertype\": {\"usertype\": \"Men\"}, \"category\": \"Jeans\"}}, {\"id\": 37, \"name\": \"Grunt Blue Slim Fit Jeans\", \"price\": \"Rs. 1400\", \"brand\": \"Polo\", \"category\": {\"usertype\": {\"usertype\": \"Men\"}, \"category\": \"Jeans\"}}, {\"id\": 38, \"name\": \"Rose Pink Embroidered Maxi Dress\", \"price\": \"Rs. 2300\", \"brand\": \"Madame\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Dress\"}}, {\"id\": 39, \"name\": \"Cotton Silk Hand Block Print Saree\", \"price\": \"Rs. 3000\", \"brand\": \"Biba\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Saree\"}}, {\"id\": 40, \"name\": \"Rust Red Linen Saree\", \"price\": \"Rs. 3500\", \"brand\": \"Biba\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Saree\"}}, {\"id\": 41, \"name\": \"Beautiful Peacock Blue Cotton Linen Saree\", \"price\": \"Rs. 5000\", \"brand\": \"Madame\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Saree\"}}, {\"id\": 42, \"name\": \"Lace Top For Women\", \"price\": \"Rs. 1400\", \"brand\": \"Mast & Harbour\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Tops\"}}, {\"id\": 43, \"name\": \"GRAPHIC DESIGN MEN T SHIRT - BLUE\", \"price\": \"Rs. 1389\", \"brand\": \"Mast & Harbour\", \"category\": {\"usertype\": {\"usertype\": \"Men\"}, \"category\": \"Tshirts\"}}]}\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-06-30T12:14:38.299Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [],
+              "status": "skipped"
             }
           ],
-          "id": "9dd4c2d9fc384d91036d-2e76398b05bb28878210",
+          "id": "9dd4c2d9fc384d91036d-4f33ca39818df7c91eac",
           "file": "API/ProductAPI.spec.ts",
           "line": 4,
           "column": 5
@@ -255,30 +188,16 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 60000,
+              "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 3,
-                  "parallelIndex": 3,
-                  "status": "passed",
-                  "duration": 6781,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-06-30T12:14:39.768Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [],
+              "status": "skipped"
             }
           ],
-          "id": "9dd4c2d9fc384d91036d-5fb472d4a2f17bafe949",
+          "id": "9dd4c2d9fc384d91036d-4bd826b341645e9bcecd",
           "file": "API/ProductAPI.spec.ts",
           "line": 19,
           "column": 5
@@ -304,30 +223,16 @@
               "tags": [],
               "tests": [
                 {
-                  "timeout": 60000,
+                  "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 2,
-                      "parallelIndex": 2,
-                      "status": "passed",
-                      "duration": 17899,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-06-30T12:14:39.713Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
-              "id": "bcff5fa723f516684996-2efc3c9ac0276c723554",
+              "id": "bcff5fa723f516684996-4dd821ac4be96fa28682",
               "file": "api-mocking.spec.ts",
               "line": 10,
               "column": 7
@@ -338,49 +243,16 @@
               "tags": [],
               "tests": [
                 {
-                  "timeout": 60000,
+                  "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 2,
-                      "parallelIndex": 2,
-                      "status": "interrupted",
-                      "duration": 28918,
-                      "error": {
-                        "message": "Error: browserContext.close: Test ended.\nBrowser logs:\n\n<launching> /Users/jay/Library/Caches/ms-playwright/chromium-1223/chrome-mac-x64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=/var/folders/8z/275qrrln1sb43k35hh1wvjsc0000gp/T/playwright_chromiumdev_profile-dgUQop --remote-debugging-pipe --no-startup-window\n<launched> pid=29589\n[pid=29589][err] [29601:249676:0630/174441.173665:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Error) eglQueryDeviceAttribEXT: Bad attribute.\n[pid=29589][err] [29601:249676:0630/174441.181130:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Error) eglQueryDeviceAttribEXT: Bad attribute.\n[pid=29589][err] [29601:249676:0630/174441.181574:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Error) eglQueryDeviceAttribEXT: Bad attribute.\n[pid=29589][err] [29601:249676:0630/174458.966294:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Error) eglQueryDeviceAttribEXT: Bad attribute.\n[pid=29589][err] [29601:249676:0630/174458.967392:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Error) eglQueryDeviceAttribEXT: Bad attribute.\n[pid=29589][err] [29601:249676:0630/174458.967796:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Error) eglQueryDeviceAttribEXT: Bad attribute.\n[pid=29589] <gracefully close start>",
-                        "stack": "Error: browserContext.close: Test ended.\nBrowser logs:\n\n<launching> /Users/jay/Library/Caches/ms-playwright/chromium-1223/chrome-mac-x64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=/var/folders/8z/275qrrln1sb43k35hh1wvjsc0000gp/T/playwright_chromiumdev_profile-dgUQop --remote-debugging-pipe --no-startup-window\n<launched> pid=29589\n[pid=29589][err] [29601:249676:0630/174441.173665:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Error) eglQueryDeviceAttribEXT: Bad attribute.\n[pid=29589][err] [29601:249676:0630/174441.181130:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Error) eglQueryDeviceAttribEXT: Bad attribute.\n[pid=29589][err] [29601:249676:0630/174441.181574:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Error) eglQueryDeviceAttribEXT: Bad attribute.\n[pid=29589][err] [29601:249676:0630/174458.966294:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Error) eglQueryDeviceAttribEXT: Bad attribute.\n[pid=29589][err] [29601:249676:0630/174458.967392:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Error) eglQueryDeviceAttribEXT: Bad attribute.\n[pid=29589][err] [29601:249676:0630/174458.967796:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Error) eglQueryDeviceAttribEXT: Bad attribute.\n[pid=29589] <gracefully close start>"
-                      },
-                      "errors": [
-                        {
-                          "message": "Error: browserContext.close: Test ended.\nBrowser logs:\n\n<launching> /Users/jay/Library/Caches/ms-playwright/chromium-1223/chrome-mac-x64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=/var/folders/8z/275qrrln1sb43k35hh1wvjsc0000gp/T/playwright_chromiumdev_profile-dgUQop --remote-debugging-pipe --no-startup-window\n<launched> pid=29589\n[pid=29589][err] [29601:249676:0630/174441.173665:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Error) eglQueryDeviceAttribEXT: Bad attribute.\n[pid=29589][err] [29601:249676:0630/174441.181130:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Error) eglQueryDeviceAttribEXT: Bad attribute.\n[pid=29589][err] [29601:249676:0630/174441.181574:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Error) eglQueryDeviceAttribEXT: Bad attribute.\n[pid=29589][err] [29601:249676:0630/174458.966294:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Error) eglQueryDeviceAttribEXT: Bad attribute.\n[pid=29589][err] [29601:249676:0630/174458.967392:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Error) eglQueryDeviceAttribEXT: Bad attribute.\n[pid=29589][err] [29601:249676:0630/174458.967796:ERROR:ui/gl/egl_util.cc:92] EGL Driver message (Error) eglQueryDeviceAttribEXT: Bad attribute.\n[pid=29589] <gracefully close start>"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-06-30T12:14:58.549Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/jay/Downloads/Plawright/E-commerce-Test/test-results/api-mocking-API-Mocking-Ex-d9749-essful-API-with-custom-data/test-failed-1.png"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "/Users/jay/Downloads/Plawright/E-commerce-Test/test-results/api-mocking-API-Mocking-Ex-d9749-essful-API-with-custom-data/trace.zip"
-                        }
-                      ]
-                    }
-                  ],
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
                   "status": "skipped"
                 }
               ],
-              "id": "bcff5fa723f516684996-7dd7f555d12695601b70",
+              "id": "bcff5fa723f516684996-fae1551ee9772526fec8",
               "file": "api-mocking.spec.ts",
               "line": 23,
               "column": 7
@@ -391,16 +263,16 @@
               "tags": [],
               "tests": [
                 {
-                  "timeout": 60000,
+                  "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [],
                   "status": "skipped"
                 }
               ],
-              "id": "bcff5fa723f516684996-a069abce656b990086df",
+              "id": "bcff5fa723f516684996-5819116b5025dafe084b",
               "file": "api-mocking.spec.ts",
               "line": 48,
               "column": 7
@@ -411,16 +283,16 @@
               "tags": [],
               "tests": [
                 {
-                  "timeout": 60000,
+                  "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [],
                   "status": "skipped"
                 }
               ],
-              "id": "bcff5fa723f516684996-aabbfd8e84d670452904",
+              "id": "bcff5fa723f516684996-f8f0a73bb8386534f94f",
               "file": "api-mocking.spec.ts",
               "line": 67,
               "column": 7
@@ -431,16 +303,16 @@
               "tags": [],
               "tests": [
                 {
-                  "timeout": 60000,
+                  "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [],
                   "status": "skipped"
                 }
               ],
-              "id": "bcff5fa723f516684996-583826ff1e5ced9dbcfb",
+              "id": "bcff5fa723f516684996-a04c4f5ba69b3d27f90b",
               "file": "api-mocking.spec.ts",
               "line": 84,
               "column": 7
@@ -459,16 +331,16 @@
               "tags": [],
               "tests": [
                 {
-                  "timeout": 60000,
+                  "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [],
                   "status": "skipped"
                 }
               ],
-              "id": "bcff5fa723f516684996-697388228c9d47f423d5",
+              "id": "bcff5fa723f516684996-362024f40f102376047a",
               "file": "api-mocking.spec.ts",
               "line": 107,
               "column": 7
@@ -479,16 +351,16 @@
               "tags": [],
               "tests": [
                 {
-                  "timeout": 60000,
+                  "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [],
                   "status": "skipped"
                 }
               ],
-              "id": "bcff5fa723f516684996-44c5dd535f47035d525d",
+              "id": "bcff5fa723f516684996-246ae6fa536d6faa726a",
               "file": "api-mocking.spec.ts",
               "line": 123,
               "column": 7
@@ -516,30 +388,16 @@
               "tags": [],
               "tests": [
                 {
-                  "timeout": 60000,
+                  "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 3,
-                      "parallelIndex": 3,
-                      "status": "passed",
-                      "duration": 14154,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-06-30T12:14:47.461Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
-              "id": "2ba1996ab9af49a658f4-f46a251753237921368f",
+              "id": "2ba1996ab9af49a658f4-4185edf46dfc319c9893",
               "file": "browser-interactions.spec.ts",
               "line": 117,
               "column": 7
@@ -558,30 +416,16 @@
               "tags": [],
               "tests": [
                 {
-                  "timeout": 60000,
+                  "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 3,
-                      "parallelIndex": 3,
-                      "status": "passed",
-                      "duration": 12172,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-06-30T12:15:01.635Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
-              "id": "2ba1996ab9af49a658f4-3b0db2521e4a8fe1b78e",
+              "id": "2ba1996ab9af49a658f4-e525e31ef34bd7dabc7e",
               "file": "browser-interactions.spec.ts",
               "line": 138,
               "column": 7
@@ -592,30 +436,16 @@
               "tags": [],
               "tests": [
                 {
-                  "timeout": 60000,
+                  "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 3,
-                      "parallelIndex": 3,
-                      "status": "passed",
-                      "duration": 5370,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-06-30T12:15:13.820Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
-              "id": "2ba1996ab9af49a658f4-c35dfdead26eade54451",
+              "id": "2ba1996ab9af49a658f4-5080e921bd892e387d52",
               "file": "browser-interactions.spec.ts",
               "line": 156,
               "column": 7
@@ -626,30 +456,16 @@
               "tags": [],
               "tests": [
                 {
-                  "timeout": 60000,
+                  "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 3,
-                      "parallelIndex": 3,
-                      "status": "passed",
-                      "duration": 5659,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-06-30T12:15:19.875Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
-              "id": "2ba1996ab9af49a658f4-972c76720a2f3699f194",
+              "id": "2ba1996ab9af49a658f4-6385fff63002670c0860",
               "file": "browser-interactions.spec.ts",
               "line": 171,
               "column": 7
@@ -668,44 +484,16 @@
               "tags": [],
               "tests": [
                 {
-                  "timeout": 60000,
+                  "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 3,
-                      "parallelIndex": 3,
-                      "status": "interrupted",
-                      "duration": 2743,
-                      "error": {
-                        "message": "Error: browserContext.newPage: Test ended.",
-                        "stack": "Error: browserContext.newPage: Test ended."
-                      },
-                      "errors": [
-                        {
-                          "message": "Error: browserContext.newPage: Test ended."
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-06-30T12:15:25.561Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "/Users/jay/Downloads/Plawright/E-commerce-Test/test-results/browser-interactions-Multi-54d9c-witch-between-multiple-tabs/trace.zip"
-                        }
-                      ]
-                    }
-                  ],
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
                   "status": "skipped"
                 }
               ],
-              "id": "2ba1996ab9af49a658f4-7e9044a46f4afcbd52d8",
+              "id": "2ba1996ab9af49a658f4-743b62ccb7d504493167",
               "file": "browser-interactions.spec.ts",
               "line": 209,
               "column": 7
@@ -726,50 +514,16 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 60000,
+              "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "interrupted",
-                  "duration": 38040,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Current URL: https://automationexercise.com/products\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-06-30T12:14:52.687Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/jay/Downloads/Plawright/E-commerce-Test/test-results/CheckoutPage-Complete-Checkout-Flow/test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/Users/jay/Downloads/Plawright/E-commerce-Test/test-results/CheckoutPage-Complete-Checkout-Flow/video.webm"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "/Users/jay/Downloads/Plawright/E-commerce-Test/test-results/CheckoutPage-Complete-Checkout-Flow/trace.zip"
-                    }
-                  ]
-                }
-              ],
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [],
               "status": "skipped"
             }
           ],
-          "id": "4fae901f9bd61a5a8bf0-497490296225bcd8e204",
+          "id": "4fae901f9bd61a5a8bf0-8e7f8b4966b2963d0efc",
           "file": "CheckoutPage.spec.ts",
           "line": 7,
           "column": 5
@@ -788,16 +542,16 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 60000,
+              "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
+              "projectId": "chromium",
+              "projectName": "chromium",
               "results": [],
               "status": "skipped"
             }
           ],
-          "id": "41d3fd2474a19feb00a1-f3ebcd273c51be8114b6",
+          "id": "41d3fd2474a19feb00a1-47eb5e4631adf767d774",
           "file": "login.spec.ts",
           "line": 4,
           "column": 5
@@ -816,16 +570,16 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 60000,
+              "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
+              "projectId": "chromium",
+              "projectName": "chromium",
               "results": [],
               "status": "skipped"
             }
           ],
-          "id": "ff20b78484ef6563815b-0eb584a1bdd0cd2a8d45",
+          "id": "ff20b78484ef6563815b-4f3b65b2a94256c7c3b3",
           "file": "Performance/assertions.spec.ts",
           "line": 3,
           "column": 5
@@ -844,16 +598,16 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 60000,
+              "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
+              "projectId": "chromium",
+              "projectName": "chromium",
               "results": [],
               "status": "skipped"
             }
           ],
-          "id": "a752315b48b41a7aa942-9cdd7be07e98dba5ce86",
+          "id": "a752315b48b41a7aa942-31328d7a945ff16614e8",
           "file": "Security/edge-cases.spec.ts",
           "line": 4,
           "column": 5
@@ -864,16 +618,16 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 60000,
+              "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
+              "projectId": "chromium",
+              "projectName": "chromium",
               "results": [],
               "status": "skipped"
             }
           ],
-          "id": "a752315b48b41a7aa942-2489e46b604e4d75956c",
+          "id": "a752315b48b41a7aa942-471d907f438c8b6b38db",
           "file": "Security/edge-cases.spec.ts",
           "line": 14,
           "column": 5
@@ -892,16 +646,16 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 60000,
+              "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
+              "projectId": "chromium",
+              "projectName": "chromium",
               "results": [],
               "status": "skipped"
             }
           ],
-          "id": "7dff6fa425278d1857ca-900efa2c02bd6ffb0aa0",
+          "id": "7dff6fa425278d1857ca-5575326b95cedbdc2e4f",
           "file": "Visual Regression/product-card.spec.ts",
           "line": 8,
           "column": 5
@@ -911,10 +665,10 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-06-30T12:14:37.596Z",
-    "duration": 54423.657999999996,
-    "expected": 9,
-    "skipped": 14,
+    "startTime": "2026-07-09T05:11:33.885Z",
+    "duration": 73.66499999999996,
+    "expected": 0,
+    "skipped": 23,
     "unexpected": 0,
     "flaky": 0
   }
