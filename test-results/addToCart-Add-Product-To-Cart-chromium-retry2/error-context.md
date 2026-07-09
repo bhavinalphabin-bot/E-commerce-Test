@@ -1,0 +1,248 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: addToCart.spec.ts >> Add Product To Cart
+- Location: tests/addToCart.spec.ts:6:5
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+```
+Tearing down "context" exceeded the test timeout of 30000ms.
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e5]:
+      - link "Website for automation practice" [ref=e8] [cursor=pointer]:
+        - /url: /
+        - img "Website for automation practice" [ref=e9]
+      - list [ref=e12]:
+        - listitem [ref=e13]:
+          - link " Home" [ref=e14] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e15]: 
+            - text: Home
+        - listitem [ref=e16]:
+          - link " Products" [ref=e17] [cursor=pointer]:
+            - /url: /products
+            - generic [ref=e18]: 
+            - text: Products
+        - listitem [ref=e19]:
+          - link " Cart" [ref=e20] [cursor=pointer]:
+            - /url: /view_cart
+            - generic [ref=e21]: 
+            - text: Cart
+        - listitem [ref=e22]:
+          - link " Signup / Login" [ref=e23] [cursor=pointer]:
+            - /url: /login
+            - generic [ref=e24]: 
+            - text: Signup / Login
+        - listitem [ref=e25]:
+          - link " Test Cases" [ref=e26] [cursor=pointer]:
+            - /url: /test_cases
+            - generic [ref=e27]: 
+            - text: Test Cases
+        - listitem [ref=e28]:
+          - link " API Testing" [ref=e29] [cursor=pointer]:
+            - /url: /api_list
+            - generic [ref=e30]: 
+            - text: API Testing
+        - listitem [ref=e31]:
+          - link " Video Tutorials" [ref=e32] [cursor=pointer]:
+            - /url: https://www.youtube.com/c/AutomationExercise
+            - generic [ref=e33]: 
+            - text: Video Tutorials
+        - listitem [ref=e34]:
+          - link " Contact us" [ref=e35] [cursor=pointer]:
+            - /url: /contact_us
+            - generic [ref=e36]: 
+            - text: Contact us
+  - generic [ref=e38]:
+    - img "Website for practice" [ref=e39]
+    - textbox "Search Product" [ref=e40]: Men Tshirt
+    - button "" [ref=e41] [cursor=pointer]:
+      - generic [ref=e42]: 
+  - generic [ref=e45]:
+    - generic [ref=e47]:
+      - heading "Category" [level=2] [ref=e48]
+      - generic [ref=e49]:
+        - heading " Women" [level=4] [ref=e52]:
+          - link " Women" [ref=e53] [cursor=pointer]:
+            - /url: "#Women"
+            - generic [ref=e55]: 
+            - text: Women
+        - heading " Men" [level=4] [ref=e58]:
+          - link " Men" [ref=e59] [cursor=pointer]:
+            - /url: "#Men"
+            - generic [ref=e61]: 
+            - text: Men
+        - heading " Kids" [level=4] [ref=e64]:
+          - link " Kids" [ref=e65] [cursor=pointer]:
+            - /url: "#Kids"
+            - generic [ref=e67]: 
+            - text: Kids
+      - insertion [ref=e69]:
+        - generic [ref=e72]:
+          - heading "These are topics related to the article that might interest you" [level=2] [ref=e74]: Discover more
+          - link "Dresses" [ref=e75] [cursor=pointer]:
+            - generic "Dresses" [ref=e76]
+            - img [ref=e78]
+          - link "Babyhug" [ref=e80] [cursor=pointer]:
+            - generic "Babyhug" [ref=e81]
+            - img [ref=e83]
+          - link "Tops & Shirts" [ref=e85] [cursor=pointer]:
+            - generic "Tops & Shirts" [ref=e86]
+            - img [ref=e88]
+          - link "Shirts & Tops" [ref=e90] [cursor=pointer]:
+            - generic "Shirts & Tops" [ref=e91]
+            - img [ref=e93]
+          - link "Men's T-shirts" [ref=e95] [cursor=pointer]:
+            - generic "Men's T-shirts" [ref=e96]
+            - img [ref=e98]
+          - link "Polo" [ref=e100] [cursor=pointer]:
+            - generic "Polo" [ref=e101]
+            - img [ref=e103]
+          - link "Textiles & Nonwovens" [ref=e105] [cursor=pointer]:
+            - generic "Textiles & Nonwovens" [ref=e106]
+            - img [ref=e108]
+          - link "Online Shopping Cart" [ref=e110] [cursor=pointer]:
+            - generic "Online Shopping Cart" [ref=e111]
+            - img [ref=e113]
+      - generic [ref=e115]:
+        - heading "Brands" [level=2] [ref=e116]
+        - list [ref=e118]:
+          - listitem [ref=e119]:
+            - link "(6) Polo" [ref=e120] [cursor=pointer]:
+              - /url: /brand_products/Polo
+              - generic [ref=e121]: (6)
+              - text: Polo
+          - listitem [ref=e122]:
+            - link "(5) H&M" [ref=e123] [cursor=pointer]:
+              - /url: /brand_products/H&M
+              - generic [ref=e124]: (5)
+              - text: H&M
+          - listitem [ref=e125]:
+            - link "(5) Madame" [ref=e126] [cursor=pointer]:
+              - /url: /brand_products/Madame
+              - generic [ref=e127]: (5)
+              - text: Madame
+          - listitem [ref=e128]:
+            - link "(3) Mast & Harbour" [ref=e129] [cursor=pointer]:
+              - /url: /brand_products/Mast & Harbour
+              - generic [ref=e130]: (3)
+              - text: Mast & Harbour
+          - listitem [ref=e131]:
+            - link "(4) Babyhug" [ref=e132] [cursor=pointer]:
+              - /url: /brand_products/Babyhug
+              - generic [ref=e133]: (4)
+              - text: Babyhug
+          - listitem [ref=e134]:
+            - link "(3) Allen Solly Junior" [ref=e135] [cursor=pointer]:
+              - /url: /brand_products/Allen Solly Junior
+              - generic [ref=e136]: (3)
+              - text: Allen Solly Junior
+          - listitem [ref=e137]:
+            - link "(3) Kookie Kids" [ref=e138] [cursor=pointer]:
+              - /url: /brand_products/Kookie Kids
+              - generic [ref=e139]: (3)
+              - text: Kookie Kids
+          - listitem [ref=e140]:
+            - link "(5) Biba" [ref=e141] [cursor=pointer]:
+              - /url: /brand_products/Biba
+              - generic [ref=e142]: (5)
+              - text: Biba
+    - generic [ref=e144]:
+      - heading "Searched Products" [level=2] [ref=e145]
+      - generic [ref=e147]:
+        - generic [ref=e148]:
+          - generic [ref=e149]:
+            - img "ecommerce website products" [ref=e150]
+            - heading "Rs. 400" [level=2] [ref=e151]
+            - paragraph [ref=e152]:
+              - text: Men
+              - link "Tshirt" [ref=e153] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e154]
+                - text: Tshirt
+            - generic [ref=e156] [cursor=pointer]:
+              - generic [ref=e157]: 
+              - text: Add to cart
+          - generic [ref=e159]:
+            - heading "Rs. 400" [level=2] [ref=e160]
+            - paragraph [ref=e161]: Men Tshirt
+            - generic [ref=e162] [cursor=pointer]:
+              - generic [ref=e163]: 
+              - text: Add to cart
+        - list [ref=e165]:
+          - listitem [ref=e166]:
+            - link " View Product" [ref=e167] [cursor=pointer]:
+              - /url: /product_details/2
+              - generic [ref=e168]: 
+              - text: View Product
+  - contentinfo [ref=e169]:
+    - generic [ref=e174]:
+      - heading "Subscription" [level=2] [ref=e175]
+      - generic [ref=e176]:
+        - textbox "Your email address" [ref=e177]
+        - button "" [ref=e178] [cursor=pointer]:
+          - generic [ref=e179]: 
+        - paragraph [ref=e180]:
+          - text: Get the most recent updates from
+          - text: our site and be updated your self...
+    - paragraph [ref=e184]: Copyright © 2021 All rights reserved
+  - text: 
+  - insertion [ref=e186]:
+    - generic [ref=e189]:
+      - heading "These are topics related to the article that might interest you" [level=2] [ref=e191]: Discover more
+      - link "Retail Trade" [ref=e192] [cursor=pointer]:
+        - generic "Retail Trade" [ref=e193]
+        - img [ref=e195]
+      - link "Kookie Kids Clothing" [ref=e197] [cursor=pointer]:
+        - generic "Kookie Kids Clothing" [ref=e198]
+        - img [ref=e200]
+      - link "T SHIRT" [ref=e202] [cursor=pointer]:
+        - generic "T SHIRT" [ref=e203]
+        - img [ref=e205]
+  - insertion [ref=e207]:
+    - iframe [ref=e210]:
+      - iframe [ref=f38e1]:
+        - generic [active]:
+          - generic [ref=f39e1]:
+            - generic [ref=f39e2]:
+              - generic:
+                - img [ref=f39e6] [cursor=pointer]
+                - button [ref=f39e8] [cursor=pointer]:
+                  - img [ref=f39e9]
+            - insertion [ref=f39e16]:
+              - generic [ref=f39e17]:
+                - link "Click Here" [ref=f39e18] [cursor=pointer]:
+                  - /url: https://googleads.g.doubleclick.net/dbm/clk?sa=L&ai=Co5-VxyZPavqsB_XfjeYPha-nwQjooY6miAGd0_mJgxb_9ZDj1wIQASD9tJ6VAWDlgoCAqA6gAYviiqAByAEJqAMByAObBKoEgQJP0NY4FJ0pInMWf3I61n9tu8Kj2tEY-3uLTNsxn7frnQAJ0eZ6siMITiCkVYeRVNVFSRop5ELBZ03SOdxQnGrKjvT22bauZIF0hEUOxP8D_GpHbDXs3-xhbzRbQW9iRJCdQN1h052jdSnZiBPbTwIvg4bOxIYrtOLcjy1vUVWT5CCsNfMUIde04UBlVHXvF_EThni0trKKo27COrZSXCBq0O-5FJ3dCZegSlNVE3o_I5Gf9TkeLdtM3OaziRItvsE0zKYKyIgtZVbGnuxL4B7qL3Jf7biiOrY5UbtOlrOmqTVyQuw2lspdslrrqcDks0QNQXMOFA9btwXSLgxrrBHZI8AE4v71788F4AQDiAW-_uOrWZAGAaAGTYAH3Z313wKoB6fMsQKoB6a-G6gHzM6xAqgH89EbqAeW2BuoB6qbsQKoB47OG6gHk9gbqAfw4BuoB-6WsQKoB_6esQKoB6--sQKoB9XJG6gH2baxAqgHmgaoB_-esQKoB9-fsQKoB_jCsQKoB_vCsQKoB-fXsQLYBwDSCDMIgGEQARifAzIIioKAgICAgAg6D4BAgMCAgICAqIACqIOAEEi9_cE6WMzIzIvkxJUDYAGACgGYCwHICwGADAGqDQJJTuoNEwjctM-L5MSVAxX1b8MGHYXXKYjwDQGIDgmwE9u6syPQEwDYEw3YFAHQFQHKFgIKAPgWAYAXAbIXBBgCUAayGAUYTSIBANAZAQ&ae=1&num=1&cid=CAQSiwIAEQoqgQmTHIx0FpTd-GT3XT5G8AJkc2FwXPO2RR2aI446p87phEcvjZdTo3o_4KZDW8xAQBmejDglU4BQDRUKr8L-iIbVABYDcDW4vdB3Y7CUGdNRpeq3WPJcWwv1iYxr9yW0AL91ookl3EkD98NW16ZNzCsR2kKHIlvDqLJILBOg8saWhU4rvPRfmSqONono0kkD2n9Yoq0ue7orC82EpwEETCYX8dWUfmpv4yJMMc4Z7dc0_95ICFw4Emvl77i5bG9A-2gB38ARps6NjsyZ-oHXO-BWzqTxneDfNzsfHnmnYPMWA9Us7j8bEUbmd9AobgRggpFXfUQe2viLO5N3n3cbP4quoOhG8acYAQ&sig=AOD64_0_aFItgnpuVW3F2dLnOkl2j-GIXg&client=ca-pub-1677597403311019&dbm_c=AKAmf-BPwmPYCRwFKSL6sjUp-j3Q6MoJsUJVRCi3ipyaWKgZ8jbhlvNEkpD51dIr8GSVDRVWdSyor6xyTU-3IQ8wHjsPItzaQ1fTn2VcZvY_XK3cwDyON88JpDdJXbZd4FoTzvNhJsCChf2mimgG1NCTf4CWoJR8gYQX1ylr155NZeoJUF0QF7YLhDIe56-9Pq-JQRIqd8-6EVv2-Durw-JGCnq95Wy1GdIjUvFfiS9fCfKRTGYgnrhbOXMz1qzVTSiECjIIHhnUjiqLtsurT2rB5ufa28QKWbAo3WFnawIb-Mo0IiKWhzuQGf6NHyliwUXZ0z6lOqZM&cry=1&dbm_d=AKAmf-CJHgQ6cT0PIAv-9go2RkhzySJw-IBsrqL-lLVtOcDgXt8tEdutcSgKMhwSvxIWPD3BvhjNiFOv9b9UfFJvGvvzqXVkG6IQQqxQ0p5I67jZpgNubUZbTUde9eJPRu7ROXljvei8hemj8aRXsR2QazNsnXtD405h00WkLKUDSGaCnGHCWgxw22FkNOHHTrYX7wzmATC1muU8xyYzzS6fFJOcto5QcPGNxNm-IlUDkembPjK1YjKa6wiJidLWLNnayJyXtiElAxmD752pm8w-R6FEcLUmihzHna3cTNJZ8VMgAO7KgmnrXfy_TA5MQebheaRWO7rI6_HOxQ68U1ju662WBTVBE6QzDFJ2bLlHP8mqMpHdU4PEV1aVBnuTz4HY0LoJqQJGEntQlG5dJLMHE2306Lp-TlYso1Y2NUvMAoN-ve-YrJZ4Nu8BNWfHj82uKBfro_5zCVlerfaLJ35hPYfCLbE3ekbLv0JhtPy1uq_ou8xyL4scxqmD0I-dPEQSwjasivD1K-df6WKbIrz3d8KQ2pHchHa1h43a6bwgU7oJlJWF9dXyAqBphqqZjF65sguOfxCpZQoKDycEoxowhmN90D_mPVRHXdji878g8iu3DS0v9JE88EpvA-DkTZBlYjFNrLlpsMsnLg6LYWnx2krfbEvjPhZ0b2FZMnPuMjImmlrfRx9Giy5j3OubWkJoE8XFP2erWdGotyXbrSQ_sIn3KGUs9iSkLs92A_OEVE15Cyqw2B_ypgzgRFxl9d9SFesG8yd2Q0sUjMTAiPAlzQLMvDbI0A&adurl=https://servedby.flashtalking.com/click/7/322492;10939567;6292967;210;0/?us_privacy=!!US_PRIVACY!&ft_partnerimpid=ABAjH0ibb1um3PL9eRHUnQi0UxVc&ft_impID=F48224D3-C413-F27A-CC97-7AECD4A37089&ft_section=23982571326&g=6764B250E66CDA&random=954120.6170430935&ft_width=728&ft_height=90&url=https://www.adobe.com/in/products/firefly.html?sdid=2FDNC54Z&mv=display&mv2=display
+                  - img "Click Here" [ref=f39e19]
+                - link "AdChoices arrow" [ref=f39e21] [cursor=pointer]:
+                  - /url: https://www.flashtalking.com/consumer-privacy
+                  - img "AdChoices arrow" [ref=f39e22]
+                - link "Privacy Notification" [ref=f39e24] [cursor=pointer]:
+                  - /url: https://www.flashtalking.com/consumer-privacy
+                  - img [ref=f39e25]
+                - link "Privacy Notification" [ref=f39e27] [cursor=pointer]:
+                  - /url: https://www.flashtalking.com/consumer-privacy
+                  - img [ref=f39e28]
+          - iframe
+  - generic [ref=e211]:
+    - generic [ref=e212] [cursor=pointer]:
+      - img [ref=e214]
+      - link "Go to shopping options for Men's T-shirts" [ref=e216]: Men's T-shirts
+    - button "Close shopping anchor" [ref=e217]
+```

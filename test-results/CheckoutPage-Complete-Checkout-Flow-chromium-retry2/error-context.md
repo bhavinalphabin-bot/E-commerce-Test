@@ -1,0 +1,235 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: CheckoutPage.spec.ts >> Complete Checkout Flow
+- Location: tests/CheckoutPage.spec.ts:7:5
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e5]:
+      - link "Website for automation practice" [ref=e8] [cursor=pointer]:
+        - /url: /
+        - img "Website for automation practice" [ref=e9]
+      - list [ref=e12]:
+        - listitem [ref=e13]:
+          - link " Home" [ref=e14] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e15]: 
+            - text: Home
+        - listitem [ref=e16]:
+          - link " Products" [ref=e17] [cursor=pointer]:
+            - /url: /products
+            - generic [ref=e18]: 
+            - text: Products
+        - listitem [ref=e19]:
+          - link " Cart" [ref=e20] [cursor=pointer]:
+            - /url: /view_cart
+            - generic [ref=e21]: 
+            - text: Cart
+        - listitem [ref=e22]:
+          - link " Logout" [ref=e23] [cursor=pointer]:
+            - /url: /logout
+            - generic [ref=e24]: 
+            - text: Logout
+        - listitem [ref=e25]:
+          - link " Delete Account" [ref=e26] [cursor=pointer]:
+            - /url: /delete_account
+            - generic [ref=e27]: 
+            - text: Delete Account
+        - listitem [ref=e28]:
+          - link " Test Cases" [ref=e29] [cursor=pointer]:
+            - /url: /test_cases
+            - generic [ref=e30]: 
+            - text: Test Cases
+        - listitem [ref=e31]:
+          - link " API Testing" [ref=e32] [cursor=pointer]:
+            - /url: /api_list
+            - generic [ref=e33]: 
+            - text: API Testing
+        - listitem [ref=e34]:
+          - link " Video Tutorials" [ref=e35] [cursor=pointer]:
+            - /url: https://www.youtube.com/c/AutomationExercise
+            - generic [ref=e36]: 
+            - text: Video Tutorials
+        - listitem [ref=e37]:
+          - link " Contact us" [ref=e38] [cursor=pointer]:
+            - /url: /contact_us
+            - generic [ref=e39]: 
+            - text: Contact us
+        - listitem [ref=e40]:
+          - generic [ref=e41]:
+            - generic [ref=e42]: 
+            - text: Logged in as Bhavy Mangukiya
+  - generic [ref=e44]:
+    - img "Website for practice" [ref=e45]
+    - textbox "Search Product" [ref=e46]: Blue Top
+    - button "" [ref=e47] [cursor=pointer]:
+      - generic [ref=e48]: 
+  - generic [ref=e51]:
+    - generic [ref=e53]:
+      - heading "Category" [level=2] [ref=e54]
+      - generic [ref=e55]:
+        - heading " Women" [level=4] [ref=e58]:
+          - link " Women" [ref=e59] [cursor=pointer]:
+            - /url: "#Women"
+            - generic [ref=e61]: 
+            - text: Women
+        - heading " Men" [level=4] [ref=e64]:
+          - link " Men" [ref=e65] [cursor=pointer]:
+            - /url: "#Men"
+            - generic [ref=e67]: 
+            - text: Men
+        - heading " Kids" [level=4] [ref=e70]:
+          - link " Kids" [ref=e71] [cursor=pointer]:
+            - /url: "#Kids"
+            - generic [ref=e73]: 
+            - text: Kids
+      - insertion [ref=e75]:
+        - generic [ref=e78]:
+          - heading "These are topics related to the article that might interest you" [level=2] [ref=e80]: Discover more
+          - link "Polo" [ref=e81] [cursor=pointer]:
+            - generic "Polo" [ref=e82]
+            - img [ref=e84]
+          - link "Babyhug Clothing" [ref=e86] [cursor=pointer]:
+            - generic "Babyhug Clothing" [ref=e87]
+            - img [ref=e89]
+          - link "Half Sleeves Tops" [ref=e91] [cursor=pointer]:
+            - generic "Half Sleeves Tops" [ref=e92]
+            - img [ref=e94]
+          - link "Women's Dresses" [ref=e96] [cursor=pointer]:
+            - generic "Women's Dresses" [ref=e97]
+            - img [ref=e99]
+          - link "Shipping & Logistics" [ref=e101] [cursor=pointer]:
+            - generic "Shipping & Logistics" [ref=e102]
+            - img [ref=e104]
+          - link "T-Shirt" [ref=e106] [cursor=pointer]:
+            - generic "T-Shirt" [ref=e107]
+            - img [ref=e109]
+          - link "T SHIRT" [ref=e111] [cursor=pointer]:
+            - generic "T SHIRT" [ref=e112]
+            - img [ref=e114]
+          - link "Shirts & Tops" [ref=e116] [cursor=pointer]:
+            - generic "Shirts & Tops" [ref=e117]
+            - img [ref=e119]
+      - generic [ref=e121]:
+        - heading "Brands" [level=2] [ref=e122]
+        - list [ref=e124]:
+          - listitem [ref=e125]:
+            - link "(6) Polo" [ref=e126] [cursor=pointer]:
+              - /url: /brand_products/Polo
+              - generic [ref=e127]: (6)
+              - text: Polo
+          - listitem [ref=e128]:
+            - link "(5) H&M" [ref=e129] [cursor=pointer]:
+              - /url: /brand_products/H&M
+              - generic [ref=e130]: (5)
+              - text: H&M
+          - listitem [ref=e131]:
+            - link "(5) Madame" [ref=e132] [cursor=pointer]:
+              - /url: /brand_products/Madame
+              - generic [ref=e133]: (5)
+              - text: Madame
+          - listitem [ref=e134]:
+            - link "(3) Mast & Harbour" [ref=e135] [cursor=pointer]:
+              - /url: /brand_products/Mast & Harbour
+              - generic [ref=e136]: (3)
+              - text: Mast & Harbour
+          - listitem [ref=e137]:
+            - link "(4) Babyhug" [ref=e138] [cursor=pointer]:
+              - /url: /brand_products/Babyhug
+              - generic [ref=e139]: (4)
+              - text: Babyhug
+          - listitem [ref=e140]:
+            - link "(3) Allen Solly Junior" [ref=e141] [cursor=pointer]:
+              - /url: /brand_products/Allen Solly Junior
+              - generic [ref=e142]: (3)
+              - text: Allen Solly Junior
+          - listitem [ref=e143]:
+            - link "(3) Kookie Kids" [ref=e144] [cursor=pointer]:
+              - /url: /brand_products/Kookie Kids
+              - generic [ref=e145]: (3)
+              - text: Kookie Kids
+          - listitem [ref=e146]:
+            - link "(5) Biba" [ref=e147] [cursor=pointer]:
+              - /url: /brand_products/Biba
+              - generic [ref=e148]: (5)
+              - text: Biba
+    - generic [ref=e150]:
+      - heading "Searched Products" [level=2] [ref=e151]
+      - generic [ref=e153]:
+        - generic [ref=e154]:
+          - generic [ref=e155]:
+            - img "ecommerce website products" [ref=e156]
+            - heading "Rs. 500" [level=2] [ref=e157]
+            - paragraph [ref=e158]: Blue Top
+            - generic [ref=e159] [cursor=pointer]:
+              - generic [ref=e160]: 
+              - text: Add to cart
+          - generic [ref=e162]:
+            - heading "Rs. 500" [level=2] [ref=e163]
+            - paragraph [ref=e164]: Blue Top
+            - generic [ref=e165] [cursor=pointer]:
+              - generic [ref=e166]: 
+              - text: Add to cart
+        - list [ref=e168]:
+          - listitem [ref=e169]:
+            - link " View Product" [ref=e170] [cursor=pointer]:
+              - /url: /product_details/1
+              - generic [ref=e171]: 
+              - text: View Product
+  - contentinfo [ref=e172]:
+    - generic [ref=e177]:
+      - heading "Subscription" [level=2] [ref=e178]
+      - generic [ref=e179]:
+        - textbox "Your email address" [ref=e180]
+        - button "" [ref=e181] [cursor=pointer]:
+          - generic [ref=e182]: 
+        - paragraph [ref=e183]:
+          - text: Get the most recent updates from
+          - text: our site and be updated your self...
+    - paragraph [ref=e187]: Copyright © 2021 All rights reserved
+  - text: 
+  - insertion [ref=e189]:
+    - generic [ref=e192]:
+      - heading "These are topics related to the article that might interest you" [level=2] [ref=e194]: Discover more
+      - link "Printed T-shirts" [ref=e195] [cursor=pointer]:
+        - generic "Printed T-shirts" [ref=e196]
+        - img [ref=e198]
+      - link "Dictionaries & Encyclopedias" [ref=e200] [cursor=pointer]:
+        - generic "Dictionaries & Encyclopedias" [ref=e201]
+        - img [ref=e203]
+      - link "Kookie Kids Clothing" [ref=e205] [cursor=pointer]:
+        - generic "Kookie Kids Clothing" [ref=e206]
+        - img [ref=e208]
+  - insertion [ref=e210]:
+    - iframe [ref=e213]:
+      - iframe [ref=f62e1]:
+        - generic [ref=f63e2]:
+          - iframe [ref=f63e5]:
+            - generic [ref=f67e5]:
+              - img [ref=f67e8]
+              - img [ref=f67e11]
+              - img [ref=f67e14]
+              - img [ref=f67e17]
+              - img [ref=f67e20]
+              - img [ref=f67e23]
+          - generic [ref=f63e6]:
+            - generic:
+              - img [ref=f63e10] [cursor=pointer]
+              - button [ref=f63e12] [cursor=pointer]:
+                - img [ref=f63e13]
+```
