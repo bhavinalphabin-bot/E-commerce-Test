@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from '@testdino/playwright';
 
 test.skip(
   (globalThis as any).process?.env?.CI,

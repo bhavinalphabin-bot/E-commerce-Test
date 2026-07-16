@@ -1,6 +1,7 @@
 name: Playwright Tests
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -8,6 +9,7 @@ on:
 
 jobs:
   playwright:
+    if: github.event_name != 'workflow_dispatch'
     runs-on: ubuntu-latest
     env:
       TESTDINO_SERVER_URL: https://stg-analytics.testdino.com
@@ -32,16 +34,12 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
-      - name: Configure TestDino Token
+      - name: Verify TestDino Token
         env:
           TESTDINO_SECRET: ${{ secrets.TESTDINO_TOKEN }}
         run: |
-          if [ -n "$TESTDINO_SECRET" ]; then
-            echo "TESTDINO_TOKEN=$TESTDINO_SECRET" >> "$GITHUB_ENV"
-          fi
-
-          if [ -z "$TESTDINO_SECRET" ] && ! grep -q '^TESTDINO_TOKEN=' utils/.env; then
-            echo "TESTDINO_TOKEN secret is missing and utils/.env does not contain TESTDINO_TOKEN."
+          if [ -z "$TESTDINO_SECRET" ]; then
+            echo "TESTDINO_TOKEN GitHub secret is required."
             exit 1
           fi
 
@@ -68,7 +66,7 @@ jobs:
 
   merge-reports:
     needs: playwright
-    if: always()
+    if: always() && github.event_name != 'workflow_dispatch'
     runs-on: ubuntu-latest
 
     steps:
@@ -107,4 +105,54 @@ jobs:
           name: playwright-html-report
           path: playwright-report
           retention-days: 30
- 
+
+  coverage:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    env:
+      TESTDINO_TOKEN: ${{ secrets.TESTDINO_TOKEN }}
+      BASE_URL: ${{ secrets.COVERAGE_BASE_URL }}
+      TESTDINO_DEBUG: 'false'
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Verify Coverage Secrets
+        run: |
+          if [ -z "$TESTDINO_TOKEN" ]; then
+            echo "TESTDINO_TOKEN GitHub secret is required."
+            exit 1
+          fi
+
+          if [ -z "$BASE_URL" ]; then
+            echo "COVERAGE_BASE_URL GitHub secret is required."
+            exit 1
+          fi
+
+      - name: Run Instrumentation Check with TestDino Coverage
+        env:
+          VERIFY_COVERAGE: 'true'
+        run: npm run test:coverage -- tests/coverage-verification.spec.ts --project=chromium
+
+      - name: Prepare Local Coverage Report
+        run: node scripts/prepare-coverage-report.cjs
+
+      - name: Upload Local Coverage Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: testdino-coverage-report
+          path: coverage-report
+          retention-days: 14

@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from '@testdino/playwright';
 
 test('TestDino trace artifact intentionally fails', async ({ page }) => {
   await page.goto('/');

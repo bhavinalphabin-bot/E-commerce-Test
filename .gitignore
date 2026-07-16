@@ -1,0 +1,10 @@
+node_modules/
+.env
+utils/.env
+coverage-report/
+coverage/
+.nyc_output/
+playwright-report/
+blob-report/
+test-results/
+

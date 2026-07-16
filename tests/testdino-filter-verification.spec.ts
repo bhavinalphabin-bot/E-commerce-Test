@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { expect, test } from '@testdino/playwright';
 
 test.describe('TestDino filter verification @testdino-filter', () => {
   test('FAILED - Assertion filter @testdino-filter', async () => {

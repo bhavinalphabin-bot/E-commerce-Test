@@ -1,5 +1,5 @@
 
-import { test, expect } from '@playwright/test';
+import { test, expect } from '@testdino/playwright';
 
 test('Verify Product API', async ({ request }) => {
 

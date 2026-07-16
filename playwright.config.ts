@@ -12,8 +12,6 @@ const ciRunId = isCI
   ? `ci-run-${process.env.GITHUB_RUN_ID}-${process.env.GITHUB_RUN_ATTEMPT || 1}`
   : `local-run-${new Date().toISOString().split('T')[0]}`;
 
-const testDinoToken = process.env.TESTDINO_TOKEN || process.env.TestDino_API_TOKEN || '';
-
 export default defineConfig({
   testDir: './tests',
   snapshotDir: './__screenshots__',
@@ -30,10 +28,14 @@ export default defineConfig({
   reporter: [
     ['@testdino/playwright', {
       serverUrl: 'https://stg-analytics.testdino.com',
-      token: testDinoToken,
+      token: process.env.TESTDINO_TOKEN,
       ciRunId,
-      debug: false,
+      debug: process.env.TESTDINO_DEBUG === 'true',
       artifacts: true,
+      coverage: {
+        // v2.0.0 generates its local HTML report in ./coverage automatically.
+        enabled: true,
+      },
     }],
     ['html', { outputDir: './playwright-report' }],
     ['json', { outputFile: './playwright-report/report.json' }],
@@ -41,7 +43,7 @@ export default defineConfig({
   ],
 
   use: {
-    baseURL: 'https://storedemo.testdino.com/products',
+    baseURL: process.env.BASE_URL || 'https://storedemo.testdino.com/products',
     headless: true,
     trace: 'retain-on-failure',
     screenshot: 'only-on-failure',
