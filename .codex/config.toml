@@ -1,0 +1,10 @@
+# Use the TestDino MCP version pinned by this project. The server inherits the
+# TESTDINO_PAT and TESTDINO_API_URL already configured for testdino-stg in the
+# user's global Codex configuration; no credentials are stored in this repo.
+[mcp_servers.testdino-stg]
+command = "node"
+args = [
+  "node_modules/testdino-mcp/dist/index.js",
+]
+startup_timeout_sec = 20
+tool_timeout_sec = 120
