@@ -5,6 +5,10 @@ import dotenv from 'dotenv';
 dotenv.config({ path: 'utils/.env' });
 
 const isCI = !!process.env.CI;
+const runTags = (process.env.TESTDINO_TAGS || '')
+  .split(',')
+  .map(tag => tag.trim())
+  .filter(Boolean);
 
 // Use the GitHub Actions run identifier in CI so all shards share one run,
 // and fall back to a date-based id for local runs.
@@ -32,6 +36,7 @@ export default defineConfig({
       ciRunId,
       debug: process.env.TESTDINO_DEBUG === 'true',
       artifacts: true,
+      tags: runTags,
       coverage: {
         // v2.0.0 generates its local HTML report in ./coverage automatically.
         enabled: true,
