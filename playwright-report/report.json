@@ -37,13 +37,17 @@
       [
         "/Users/jay/Downloads/Plawright/E-commerce-Test/node_modules/@testdino/playwright/dist/index.js",
         {
-          "serverUrl": "https://stg-analytics.testdino.com",
-          "token": "td_api_18c986fd8e2bd954a650c02ed01fb540456a39dd670ca924b5004241832445a2",
-          "ciRunId": "local-run-2026-07-18",
+          "serverUrl": "https://reporter.testdino.com",
+          "token": "[REDACTED]",
+          "ciRunId": "local-tag-variation-1784525057942-5",
           "debug": false,
           "artifacts": true,
           "tags": [
-            "smoke"
+            "smoke",
+            "regression",
+            "sanity",
+            "E2E",
+            "visual"
           ],
           "coverage": {
             "enabled": true
@@ -89,9 +93,11 @@
       "line": 0,
       "specs": [
         {
-          "title": "run tag filter verification",
+          "title": "run tags: 5 tags @run-tag-5",
           "ok": true,
-          "tags": [],
+          "tags": [
+            "run-tag-5"
+          ],
           "tests": [
             {
               "timeout": 30000,
@@ -104,12 +110,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 657,
+                  "duration": 491,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-18T07:26:52.759Z",
+                  "startTime": "2026-07-20T05:24:43.631Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -117,18 +123,18 @@
               "status": "expected"
             }
           ],
-          "id": "1312b06ed31cb0c6b059-28de8f8ebf2468326646",
+          "id": "1312b06ed31cb0c6b059-26171865d6599ef6204c",
           "file": "run-tag-filter-verification.spec.ts",
-          "line": 3,
-          "column": 5
+          "line": 15,
+          "column": 7
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-07-18T07:26:51.925Z",
-    "duration": 1820.696,
+    "startTime": "2026-07-20T05:24:42.869Z",
+    "duration": 1552.763,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

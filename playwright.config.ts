@@ -12,9 +12,9 @@ const runTags = (process.env.TESTDINO_TAGS || '')
 
 // Use the GitHub Actions run identifier in CI so all shards share one run,
 // and fall back to a date-based id for local runs.
-const ciRunId = isCI
+const ciRunId = process.env.TESTDINO_CI_RUN_ID || (isCI
   ? `ci-run-${process.env.GITHUB_RUN_ID}-${process.env.GITHUB_RUN_ATTEMPT || 1}`
-  : `local-run-${new Date().toISOString().split('T')[0]}`;
+  : `local-run-${new Date().toISOString().split('T')[0]}`);
 
 export default defineConfig({
   testDir: './tests',
@@ -31,7 +31,7 @@ export default defineConfig({
 
   reporter: [
     ['@testdino/playwright', {
-      serverUrl: 'https://stg-analytics.testdino.com',
+      serverUrl: 'https://reporter.testdino.com',
       token: process.env.TESTDINO_TOKEN,
       ciRunId,
       debug: process.env.TESTDINO_DEBUG === 'true',

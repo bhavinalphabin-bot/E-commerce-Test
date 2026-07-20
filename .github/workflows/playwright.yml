@@ -12,7 +12,7 @@ jobs:
     if: github.event_name != 'workflow_dispatch'
     runs-on: ubuntu-latest
     env:
-      TESTDINO_SERVER_URL: https://stg-analytics.testdino.com
+      TESTDINO_SERVER_URL: https://reporter.testdino.com
 
     strategy:
       fail-fast: false
@@ -36,9 +36,9 @@ jobs:
 
       - name: Verify TestDino Token
         env:
-          TESTDINO_SECRET: ${{ secrets.TESTDINO_TOKEN }}
+          TESTDINO_TOKEN: ${{ secrets.TESTDINO_TOKEN }}
         run: |
-          if [ -z "$TESTDINO_SECRET" ]; then
+          if [ -z "$TESTDINO_TOKEN" ]; then
             echo "TESTDINO_TOKEN GitHub secret is required."
             exit 1
           fi
@@ -46,7 +46,7 @@ jobs:
       - name: Run TestDino Playwright Shard
         env:
           TESTDINO_TOKEN: ${{ secrets.TESTDINO_TOKEN }}
-        run: npx tdpw test --ci-run-id ci-run-${{ github.run_id }}-${{ github.run_attempt }} -- --shard=${{ matrix.shard }}/4
+        run: npx playwright test --shard=${{ matrix.shard }}/4
 
       - name: Verify Blob Report
         if: always()
@@ -63,6 +63,36 @@ jobs:
           name: blob-report-${{ matrix.shard }}
           path: blob-report
           retention-days: 1
+
+  testdino-tag-variations:
+    if: github.event_name != 'workflow_dispatch'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Run TestDino Tag Variations
+        env:
+          TESTDINO_TOKEN: ${{ secrets.TESTDINO_TOKEN }}
+        run: |
+          if [ -z "$TESTDINO_TOKEN" ]; then
+            echo "TESTDINO_TOKEN GitHub secret is required."
+            exit 1
+          fi
+
+          npm run test:run-tags
 
   merge-reports:
     needs: playwright

@@ -6,6 +6,7 @@
   "scripts": {
     "test": "playwright test",
     "test:headed": "playwright test --headed",
+    "test:run-tags": "node scripts/run-tag-variations.cjs",
     "test:coverage": "node --env-file=utils/.env node_modules/@testdino/playwright/bin/tdpw.js test --coverage",
     "test:coverage:report": "node --env-file=utils/.env node_modules/@testdino/playwright/bin/tdpw.js test --coverage && node scripts/prepare-coverage-report.cjs",
     "verify:coverage": "VERIFY_COVERAGE=true playwright test tests/coverage-verification.spec.ts --project=chromium"
@@ -17,7 +18,7 @@
   "devDependencies": {
     "@axe-core/playwright": "^4.11.3",
     "@playwright/test": "^1.60.0",
-    "@testdino/playwright": "file:testdino-playwright-2.0.0.tgz",
+    "@testdino/playwright": "^2.0.0",
     "axe-playwright": "^2.2.2"
   },
   "dependencies": {
