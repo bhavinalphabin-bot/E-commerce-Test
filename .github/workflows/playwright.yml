@@ -13,6 +13,12 @@ jobs:
     runs-on: ubuntu-latest
     env:
       TESTDINO_SERVER_URL: https://reporter.testdino.com
+      TESTDINO_CI_RUN_ID: ci-run-${{ github.run_id }}-${{ github.run_attempt }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [1, 2, 3, 4, 5]
 
     steps:
       - name: Checkout Repository
@@ -38,10 +44,10 @@ jobs:
             exit 1
           fi
 
-      - name: Run 500 TestDino Cases
+      - name: Run TestDino Shard ${{ matrix.shard }} of 5
         env:
           TESTDINO_TOKEN: ${{ secrets.TESTDINO_TOKEN }}
-        run: npx playwright test tests/run-tag-filter-verification.spec.ts
+        run: npx playwright test tests/run-tag-filter-verification.spec.ts --shard=${{ matrix.shard }}/5
 
       - name: Verify Blob Report
         if: always()
@@ -55,7 +61,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: blob-report-single-run
+          name: blob-report-${{ matrix.shard }}
           path: blob-report
           retention-days: 1
 
