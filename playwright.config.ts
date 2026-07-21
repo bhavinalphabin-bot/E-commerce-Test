@@ -35,6 +35,7 @@ export default defineConfig({
       token: process.env.TESTDINO_TOKEN,
       ciRunId,
       debug: process.env.TESTDINO_DEBUG === 'true',
+      // Stream Playwright attachments, including trace.zip files, to TestDino.
       artifacts: true,
       tags: runTags,
       coverage: {
@@ -50,6 +51,8 @@ export default defineConfig({
   use: {
     baseURL: process.env.BASE_URL || 'https://storedemo.testdino.com/products',
     headless: true,
+    // Keep a trace for every failed attempt so TestDino's trace viewer can open it.
+    // This also works in CI where retries are disabled.
     trace: 'retain-on-failure',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
