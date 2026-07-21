@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "playwright test",
+    "test": "node scripts/run-playwright.cjs",
     "test:headed": "playwright test --headed",
     "test:coverage": "node --env-file=utils/.env node_modules/@testdino/playwright/bin/tdpw.js test --coverage",
     "test:coverage:report": "node --env-file=utils/.env node_modules/@testdino/playwright/bin/tdpw.js test --coverage && node scripts/prepare-coverage-report.cjs",
