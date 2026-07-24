@@ -39,7 +39,7 @@ export default defineConfig({
       artifacts: true,
       tags: runTags,
       coverage: {
-        // v2.0.0 generates its local HTML report in ./coverage automatically.
+        // TestDino generates its local HTML report in ./coverage automatically.
         enabled: true,
       },
     }],

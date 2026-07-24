@@ -20,13 +20,13 @@ npm test -- --max-workers=2
 
 ## TestDino MCP
 
-The project pins TestDino MCP 1.1.0 from `testdino-mcp-1.1.0 (3).tgz` and
-configures Codex in `.codex/config.toml`. The project config overrides the MCP
-command so it runs this exact local package while retaining the `TESTDINO_PAT`
-and `TESTDINO_API_URL` from the user's global `testdino-stg` Codex config.
-Credentials are not duplicated in this repository.
+The project installs the latest compatible TestDino MCP release from npm and
+configures Codex in `.codex/config.toml`. The project config runs the installed
+package while retaining the `TESTDINO_PAT` and `TESTDINO_API_URL` from the
+user's global `testdino-stg` Codex config. Credentials are not duplicated in
+this repository.
 
-After cloning or changing the MCP archive, run:
+After cloning or updating dependencies, run:
 
 ```bash
 npm install

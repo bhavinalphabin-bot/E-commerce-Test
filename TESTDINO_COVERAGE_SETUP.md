@@ -13,10 +13,10 @@ A normal staging or production build usually is not instrumented and will show *
 ## Installed tooling
 
 - `@playwright/test` remains the Playwright test runner.
-- `@testdino/playwright` 2.0.0 supplies the streaming reporter, coverage auto-fixture, and `tdpw test` command.
+- `@testdino/playwright` supplies the streaming reporter, coverage auto-fixture, and `tdpw test` command.
 - The separate legacy `tdpw` upload package is not needed for streaming coverage and has been removed to avoid an executable-name conflict.
 
-Version 2.0.0 generates its Istanbul HTML output in `./coverage`. `npm run test:coverage:report` copies that generated report to the repository-standard `./coverage-report` directory after a successful run.
+TestDino generates its Istanbul HTML output in `./coverage`. `npm run test:coverage:report` copies that generated report to the repository-standard `./coverage-report` directory after a successful run.
 
 ## Environment variables
 
