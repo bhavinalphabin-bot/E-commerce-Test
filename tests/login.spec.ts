@@ -4,7 +4,7 @@ import { LoginPage } from '../Pages/LoginPage';
 test('Login Test', {
   annotation: {
     type: 'testdino:notify-slack',
-    description: '#e2e-alerts,@qa-lead',
+    description: '#e2e-alerts',
   },
 }, async ({ page }) => {
 
