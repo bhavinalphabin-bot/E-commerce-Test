@@ -1,7 +1,12 @@
 import { test, expect } from '@testdino/playwright';
 import { LoginPage } from '../Pages/LoginPage';
 
-test('Login Test', async ({ page }) => {
+test('Login Test', {
+  annotation: {
+    type: 'testdino:notify-slack',
+    description: '#e2e-alerts,@qa-lead',
+  },
+}, async ({ page }) => {
 
   const loginPage = new LoginPage(page);
 
