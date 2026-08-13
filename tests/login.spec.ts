@@ -24,3 +24,12 @@ test('Login Test with valid user credentials', {
   });
 
 });
+
+test('Login page loads with email and password fields', async ({ page }) => {
+  const loginPage = new LoginPage(page);
+
+  await loginPage.goto();
+
+  await expect(page.locator('[data-qa="login-email"]')).toBeVisible();
+  await expect(page.locator('[data-qa="login-password"]')).toBeVisible();
+});
