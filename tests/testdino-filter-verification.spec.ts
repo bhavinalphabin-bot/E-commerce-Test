@@ -13,7 +13,7 @@ test.describe('TestDino filter verification @testdino-filter', () => {
     });
   });
 
-  test('FAILED - Timeout filter @testdino-filter', async ({ page }) => {
+  test('FAILED - Timeout filters @testdino-filter', async ({ page }) => {
     test.setTimeout(1_000);
 
     await page.waitForTimeout(2_000);
