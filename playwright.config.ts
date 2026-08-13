@@ -31,7 +31,7 @@ export default defineConfig({
 
   reporter: [
     ['@testdino/playwright', {
-      serverUrl: process.env.TESTDINO_SERVER_URL || 'https://stg-analytics.testdino.com/',
+      serverUrl: process.env.TESTDINO_SERVER_URL || 'https://reporter.testdino.com/',
       token: process.env.TESTDINO_TOKEN,
       ciRunId,
       debug: process.env.TESTDINO_DEBUG === 'true',
