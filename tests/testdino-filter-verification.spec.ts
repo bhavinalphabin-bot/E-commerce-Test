@@ -5,7 +5,7 @@ test.describe('TestDino filter verification @testdino-filter', () => {
     expect('actual assertion value').toBe('expected assertion value');
   });
 
-  test('FAILED - Element Not Found filter @testdino-filter', async ({ page }) => {
+  test('FAILED - Element Not Found filters @testdino-filter', async ({ page }) => {
     await page.setContent('<main><h1>Filter verification page</h1></main>');
 
     await expect(page.getByRole('button', { name: 'Never Rendered Button' })).toBeVisible({
