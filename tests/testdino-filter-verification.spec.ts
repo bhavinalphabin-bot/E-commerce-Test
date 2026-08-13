@@ -65,7 +65,7 @@ test.describe('TestDino filter verification @testdino-filter', () => {
     }
   });
 
-  test('FLAKY - Other filter @testdino-filter', async ({}, testInfo) => {
+  test('FLAKY - Other filters @testdino-filter', async ({}, testInfo) => {
     if (testInfo.retry === 0) {
       throw new Error('Synthetic uncategorized flaky failure for the TestDino Other filter');
     }
