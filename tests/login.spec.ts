@@ -1,7 +1,7 @@
 import { test, expect } from '@testdino/playwright';
 import { LoginPage } from '../Pages/LoginPage';
 
-test('Login Test', {
+test('Login Test with valid user credentials', {
   annotation: {
     type: 'testdino:notify-slack',
     description: '#e2e-alerts',
