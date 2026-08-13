@@ -19,7 +19,7 @@ const tagGroups = [
   },
 ];
 
-test.describe('Test-case tag filter verification', () => {
+test.describe('Test-case TAG filter verification', () => {
   for (const group of tagGroups) {
     for (let testNumber = 1; testNumber <= 4; testNumber += 1) {
       test(
