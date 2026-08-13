@@ -94,3 +94,36 @@ test('Logout ends the session and returns to the login page', async ({ page }) =
     page.locator('[data-qa="login-email"]')
   ).toBeVisible();
 });
+
+// Reported to TestDino under Skipped > Skipped.
+test.skip('SKIPPED - Login with Google SSO', async ({ page }) => {
+
+  const loginPage = new LoginPage(page);
+
+  await loginPage.goto();
+
+  await page.getByRole('button', { name: 'Sign in with Google' }).click();
+
+  await expect(
+    page.locator('a[href="/logout"]')
+  ).toBeVisible();
+});
+
+// Reported to TestDino under Skipped > Fixme.
+test.fixme('SKIPPED - Session survives a page reload', async ({ page }) => {
+
+  const loginPage = new LoginPage(page);
+
+  await loginPage.goto();
+
+  await loginPage.login(
+    'bhavymangukiya30@gmail.com',
+    'Bhavy@207'
+  );
+
+  await page.reload();
+
+  await expect(
+    page.locator('a[href="/logout"]')
+  ).toBeVisible();
+});

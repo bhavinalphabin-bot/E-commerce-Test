@@ -293,4 +293,30 @@ test.describe('Keyboard, Hover & Scrolling', () => {
       page.locator('#cartModal')
     ).toContainText('Added!');
   });
+
+  // Reported to TestDino under Skipped > Skipped.
+  test.skip('SKIPPED - Upload a profile picture', async ({ page }) => {
+
+    await page.goto('https://automationexercise.com/contact_us');
+
+    await page.locator('input[type="file"]')
+      .setInputFiles('./fixtures/test-image.png');
+
+    await expect(
+      page.locator('input[type="file"]')
+    ).not.toHaveValue('');
+  });
+
+  // Reported to TestDino under Skipped > Fixme.
+  test.fixme('SKIPPED - Drag a product onto the cart icon', async ({ page }) => {
+
+    await page.goto('https://automationexercise.com/products');
+
+    await page.locator('.product-image-wrapper').first()
+      .dragTo(page.locator('a[href="/view_cart"]').first());
+
+    await expect(
+      page.locator('#cartModal')
+    ).toBeVisible();
+  });
 });

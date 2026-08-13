@@ -206,4 +206,41 @@ test.describe('Network Response Validation', () => {
 
     expect(seen['x-testdino-mock']).toBe('injected');
   });
+
+  // Reported to TestDino under Skipped > Skipped.
+  test.skip('SKIPPED - Replay the products page from a HAR archive', async ({ page }) => {
+
+    await page.routeFromHAR('./fixtures/products.har', {
+      url: '**/products',
+      update: false,
+    });
+
+    await page.goto('https://automationexercise.com/products');
+
+    await expect(
+      page.locator('.product-image-wrapper').first()
+    ).toBeVisible();
+  });
+
+  // Reported to TestDino under Skipped > Fixme.
+  test.fixme('SKIPPED - Mocked catalogue renders in the product grid', async ({ page }) => {
+
+    await page.route('**/api/productsList', async route => {
+      await route.fulfill({
+        status: 200,
+        contentType: 'application/json',
+        body: JSON.stringify({
+          products: [
+            { id: 1, name: 'Mocked Product', price: 'Rs. 99' },
+          ],
+        }),
+      });
+    });
+
+    await page.goto('https://automationexercise.com/products');
+
+    await expect(
+      page.locator('.product-image-wrapper')
+    ).toHaveCount(1);
+  });
 });

@@ -159,3 +159,33 @@ test('Order comment is accepted before placing the order', async ({ page }) => {
     timeout: 20000
   });
 });
+
+// Reported to TestDino under Skipped > Skipped.
+test.skip('SKIPPED - Pay with a real card against the live gateway', async ({ page }) => {
+
+  const checkoutPage = new CheckoutPage(page);
+
+  await page.goto('https://automationexercise.com/payment');
+
+  await checkoutPage.enterPaymentDetails();
+
+  await checkoutPage.submitOrder();
+
+  await expect(
+    page.getByText('Your order has been placed successfully!')
+  ).toBeVisible();
+});
+
+// Reported to TestDino under Skipped > Fixme.
+test.fixme('SKIPPED - Invoice downloads after the order is placed', async ({ page }) => {
+
+  await page.goto(
+    'https://automationexercise.com/payment_done/1'
+  );
+
+  const download = page.waitForEvent('download');
+
+  await page.getByRole('link', { name: 'Download Invoice' }).click();
+
+  expect((await download).suggestedFilename()).toContain('invoice');
+});

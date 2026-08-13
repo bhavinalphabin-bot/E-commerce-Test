@@ -98,3 +98,39 @@ test('Quantity chosen on the product page carries into the cart', async ({ page 
 
   await cartPage.verifyProduct('Blue Top');
 });
+
+// Reported to TestDino under Skipped > Skipped.
+test.skip('SKIPPED - Cart survives a logout and login', async ({ page }) => {
+
+  const cartPage = new CartPage(page);
+
+  await page.goto(
+    'https://automationexercise.com/product_details/1'
+  );
+
+  await page.locator('button.cart').click();
+
+  await page.getByRole('link', { name: 'Continue Shopping' }).click();
+
+  await page.goto('https://automationexercise.com/logout');
+
+  await cartPage.openCart();
+
+  await cartPage.verifyProduct('Blue Top');
+});
+
+// Reported to TestDino under Skipped > Fixme.
+test.fixme('SKIPPED - Cart counter updates without a reload', async ({ page }) => {
+
+  await page.goto(
+    'https://automationexercise.com/product_details/1'
+  );
+
+  await page.locator('button.cart').click();
+
+  await page.locator('.close-modal').click();
+
+  await expect(
+    page.locator('.shop-menu .cart_count')
+  ).toHaveText('1');
+});
