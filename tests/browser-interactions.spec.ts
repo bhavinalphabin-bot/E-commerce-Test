@@ -226,3 +226,71 @@ test.describe('Multiple Tabs/Windows', () => {
     await page3.close();
   });
 });
+
+test.describe('Keyboard, Hover & Scrolling', () => {
+
+  test('Search typed on the keyboard returns matching results', async ({ page }) => {
+    await page.goto('https://automationexercise.com/products');
+
+    const searchInput = page.locator('#search_product');
+
+    await searchInput.click();
+
+    await page.keyboard.type('Tshirt');
+
+    // The search box is not wired to submit on Enter, so the button is the
+    // only way to run the query.
+    await page.locator('#submit_search').click();
+
+    await expect(
+      page.getByRole('heading', { name: 'Searched Products' })
+    ).toBeVisible({ timeout: 20000 });
+
+    await expect(
+      page.locator('.product-image-wrapper').first()
+    ).toBeVisible();
+  });
+
+  test('Clearing the search box with Ctrl+A then Delete', async ({ page }) => {
+    await page.goto('https://automationexercise.com/products');
+
+    const searchInput = page.locator('#search_product');
+
+    await searchInput.click();
+
+    await page.keyboard.type('Men Tshirt');
+
+    await expect(searchInput).toHaveValue('Men Tshirt');
+
+    await page.keyboard.press('ControlOrMeta+A');
+    await page.keyboard.press('Delete');
+
+    await expect(searchInput).toHaveValue('');
+  });
+
+  test('Hovering a product exposes a working overlay add-to-cart', async ({ page }) => {
+    await page.goto('https://automationexercise.com/products');
+
+    const firstProduct = page.locator('.product-image-wrapper').first();
+
+    await expect(firstProduct).toBeVisible({ timeout: 20000 });
+
+    const overlayButton = firstProduct.locator(
+      '.overlay-content .add-to-cart'
+    );
+
+    // The overlay sits behind the product tile until the tile is hovered, so
+    // the click only lands once the hover has raised it.
+    await firstProduct.hover();
+
+    await overlayButton.click();
+
+    await expect(
+      page.locator('#cartModal')
+    ).toBeVisible({ timeout: 20000 });
+
+    await expect(
+      page.locator('#cartModal')
+    ).toContainText('Added!');
+  });
+});
